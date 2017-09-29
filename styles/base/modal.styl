@@ -1,0 +1,87 @@
+.modal
+  animation bigFadeUp .3s forwards ease
+  background #fff
+  box-shadow 0 1rem 2rem rgba($main, .1)
+  border-radius $radius 0 $radius $radius
+  display none
+  margin 10rem auto
+  padding 4rem
+  position relative
+  width 72rem
+  &__title
+    font-size 2.4rem
+    font-weight 500
+    line-height 1
+    margin-bottom 4rem
+  &__plate
+    background-color $light-gray
+    margin-left -4rem
+    margin-right -4rem
+    margin-bottom 3.2rem
+    margin-top -1.6rem
+    padding 1.6rem 4rem
+  &--without-border
+    background-color transparent
+    box-shadow none
+    padding 0
+    max-width 70%
+    height 40rem
+    iframe
+      height 100%
+      width 100%
+    .mfp-close,
+    .mfp-close:active
+      color #fff !important
+      font-size 3.2rem
+      opacity 1
+      right -5rem !important
+      top -1.3rem !important
+
+.mfp-ready
+  .modal
+    display block
+
+.mfp-close-btn-in .mfp-close,
+.mfp-close-btn-in .mfp-close:active
+  // background-color $primary
+  circle(4rem)
+  color $main
+  font-size 4rem
+  opacity 1
+  padding 0
+  text-align center
+  top 2.9rem
+  right 2.4rem
+
+.mfp-close
+  circle(6rem)
+
+.open-image
+  display block
+
+.mfp-gallery .mfp-close,
+.mfp-gallery .mfp-close:active
+  color #fff
+  right -5.6rem
+  top 2.8rem
+
+
+  
+
+@media(max-width 767px)
+  .mfp-container
+    padding 0
+  .modal
+    padding 2.4rem 4%
+    right 0
+    width 94%
+    &__plate
+      margin-left -4.3%
+      margin-right -4.3%
+      padding 1.6rem 4%
+    .mfp-close,
+    .mfp-close:active
+      font-size 4rem
+      opacity 1
+      top 1.4rem
+      right .4rem

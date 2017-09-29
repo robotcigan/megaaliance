@@ -1,0 +1,87 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title МегаАльянс
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="styles/css/vendor.css")
+    link(rel="stylesheet", href="styles/css/main.css")
+  body
+
+    header.top-header
+      .grid.grid--container
+        .top-header__container
+          .top-header__phone 8 861 204-18-83
+          .top-header__callback Обратный звонок
+          .top-header__item
+            .top-header__icon
+              img(src="./img/clock.png", alt="")
+            .top-header__text Пн- Пт, с 9:00 до 18:00 (ежедневно без выходных)
+          .top-header__item
+            .top-header__icon
+              img(src="./img/heart.png", alt="")
+            .top-header__text Избранное
+
+    header.main-header
+      .grid.grid--container
+        .main-header__container
+          a(href="").logo
+          .nav
+            a(href="#").nav__link О компании
+            a(href="#").nav__link Объекты в продаже
+            a(href="#").nav__link Выбор квартир
+            a(href="#").nav__link Покупателям
+            a(href="#").nav__link Проекты
+            a(href="#").nav__link Новости и акции
+            a(href="#").nav__link Риэлторам
+            a(href="#").nav__link Ход сроительства
+
+    block content
+
+    footer.main-footer
+      h2 footer
+
+
+    #callback.modal
+      .modal__title Заявка
+      form.form
+        .form-control
+          label Интересующее оборудование или услуги
+          input(type="text")
+        .form-control
+          label Как вас зовут?
+          input(type="text")
+        .form-control
+          label Телефон
+          input(type="tel").phone-mask
+        .form-control
+          label Электронная почта
+          input(type="email")
+        .form-control
+          label Название компании
+          input(type="text")
+        .form-control
+          label Город
+          input(type="text")
+        .checkbox.mini-offset
+          input(type="checkbox" id="checkbox")
+          label(for="checkbox").checkbox__label
+          label.checkbox__text(for="checkbox") Я согласен на обработку 
+            a(href="").link персональных данных
+        .row
+          .col.col--sm-6
+            .form-control
+              input(type="text")
+          .col.col--sm-6
+            img(src="./img/captcha.png", alt="")
+        button.btn Отправить
+
+    script(src="./js/jquery.min.js")
+    script(src="./js/jquery.easeScroll.js")
+    script(src="./js/slick.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/jquery.magnific-popup.min.js")
+    script(src="./js/sticky.js")
+    script(src="./js/main.js")

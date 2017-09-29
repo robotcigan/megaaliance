@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>МегаАльянс</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles/css/vendor.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="grid grid--container">
+        <div class="top-header__container">
+          <div class="top-header__phone">8 861 204-18-83</div>
+          <div class="top-header__callback">Обратный звонок</div>
+          <div class="top-header__item">
+            <div class="top-header__icon"><img src="./img/clock.png" alt=""></div>
+            <div class="top-header__text">Пн- Пт, с 9:00 до 18:00 (ежедневно без выходных)</div>
+          </div>
+          <div class="top-header__item">
+            <div class="top-header__icon"><img src="./img/heart.png" alt=""></div>
+            <div class="top-header__text">Избранное</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="main-header">
+      <div class="grid grid--container">
+        <div class="main-header__container"><a class="logo" href=""></a>
+          <div class="nav"><a class="nav__link" href="#">О компании</a><a class="nav__link" href="#">Объекты в продаже</a><a class="nav__link" href="#">Выбор квартир</a><a class="nav__link" href="#">Покупателям</a><a class="nav__link" href="#">Проекты</a><a class="nav__link" href="#">Новости и акции</a><a class="nav__link" href="#">Риэлторам</a><a class="nav__link" href="#">Ход сроительства</a></div>
+        </div>
+      </div>
+    </header>
+    <footer class="main-footer">
+      <h2>footer</h2>
+    </footer>
+    <div class="modal" id="callback">
+      <div class="modal__title">Заявка</div>
+      <form class="form">
+        <div class="form-control">
+          <label>Интересующее оборудование или услуги</label>
+          <input type="text">
+        </div>
+        <div class="form-control">
+          <label>Как вас зовут?</label>
+          <input type="text">
+        </div>
+        <div class="form-control">
+          <label>Телефон</label>
+          <input class="phone-mask" type="tel">
+        </div>
+        <div class="form-control">
+          <label>Электронная почта</label>
+          <input type="email">
+        </div>
+        <div class="form-control">
+          <label>Название компании</label>
+          <input type="text">
+        </div>
+        <div class="form-control">
+          <label>Город</label>
+          <input type="text">
+        </div>
+        <div class="checkbox mini-offset">
+          <input type="checkbox" id="checkbox">
+          <label class="checkbox__label" for="checkbox"></label>
+          <label class="checkbox__text" for="checkbox">Я согласен на обработку <a class="link" href="">персональных данных</a></label>
+        </div>
+        <div class="row">
+          <div class="col col--sm-6">
+            <div class="form-control">
+              <input type="text">
+            </div>
+          </div>
+          <div class="col col--sm-6"><img src="./img/captcha.png" alt=""></div>
+        </div>
+        <button class="btn">Отправить</button>
+      </form>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easeScroll.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/jquery.inputmask.bundle.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/sticky.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

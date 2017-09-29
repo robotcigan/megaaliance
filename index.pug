@@ -1,0 +1,228 @@
+extends layout.pug
+
+
+block content
+  .hero
+
+  h2.h2 Застройщик квартир в Краснодаре
+  p.subheader В  нашем активе — как отдельные дома, так и масштабные жилые комплексы
+  
+  section.section.section--formats
+    h2.h2 Качественно новое пространство для жизни
+    p.subheader Разнообразие форматов квартир, широкий выбор планировочных решений и продуманная инфраструктура.
+    .grid.grid--container
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Новости
+            .tabs__link Спецпредложения
+          .tabs__buttons
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Все новости и акции
+
+      .tabs__content.tabs__content--active
+
+  .white-block
+    .grid.grid--container
+      .row.row--sm-center
+        .col.col--md-flex.col--md-3
+          .white-block__left
+            .white-block__title Скидка 2%
+            .white-block__subtitle при 100% оплате и ипотеке
+        .col.col--md-flex.col--md-9
+          .white-block__right
+            .white-block__second-header Рассрочки
+            .white-block__text На 3 месяца без удорожания (от 40% первоначальный взнос) <br>На 6 мес с удорожанием (2% на остаток, от 40% первоначальный взнос)
+            .white-block__img
+              img(src="./img/coin.png", alt="")
+
+  
+  section.section.section--formats
+    .grid.grid--container
+      h2.h2 Редкие форматы квартир
+      p.subheader Казалось бы, незначительные улучшения кардинально меняют качество жизни обладателей наших квартир.
+      .formats
+        .item(style="background-image: url(./img/formats/1.jpg)")
+          .item__text Для молодых
+        .item(style="background-image: url(./img/formats/2.jpg)")
+          .item__text Для гармоничных
+        .item.item--white
+          .item__title Дизайн проекты квартир
+          p.item__anons Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.
+          .megalink
+            .megalink__icon
+              img(src="./img/megalink.png", alt="")
+            .megalink__text Подробнее
+        .item(style="background-image: url(./img/formats/3.jpg)")
+          .item__text Для тех, кто не любит скучать
+
+
+
+  section.section.section--news
+    h2.h2 Новости и спецпредложения
+    p.subheader Новости и самые выгодные предложения для подписчиков
+    .grid.grid--container
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Новости
+            .tabs__link Спецпредложения
+          .tabs__buttons
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Все новости и акции
+
+        .tabs__content.tabs__content--active
+          .news-slider.slider
+            .news-slider__item.news-slider__item--extra
+              .news-slider__img
+                .news-slider__img-container
+                  .news-slider__img-title
+                    span Яркая жизнь
+                    | вместе<br>с МегаАльянс
+                  .news-slider__img-micro
+                    img(src="./img/microphone.png", alt="")
+
+              .news-slider__container(style="background-image: url(./img/news/1.jpg)")
+                .news-slider__container-container
+                  .news-slider__date 5 мая 2017
+                  .news-slider__title В столице Кубани прошла конференции ООО «МегаАльянс» «Строим доступное жильё в Краснодаре».
+                  .news-slider__down
+                    a(href="").megalink
+                      .megalink__icon
+                        img(src="./img/megalink.png", alt="")
+                      .megalink__text Подробнее
+
+            .news-slider__item
+              .news-slider__img(style="background-image: url(./img/news/2.jpg)")
+              .news-slider__container
+                .news-slider__date 5 мая 2017
+                .news-slider__title Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.
+                .news-slider__video
+                  .news-slider__video-icon
+                    img(src="./img/video.png", alt="")
+                  .news-slider__video-text Смотреть ролик
+            - for (var i = 0; i < 3; i ++)
+              .news-slider__item
+                .news-slider__img(style="background-image: url(./img/news/3.jpg)")
+                .news-slider__container
+                  .news-slider__date 5 мая 2017
+                  .news-slider__title Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.
+
+
+        .tabs__content
+          p shit 2
+
+
+
+  section.section.section--banks
+    h2.h2 Смотрите, выгодная ипотека
+    p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условия
+    .grid.grid--container
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Ипотека
+            .tabs__link Материнский капитал
+            .tabs__link Рассрочка без %
+          .tabs__buttons
+            .item.item--type-1
+              .item__icon
+                img(src="./img/plus.png", alt="")
+              .item__text Все банки партнеры
+            .item.item--type-2
+              .item__icon
+                img(src="./img/calc.png", alt="")
+              .item__text Ипотечный калькулятор
+
+        .tabs__content.tabs__content--active
+          .banks
+            - for(var i = 0; i < 3; i++)
+              .bank
+                .bank__top
+                  .bank__logo
+                    img(src="./img/sberbank.png", alt="")
+                  .bank__percent от 7,4%
+                  .bank__table
+                    .item
+                      .item__label Ставка по кредиту
+                      .item__text от 7,4%
+                    .item
+                      .item__label Минимальный взнос
+                      .item__text от 15%
+                    .item
+                      .item__label Срок кредита
+                      .item__text до 7 лет
+                    .item
+                      .item__label Макс. сумма кредита
+                      .item__text до 25 млн. руб.
+                  .bank__arrow
+                    img(src="./img/arrow.png", alt="")
+                .bank__bottom
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
+        .tabs__content
+          .banks
+            - for(var i = 0; i < 1; i++)
+              .bank
+                .bank__top
+                  .bank__logo
+                    img(src="./img/sberbank.png", alt="")
+                  .bank__percent от 7,4%
+                  .bank__table
+                    .item
+                      .item__label Ставка по кредиту
+                      .item__text от 7,4%
+                    .item
+                      .item__label Минимальный взнос
+                      .item__text от 15%
+                    .item
+                      .item__label Срок кредита
+                      .item__text до 7 лет
+                    .item
+                      .item__label Макс. сумма кредита
+                      .item__text до 25 млн. руб.
+                  .bank__arrow
+                    img(src="./img/arrow.png", alt="")
+                .bank__bottom
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
+        .tabs__content
+          .banks
+            - for(var i = 0; i < 2; i++)
+              .bank
+                .bank__top
+                  .bank__logo
+                    img(src="./img/sberbank.png", alt="")
+                  .bank__percent от 7,4%
+                  .bank__table
+                    .item
+                      .item__label Ставка по кредиту
+                      .item__text от 7,4%
+                    .item
+                      .item__label Минимальный взнос
+                      .item__text от 15%
+                    .item
+                      .item__label Срок кредита
+                      .item__text до 7 лет
+                    .item
+                      .item__label Макс. сумма кредита
+                      .item__text до 25 млн. руб.
+                  .bank__arrow
+                    img(src="./img/arrow.png", alt="")
+                .bank__bottom
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
+
+      
+
+  h2.h2 Расчитать ипотеку
+  p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
+
+
+
+
+
+
+
+

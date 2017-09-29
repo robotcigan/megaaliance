@@ -1,0 +1,32 @@
+.table
+  border-collapse collapse
+  font-size 1.4rem
+  font-weight 300
+  max-width 100%
+  margin-bottom 2rem
+  margin-top 2rem
+  width 100%
+  thead
+    background $primary + 95%
+    text-align left
+    th
+      color $primary
+      font-weight 400
+  th,
+  td
+    line-height $line-height
+    // padding 1.2rem 1.5rem
+    padding 1.2rem 3rem
+    padding-right 1rem
+    margin 0
+    vertical-align top
+    &:first-child
+      min-width 7rem
+  tr:nth-child(even)
+    background $primary + 95%
+  tfoot
+    td
+      border none
+      font-weight 600
+  i
+    margin 0 !important

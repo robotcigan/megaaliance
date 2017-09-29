@@ -1,0 +1,207 @@
+.hero
+  background url('../../img/hero.jpg') no-repeat center
+  background-size cover
+  min-height 80rem
+  margin-bottom $main-offset
+  width 100%
+
+.section
+  padding $main-padding
+  &--formats
+    background-color $light-gray
+  &--banks
+    background-color $light-gray
+  &--news
+    background-color $baby-blue
+
+.formats
+  display flex
+  flex-wrap wrap
+  .item
+    align-items center
+    background-repeat no-repeat
+    background-size cover
+    display flex
+    justify-content center
+    height 32rem
+    width 50%
+    &__text
+      color #fff
+      font-size 2.4rem
+      font-weight 600
+    &__title
+      font-size 3rem
+      font-weight 300
+      margin-bottom 2.5rem
+    &__anons
+      margin-bottom 3rem
+    &--white
+      background-color #fff
+      display block
+      padding-left 6rem
+      padding-top 6rem
+      padding-right 10rem
+
+.banks
+  .bank
+    margin-bottom 1rem
+    &__top
+      align-items center
+      background-color #fff
+      cursor pointer
+      display flex
+      justify-content space-between
+      padding 4rem 4rem
+      transition all .6s ease
+    &__percent
+      font-size 3rem
+      font-weight 300
+    &__table
+      display flex
+      justify-content center
+      .item
+        margin-right 7rem
+        &__label
+          color $secondary
+          font-weight 300
+          margin-bottom 1rem
+        &__text
+          font-size 1.8rem
+          font-weight 500
+    &__arrow
+      transition transform .3s ease
+      img
+        display block
+    &__bottom
+      background-color #fff
+      border-top $border
+      display none
+      padding 4rem 6rem
+    &--active
+      .bank
+        &__arrow
+          transform rotate(180deg)
+    &:not(.bank--active):hover
+      .bank__top
+        transform translateY(-4px)
+        filter: drop-shadow(0 16px 24px rgba(135, 149, 163, .45))
+
+
+.news-slider
+  margin-left -1.5rem
+  margin-right -1.5rem
+  &__item
+    background-color #fff
+    margin-left 1.5rem
+    margin-right 1.5rem
+  &__img
+    background-repeat no-repeat
+    background-size cover
+    height 22rem
+  &__container
+    min-height 25rem
+    padding 2rem
+    padding-top 4rem
+  &__date
+    colort $baby-blue - 10%
+    font-weight 500
+    margin-bottom 2.5rem
+  &__title
+    font-size 1.8rem
+    line-height 1.4
+    margin-bottom 5rem
+  &__video
+    &-icon
+      display inline-block
+      margin-right 1rem
+      vertical-align middle
+      img
+        display block
+    &-text
+      display inline-block
+      vertical-align middle
+  &__item--extra
+    .news-slider
+      &__img
+        align-items center
+        background-color $primary
+        color #fff
+        display flex
+        font-size 3rem
+        font-weight 500
+        padding ((40 / 490) * 100)%
+        &-container
+          align-items flex-end
+          display flex
+          justify-content space-between
+          width 100%
+        &-title
+          font-weight 600
+          line-height 1.2
+          span
+            display block
+            font-size 2.4rem
+      &__container
+        position relative
+        &:before
+          background-color rgba($main, .6)
+          content ''
+          left 0
+          height 100%
+          position absolute
+          top 0
+          width 100%
+          z-index 0
+        &-container
+          position relative
+          z-index 1
+      &__date
+        color #fff
+      &__title
+        color #fff
+      // &__down
+      //   bottom 0
+      //   position absolute
+    
+.white-block
+  overflow hidden
+  padding 6rem 0
+  position relative
+  width 100%
+  &__left
+    padding-left (70 / 363 * 100)%
+    width 100%
+  &__title
+    font-size 4.8rem
+    font-weight 300
+    margin-bottom .8rem
+  &__subtitle
+    color $dark-gray
+    font-weight 300
+  &__right
+    position relative
+    padding-left (100 / 1150 * 100)%
+    width 100%
+    &:after
+      background-color $primary
+      content ''
+      height 4px
+      left 0
+      position absolute
+      top 50%
+      width 44px
+  &__second-header
+    margin-bottom 1.5rem
+  &__text
+    color $secondary - 20%
+    line-height 1.4
+  &__img
+    bottom -18rem
+    left (800 / 1150 * 100)%
+    position absolute
+    transition transform .3s ease
+  &:hover
+    .white-block
+      &__img
+        transform translateY(-1.5rem)
+

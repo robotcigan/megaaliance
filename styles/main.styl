@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic')
+
+@import 'helpers/variables.styl'
+@import 'helpers/mixins.styl'
+@import 'helpers/helpers.styl'
+
+@import 'base/base.styl'
+@import 'base/ui.styl'
+@import 'base/table.styl'
+@import 'base/typography.styl'
+@import 'base/animations.styl'
+@import 'base/icons.styl'
+@import 'base/modal.styl'
+
+@import 'modifications/modifications.styl'
+
+@import 'pages/index.styl'
+
+.grid--container
+  max-width 1542px
+  
+.megalink
+  &__icon
+    display inline-block
+    margin-right 1rem
+    vertical-align middle
+    img
+      display block
+  &__text
+    display inline-block
+    font-weight 500
+    vertical-align middle
+  &:hover
+    color $primary
+
+.top-header
+  background-color $gray
+  overflow hidden
+  padding 1.2rem 0
+  &__container
+    display flex
+    justify-content flex-end
+  &__phone
+    align-items center
+    background-color $light-gray
+    display flex
+    font-weight 500
+    font-size 1.8rem
+    margin -2rem 0
+    padding 0 3rem
+  &__callback
+    align-items center
+    background-color $primary
+    color #fff
+    display flex
+    font-weight 500
+    font-size 1.8rem
+    margin -2rem 0
+    margin-right 4.5rem
+    padding 0 3rem
+  &__item
+    display inline-block
+    &:not(:last-child)
+      margin-right 9rem
+  &__icon
+    display inline-block
+    margin-right 1rem
+    vertical-align middle
+  &__text
+    display inline-block
+    vertical-align middle
+
+.main-header
+  padding 2.5rem 0
+  &__container
+    align-items center
+    display flex
+    justify-content space-between
+
+.logo
+  background url('../../img/logo.png') no-repeat center
+  background-size contain
+  display block
+  height 57px
+  text-decoration none
+  width 203px
+
+.nav
+  margin-right -2.5rem
+  position relative
+  &__link
+    font-weight 400
+    text-decoration none
+    padding 0 2.5rem
+    position relative
+    &:after
+      content ''
+      background-color $primary
+      bottom -4.4rem
+      height 2px
+      left 0
+      position absolute
+      transition width .25s ease
+      width 0
+    &:hover
+    &--active
+      &:after
+        width 100%
+
+@import 'base/media.styl'
+
+
