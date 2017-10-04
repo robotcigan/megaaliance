@@ -17,13 +17,14 @@
 @import 'pages/index.styl'
 
 .grid--container
-  max-width 1542px
+  max-width 1540px
   
 .megalink
   &__icon
     display inline-block
     margin-right 1rem
     vertical-align middle
+    transition all .3s ease
     img
       display block
   &__text
@@ -32,6 +33,9 @@
     vertical-align middle
   &:hover
     color $primary
+    .megalink
+      &__icon
+        transform translateX(.5rem)
 
 .top-header
   background-color $gray
@@ -71,41 +75,215 @@
     vertical-align middle
 
 .main-header
-  padding 2.5rem 0
+  // padding 2.5rem 0
+  position relative
   &__container
     align-items center
     display flex
     justify-content space-between
 
 .logo
-  background url('../../img/logo.png') no-repeat center
+  background-image url('../../img/logo.png')
+  background-position center
+  background-repeat no-repeat
   background-size contain
   display block
+  flex-shrink 0
   height 57px
   text-decoration none
   width 203px
+  &--white
+    background-image url('../../img/logo-white.png')
+  &--with-solid
+    background-image url('../../img/logo-with-solid.png')
+    display inline-block
+    height 85px
+    margin-bottom 4rem
+    width 180px
 
 .nav
+  display flex
   margin-right -2.5rem
-  position relative
   &__link
+    // background-color teal
+    // border-left 1px solid #eee
+    display block
     font-weight 400
     text-decoration none
-    padding 0 2.5rem
-    position relative
+    // padding .6rem 2.5rem
+    & > a
+      display block
+      padding 4.5rem 2.5rem
     &:after
       content ''
+      display block
       background-color $primary
-      bottom -4.4rem
       height 2px
-      left 0
-      position absolute
       transition width .25s ease
+      // transform translateY(2.6rem)
       width 0
+    &:hover .subnav
+      opacity 1
+      transform none
     &:hover
     &--active
       &:after
         width 100%
+
+.subnav
+  background-color #f8f9fa
+  border-top 1px solid #f1efef
+  bottom -5.7rem
+  opacity 0
+  padding 2rem 0
+  position absolute
+  // transform translateY(1rem)
+  transition all .3s ease
+  left 0
+  width 100%
+  &__link
+    margin-right 5rem
+    &:hover
+      color $primary
+
+
+.like
+  background-image url('../../img/like.png')
+  background-size contain
+  background-repeat no-repeat
+  cursor pointer
+  height 2.1rem
+  position absolute
+  right 3rem
+  top 3rem
+  width 2.5rem
+  &:hover,
+  &--active
+    background url('../../img/like-active.png')
+
+
+.card
+  &__img
+    align-items flex-end
+    background-size cover
+    background-repeat no-repeat
+    display flex
+    min-height 28rem
+    padding 2.5rem
+    position relative
+  &__title
+    color #fff
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 1rem
+  &__address
+    align-items center
+    color #fff
+    display flex
+    font-weight 600
+    img
+      margin-right 1rem
+  &__container
+    background-color #fff
+    padding 3rem 2.5rem
+    position relative
+  &__row
+    border-bottom 1px solid #eaeaea
+    display flex
+    justify-content space-between
+    margin-bottom 1.2rem
+    padding-bottom 1.2rem
+  &__price
+    margin-bottom 2.5rem
+  &__status
+    bottom 2.5rem
+    color $gray - 10%
+    display flex
+    position absolute
+    right 2.5rem
+    img
+      display block
+      margin-right 1rem
+    span
+      transform translateY(1px)
+
+
+
+.pre-footer
+  background-color #95a3b3
+  overflow hidden
+  padding $main-padding
+  &__container
+    padding-left (275 / $container-width * 100)%
+    position relative
+    &:before
+      palka()
+      background-color #fff
+      height 3px
+      width 62px
+  &__arm
+    bottom -22rem
+    position absolute
+    right (300 / $container-width * 100)%
+    transition transform .3s ease
+  &:hover
+    .pre-footer
+      &__arm
+        transform translateY(-2rem)
+      
+
+.main-footer
+  background #282828
+  padding $main-padding
+  .logo
+    margin-bottom 3rem
+  p
+    color #fff
+    font-size 1.4rem
+
+.main-footer-nav
+  &__link
+    margin-bottom 2rem
+    a
+      border-bottom 1px dotted rgba(#fff, .2)
+      color #fff
+      font-weight 600
+  &--gray
+    .main-footer-nav
+      &__link
+        a
+          color $dark-gray
+          font-size 1.4rem
+
+.copy
+  color $dark-gray
+  font-size 1.4rem
+  line-height 1.6
+  margin-bottom 4.5rem
+
+.wf
+  color #fff
+  font-size 1.4rem
+  &:hover
+    color $primary
+
+.socials
+  display flex
+  margin-bottom 3.5rem
+  .social
+    align-items center
+    background-color #fff
+    border-radius 50%
+    circle(4rem)
+    color #303334
+    display flex
+    justify-content center
+    .fa
+      font-size 1.8rem
+    .fa-vk
+      transform translateX(-1px)
+    &:not(:last-child)
+      margin-right .6rem
 
 @import 'base/media.styl'
 

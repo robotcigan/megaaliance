@@ -3,121 +3,41 @@
 // html.mobile-menu-was-open
 //   overflow hidden
 
-@media (max-width: 767px)
-  .row
-    margin 0 -2%
-  .wf
-    margin-bottom 2.4rem
+@media(max-width 1630px)
+  .nav
+    margin-right 0
+
+@media(max-width 1550px)
+  .grid--container
+    max-width 96%
+  .nav
+    &__link
+      & > a
+        padding 4.5rem 1rem
+  .pre-footer
+    &__arm
+      right 5%
+
+@media(max-width 1400px)
+  .logo
+    width 150px
+  .form-control--inline
+    label
+      margin-right 1rem
+    input,
+    select,
+    .select2-selection--single
+      max-width initial
+  // .nav
+  //   &__link
+  //     & > a
+  //       padding 4.5rem 1rem
 
 @media(max-width 1200px)
   body
     &.body--cursor-pointer
       cursor pointer
+  .pre-footer
+    &__arm
+      right 0
 
-.mobile-header
-  background-color $main
-  display none
-  height 7rem
-  margin-bottom 0
-  position relative
-  padding 1rem 0
-  transition transform .4s ease
-  width 100%
-  .logo
-    &__icon
-      background url('../../img/logo-white.png') no-repeat
-      background-size contain
-      margin-right 0
-      transform translateX(-1rem)
-    &__text
-      color #fff
-
-.mobile-menu-toggle
-  cursor pointer
-  display none
-  position absolute
-  right 3rem
-  top 2.8rem
-  size(12px, 15px)
-  transition transform .4s ease
-  &:before
-    // background-color rgba(#fff, .97)
-    content ''
-    left -3.5rem
-    position absolute
-    top -3rem
-    circle(8rem)
-  span
-    // background-color $primary
-    background-color #fff
-    display block
-    height 2px
-    position absolute
-    top 0
-    transition all .3s
-    width 3rem
-    &:nth-child(2)
-      top 8px
-    &:nth-child(3)
-      top 16px
-  &--active
-    span
-      &:nth-child(1)
-        transform rotate(45deg)
-        top 5px
-      &:nth-child(2)
-        opacity 0
-      &:nth-child(3)
-        transform rotate(-45deg)
-        top 5px
-
-.mobile-menu
-  background-color $main
-  color #fff
-  display none
-  border-top 1px solid rgba(#fff, .1)
-  padding 4rem 1rem
-  &__links
-    display block
-    margin-bottom 4rem
-  &__link
-    margin-bottom 2.5rem
-    a
-      color #fff
-      display inline-block
-      font-size 2rem
-      font-weight 600
-      text-decoration none
-      text-transform uppercase
-  .btn
-    margin-top 1rem
-    margin-bottom 3.5rem
-  .contact
-    &__phone
-      font-size 2.4rem
-      font-weight 600
-      margin-bottom 2rem
-
-@media(max-width 1200px)
-  .grid--container
-    max-width 96%
-  .main-header
-    .logo
-      &__text
-        display none
-
-@media(max-width 960px)
-  .main-header
-    display none
-  .mobile-header
-    display block
-  .mobile-menu-toggle
-    display block
-  .nav
-    display none
-
-@media(max-width 420px)
-  .mobile-header
-    .logo
-      &__text
-        font-size 2rem

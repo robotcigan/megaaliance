@@ -11,7 +11,7 @@ reload = browserSync.reload
 
 
 swallowError = (error) ->
-  console.log(error.toString())
+  console.log('error from swallow function -> ', error.toString())
   this.emit('end')
 
 

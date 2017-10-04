@@ -11,10 +11,9 @@
   flex-shrink 0
   line-height 1
   letter-spacing .4px
-  max-height 6rem
-  padding 2.2rem 3.5rem
+  max-height 5.4rem
+  padding 1.9rem 4rem
   text-decoration none
-  text-transform uppercase
   transition all .4s
   &__icon
     line-height 1 !important
@@ -40,13 +39,20 @@
     padding 2.2rem 3rem
     text-align center
     width 100%
-  &--white
+  &--dotted
     background-color transparent
-    border 1px solid #fff
-    color #fff
-    margin-bottom 2rem
+    border 1px dashed rgba(#fff, .7)
+    &:hover
+      border-color $primary
+  &--big
+    font-size 2.2rem
+    font-weight 300
+    max-height initial
+    padding 3.6rem 5.6rem
   &--small
     padding 1.6rem 3.6rem
+  & + .btn
+    margin-left 2rem
 
 .flatpickr
   &-month
@@ -59,28 +65,30 @@
       &:after
         display none !important
 
-// .form
-//   margin-bottom 4rem
-
 .form-control
-  min-height 5rem
-  margin-bottom 1.6 rem
+  // min-height 5rem
+  margin-bottom 1.6rem
   position relative
   &__icon
-    color $gray
-    font-size 3.2rem
+    color $primary
+    font-size 2.2rem
     position absolute
     right 2rem
-    top 3rem
+    top 5rem
     .fa
       transition all .2s
+  &__text
+    color #d9e5ea
+    position absolute
+    right 2rem
+    top 5.2rem
   label
     color $main
     cursor text
     display inline-block
     line-height 1
-    font-weight 300
-    margin-bottom .8rem
+    font-weight 500
+    margin-bottom 1.8rem
     transition all .2s
     max-width 100%
   input[type="text"],
@@ -93,14 +101,15 @@
   textarea,
   .select2-selection--single
     background #fff
-    border 2px solid $light-gray
-    border-radius 0
+    border none
+    border-radius $radius
     display block
-    font-size 1.6rem
+    font-family $font
+    font-size 1.8rem
     line-height 1
-    min-height 4rem
+    // min-height 4rem
     transition border-color .2s
-    padding 1.3rem 1.6rem
+    padding 1.6rem 2rem
     position relative
     resize vertical
     width 100%
@@ -112,6 +121,7 @@
   textarea
     height 100%
     min-height 22rem
+
   .select2-container--open + .form-control__icon
       transform rotate(180deg)
   &--error
@@ -129,14 +139,48 @@
       color $error
     .form-control__icon
       color $error
+  
+  &--inline
+    align-items center
+    display flex
+    justify-content space-between
+    label
+      flex-shrink 0
+      margin-bottom 0
+      margin-right 5rem
+    input,
+    select,
+    .select2-selection--single
+      max-width 40%
+    .form-control
+      &__text
+        top 1.8rem
 
-.custom-select
-  &--type-2
-    font-size 3.8rem !important
-    padding 1rem 3rem !important
-    padding-right 6rem !important
-    & + .form-control__icon
-      top .5rem
+
+.select2
+  &-container--default
+    .select2-selection__arrow b
+      display none
+  &-dropdown
+    border $border
+  &-selection
+    &--single
+      height initial !important
+    &__rendered
+      line-height 1.2 !important
+      padding-left 0 !important
+  &-results__option
+    padding 1.2rem
+    padding-left 2rem
+  &-container--open .select2-dropdown--below
+    box-shadow 0 16px 24px 0 rgba(135, 149, 163, .1)
+  &-dropdown.select2-dropdown--below 
+    animation fadeUp .3s forwards
+
+
+// dropdown element hover
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+  background-color $primary
 
 .checkbox
   cursor pointer
@@ -248,10 +292,10 @@
       color #fff
 
   &__buttons
-    align-item center
+    align-items center
     display flex
     position absolute
-    top .8rem
+    top .5rem
     right 0
     .item
       align-items center

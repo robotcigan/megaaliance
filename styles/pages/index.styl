@@ -1,9 +1,96 @@
 .hero
-  background url('../../img/hero.jpg') no-repeat center
+  background url('../../img/hero.jpg') no-repeat bottom center
   background-size cover
-  min-height 80rem
+  min-height 60rem
+  height calc(100vh - 15rem)
   margin-bottom $main-offset
   width 100%
+  &__container
+    align-items flex-end
+    display flex
+    height 100%
+  &-form
+    border-radius $radius
+    height 5.4rem
+    margin-bottom 10rem
+    display flex
+    &__control
+      width 100%
+      input,
+      select,
+      .select2-selection--single
+        border none
+        border-radius 0
+        font-family $font
+        font-size 1.4rem
+        height 5.4rem !important
+        padding-left 2rem
+        width 100%
+      .select2-selection--single
+        padding-top 1.8rem
+      &:not(:last-child)
+        border-right $border
+    .btn
+      margin-left 1rem
+
+.hero-slider
+  // margin-bottom 14rem !important
+  margin-bottom (70 / 960 * 100)% !important
+  .slide
+    color #fff
+    &__title
+      font-size 4.8rem
+      font-weight 600
+      margin-bottom 3rem
+    &__subtitle
+      font-size 2.2rem
+      font-weight 500
+      margin-bottom .5rem
+    &__sub
+      font-size 2.2rem
+      font-weight 400
+  .slick-dots
+    margin-top 3.6rem
+    position initial
+    text-align left
+
+.hero__icons
+  display flex
+  justify-content space-between
+  margin-bottom 6rem
+  &-left
+    display flex
+  .icon
+    align-items center
+    cursor pointer
+    display flex
+    margin-right 7rem
+    &__symbol
+      align-items center
+      border 2px solid #fff
+      border-radius 50%
+      circle(57px)
+      display flex
+      justify-content center
+      margin-right 1rem
+      vertical-align middle
+      transition all .1s ease
+      img
+        display block
+    &__text
+      color #fff
+      font-size 1.4rem
+      font-weight 600
+      line-height 1.2
+    &:hover
+      .icon
+        &__symbol
+          background-color $primary
+          border-color $primary
+  &-absolute
+    position absolute
+    top 22rem
+    right 0
 
 .section
   padding $main-padding
@@ -13,34 +100,173 @@
     background-color $light-gray
   &--news
     background-color $baby-blue
+  &--mortage
+    background-color #eaeaea
+  &--mortage-star
+    background-color #eee
+    padding 4rem 0
+  &--short-news
+    padding 4rem 0
+
+.index-slider
+  .slide
+    min-height 48rem
+    position relative
+    &__left
+      align-items center
+      background-color $primary
+      bottom 0
+      color #fff
+      display flex
+      font-size 2rem
+      font-weight 500
+      height 23rem
+      justify-content center
+      position absolute
+      left (125 / $container-width * 100)%
+      line-height 1.2
+      margin auto
+      padding 4rem
+      top 0
+      width 24rem
+    &__right
+      background-color $primary
+      color #fff
+      height 100%
+      padding 7rem
+      position absolute
+      right 0
+      width 48rem
+    .megalink
+      &:hover
+        .megalink
+          &__text
+            color #fff
+
+.object-card
+  background-repeat no-repeat
+  background-position top center
+  background-size cover
+  width 100%
+  &__container
+    padding 3.5rem 3rem
+    padding-top 30rem
+    position relative
+  &__title
+    color #fff
+    font-size 3.6rem
+    font-weight 800
+    margin-bottom 1rem
+  &__info
+    display flex
+  &__address,
+  &__time
+    margin-bottom 1rem
+    margin-right 2rem
+    span
+      color #fff
+      font-weight 600
+      display inline-block
+      vertical-align middle
+    img
+      display inline-block
+      margin-right 1rem
+      vertical-align middle
+  &__price
+    color #fff
+    font-size 3rem
+    font-weight 600
+    margin-bottom 3rem
+  .megalink
+    color #fff
+  &__logo
+    bottom (90 / 500 * 100)%
+    position absolute
+    right (60 / 1000 * 100)%
 
 .formats
   display flex
   flex-wrap wrap
+  position relative
   .item
-    align-items center
-    background-repeat no-repeat
-    background-size cover
-    display flex
-    justify-content center
     height 32rem
+    transition all .3s ease
     width 50%
+    &__container
+      align-items center
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      display flex
+      justify-content center
+      height 100%
+      transition all .4s ease
+      width 100%
     &__text
       color #fff
       font-size 2.4rem
       font-weight 600
-    &__title
-      font-size 3rem
-      font-weight 300
-      margin-bottom 2.5rem
-    &__anons
-      margin-bottom 3rem
-    &--white
+    .block
       background-color #fff
-      display block
+      height 100%
+      opacity 0
       padding-left 6rem
       padding-top 6rem
       padding-right 10rem
+      transform translateY(-100%)
+      transition opacity .4s ease
+      &__title
+        font-size 3rem
+        font-weight 300
+        margin-bottom 2.5rem
+      &__anons
+        margin-bottom 3rem
+    &:hover
+      .item
+        &__container
+          opacity 0
+          transform scale(.95)
+      .block
+        opacity 1
+  &:hover
+    .circle
+      circle(20rem)
+      transform scale(.6)
+      &__icon
+        margin-bottom 0
+        margin-top 1rem
+      &__text
+        opacity 0
+        translateY(2rem)
+        
+
+
+.circle
+  align-items center
+  background-color $primary
+  border-radius 50%
+  center()
+  circle(26rem)
+  display flex
+  flex-direction column
+  justify-content center
+  position absolute
+  transition all .3s ease
+  &:after
+    border-radius 50%
+    content ''
+    circle(28rem)
+    center()
+    opacity .5
+  &__icon
+    margin-bottom 2rem
+    margin-top -2.5rem
+    transition all .3s ease
+  &__text
+    color #fff
+    font-size 2.4rem
+    font-weight 500
+    transition all .3s ease
 
 .banks
   .bank
@@ -53,9 +279,19 @@
       justify-content space-between
       padding 4rem 4rem
       transition all .6s ease
+      will-change filter
+    &__info
+      align-items center
+      display flex
+      justify-content space-between
+      margin-right 2rem
+      width (410 / $container-width * 100)%
+    &__logo
+      margin-right 1rem
     &__percent
       font-size 3rem
       font-weight 300
+      flex-shrink 0
     &__table
       display flex
       justify-content center
@@ -91,25 +327,83 @@
   margin-left -1.5rem
   margin-right -1.5rem
   &__item
+    display block
     background-color #fff
     margin-left 1.5rem
     margin-right 1.5rem
+    &:hover
+      .news-slider
+        &__hover
+          opacity 1
+          transform none
+        &__img
+          transform translateY(100%)
+          &:after
+            opacity 1
+        &__date
+          color #fff
+        &__title
+          color #fff
+      .megalink
+        opacity 1
+        transform none
+  &__hover
+    align-items center
+    background-color $primary
+    display flex
+    height 24rem
+    opacity 0
+    margin-bottom -24rem
+    padding 4rem
+    transform translateY(2rem)
+    transition all .3s ease
+    &-container
+      align-items center
+      display flex
+      flex-shrink 0
+      justify-content space-between
+      width 100%
+    &-title
+      color #fff
+      font-size 3rem
+      font-weight 600
+      line-height 1.2
+      span
+        display block
+        font-size 2.4rem
   &__img
     background-repeat no-repeat
     background-size cover
-    height 22rem
+    height 24rem
+    position relative
+    transition all .4s ease
+    z-index 1
+    &:after
+      background-color rgba($main, .6)
+      content ''
+      height 100%
+      left 0
+      opacity 0
+      position absolute
+      top 0
+      transition opacity .3s ease
+      width 100%
   &__container
-    min-height 25rem
+    min-height 24rem
     padding 2rem
     padding-top 4rem
+    position relative
+    z-index 5
   &__date
     colort $baby-blue - 10%
     font-weight 500
     margin-bottom 2.5rem
+    transition all .2s ease
   &__title
     font-size 1.8rem
     line-height 1.4
     margin-bottom 5rem
+    transition all .2s ease
   &__video
     &-icon
       display inline-block
@@ -120,6 +414,12 @@
     &-text
       display inline-block
       vertical-align middle
+  .megalink
+    color #fff
+    display inline-block
+    opacity 0
+    transform translateY(1rem)
+    transition opacity .3s ease .3s, transform .3s ease .3s
   &__item--extra
     .news-slider
       &__img
@@ -162,7 +462,38 @@
       // &__down
       //   bottom 0
       //   position absolute
-    
+
+.offers-slider
+  .slide
+    position relative
+    &__box
+      background-color $primary
+      bottom 0
+      color #fff
+      display flex
+      margin auto
+      max-height 27rem
+      padding 5rem
+      padding-right 15rem
+      position absolute
+      top 0
+      right 0
+      z-index 10
+    &__icon
+      margin-right 5rem
+    &__title
+      font-size 3rem
+      font-weight 600
+      line-height 1.2
+      max-width 34rem
+      margin-bottom 3rem
+    &__phone
+      font-size 3rem
+      font-weight 300
+      margin-bottom 2rem
+    &__date
+      opacity .7
+
 .white-block
   overflow hidden
   padding 6rem 0
@@ -183,18 +514,13 @@
     padding-left (100 / 1150 * 100)%
     width 100%
     &:after
-      background-color $primary
-      content ''
-      height 4px
-      left 0
-      position absolute
-      top 50%
-      width 44px
+      palka()
   &__second-header
     margin-bottom 1.5rem
   &__text
     color $secondary - 20%
-    line-height 1.4
+    line-height 1.45
+    max-width 60rem
   &__img
     bottom -18rem
     left (800 / 1150 * 100)%
@@ -205,3 +531,98 @@
       &__img
         transform translateY(-1.5rem)
 
+.calc
+  font-size 2.4rem
+  font-weight 300
+  padding-left .4rem
+  padding-top 2.5rem
+  position relative
+  &:after
+    background-color $primary
+    content ''
+    height 4px
+    left .4rem
+    position absolute
+    top .4rem
+    width 44px
+  &__result
+    color $primary
+    display inline-block
+    font-weight 500
+
+.noUi
+  &-value-large
+    &:nth-child(2)
+      padding-left 4rem
+    &:last-child
+      padding-right 4.5rem
+
+#initial-pay
+  .noUi
+    &-value-large
+      &:nth-child(2),
+      &:last-child
+        &:after
+          content ' млн'
+
+#credit-term
+  .noUi
+    &-value-large
+      &:nth-child(2)
+        &:after
+          content ' год'
+      &:last-child
+        &:after
+          content ' лет'
+
+.mortage-star
+  font-size 1.4rem
+  font-weight 300
+  line-height 1.6
+  padding-left 2.5rem
+  position relative
+  &:after
+    content '*'
+    color $primary
+    font-size 2.4rem
+    font-weight 500
+    left 0
+    position absolute
+    top -1rem
+    
+
+.short-news
+  display flex
+  &__left
+    color $primary
+    padding-left 3rem
+    width 26rem
+
+@media(max-width 1540px)
+  .grid.grid--container
+    padding 0 1.5rem
+  .object-card
+    &__logo
+      bottom initial
+      left 3.5rem
+      top 6%
+      right initial
+
+@media(max-width 1400px)
+  .index-slider .slide__right
+    padding 7rem 4rem
+  .tabs__buttons
+    .item:not(:last-child)
+      margin-right 1rem
+
+@media(max-width 1200px)
+  .banks
+    .bank
+      &__top
+        flex-wrap wrap
+      &__info
+        justify-content initial
+        margin-bottom 4rem
+        width 100%
+      &__logo
+        margin-right 5rem

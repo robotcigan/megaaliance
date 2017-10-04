@@ -29,19 +29,83 @@ html(lang="ru")
         .main-header__container
           a(href="").logo
           .nav
-            a(href="#").nav__link О компании
-            a(href="#").nav__link Объекты в продаже
-            a(href="#").nav__link Выбор квартир
-            a(href="#").nav__link Покупателям
-            a(href="#").nav__link Проекты
-            a(href="#").nav__link Новости и акции
-            a(href="#").nav__link Риэлторам
-            a(href="#").nav__link Ход сроительства
+            .nav__link
+              a(href="") О компании
+              .subnav
+                .grid.grid--container
+                  a(href="").subnav__link О компании
+                  a(href="").subnav__link О компании
+            .nav__link
+              a(href="") Объекты в продаже
+              .subnav
+                .grid.grid--container
+                  a(href="").subnav__link История
+                  a(href="").subnav__link Руководство
+                  a(href="").subnav__link Менеджеры
+                  a(href="").subnav__link Документы
+                  a(href="").subnav__link Партнеры
+                  a(href="").subnav__link Вакансии
+                  a(href="").subnav__link Контакты
+            .nav__link
+              a(href="#") Выбор квартир
+            .nav__link
+              a(href="#") Покупателям
+            .nav__link
+              a(href="#") Проекты
+            .nav__link
+              a(href="#") Новости и акции
+            .nav__link
+              a(href="#") Риэлторам
+            .nav__link
+              a(href="#") Ход сроительства
 
     block content
 
+    section.pre-footer
+      .grid.grid--container
+        .pre-footer__container
+          .btn.btn--big.btn--dotted Задать вопрос
+          .btn.btn--big.btn--dotted Подписаться на акции
+          .pre-footer__arm
+            img(src="./img/arm.png", alt="")
+
     footer.main-footer
-      h2 footer
+      .grid.grid--container
+        .row
+          .col.col--sm-3
+            .logo.logo--white
+            .copy Квартиры от застройщика в Краснодаре<br>&copy; 2015—2017
+            a(href="").wf Создание сайта в Webformula
+          .col.col--sm-2
+            .main-footer-nav
+              .main-footer-nav__link
+                a(href="") О компании
+              .main-footer-nav__link
+                a(href="") Объекты в продаже
+              .main-footer-nav__link
+                a(href="") Новости и Акции
+              .main-footer-nav__link
+                a(href="") Риэлторам
+          .col.col--sm-3
+            .socials
+              a(href="").social
+                i.fa.fa-vk
+              a(href="").social
+                i.fa.fa-facebook
+              a(href="").social
+                i.fa.fa-odnoklassniki
+              a(href="").social
+                i.fa.fa-instagram
+            .main-footer-nav.main-footer-nav--gray
+              .main-footer-nav__link
+                a(href="") Политика конфиденциальности
+              .main-footer-nav__link
+                a(href="") Карта сайта
+          .col.col--sm-4
+            p.text-gray Официальный сай застройщика ООО «МегаАльянс».Новости, отзывы покупателей, мнение о квартальной застройке.
+            p 350062, Краснодар,Пр-т им. Константина Образцова, 2<br>понедельник - пятница, с 9:00 до 18:00
+            a(href="").btn Офисы продаж
+ 
 
 
     #callback.modal
@@ -81,7 +145,10 @@ html(lang="ru")
     script(src="./js/jquery.min.js")
     script(src="./js/jquery.easeScroll.js")
     script(src="./js/slick.min.js")
-    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/select2.min.js")
+    script(src="./js/nouislider.min.js")
+    script(src="./js/wNumb.js")
     script(src="./js/jquery.magnific-popup.min.js")
-    script(src="./js/sticky.js")
+    script(src="./js/flatpickr.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
     script(src="./js/main.js")
