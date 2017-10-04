@@ -15,6 +15,7 @@
 @import 'modifications/modifications.styl'
 
 @import 'pages/index.styl'
+@import 'pages/object.styl'
 
 .grid--container
   max-width 1540px
@@ -146,6 +147,31 @@
     &:hover
       color $primary
 
+.breadcrumbs
+  padding 5rem 0
+  &__link
+    color $secondary
+    display inline-block
+    font-size 1.4rem
+    position relative
+    line-height 1
+    margin-right 3rem
+    text-decoration none
+    &:after
+      content '\f105'
+      color $primary
+      font-family FontAwesome
+      font-weight 600
+      position absolute
+      right -1.6rem
+      top 0
+    &--active
+      &:after
+        display none
+      &:hover
+        color $secondary !important
+    &:hover
+      color $primary
 
 .like
   background-image url('../../img/like.png')
@@ -207,6 +233,10 @@
     span
       transform translateY(1px)
 
+
+#map
+  width 100%
+  height 40rem
 
 
 .pre-footer

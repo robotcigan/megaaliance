@@ -8,6 +8,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="styles/css/vendor.css">
     <link rel="stylesheet" href="styles/css/main.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="mapbasics.js" type="text/javascript"></script>
   </head>
   <body>
     <header class="top-header">
@@ -50,7 +52,7 @@
         </div>
       </div>
     </header>
-    <div class="hero">
+    <div class="hero hero--small" style="background-image: url(img/object.jpg);">
       <div class="hero__container">
         <div class="grid grid--container">
           <div class="hero-slider slider">
@@ -119,396 +121,105 @@
         </div>
       </div>
     </div>
-    <section class="section section--slider">
+    <div class="breadcrumbs">
       <div class="grid grid--container">
-        <h2 class="h2">Застройщик квартир в Краснодаре</h2>
-        <p class="subheader">В  нашем активе — как отдельные дома, так и масштабные жилые комплексы</p>
-        <div class="index-slider slider">
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
-            <div class="slide__right">
-              <div class="text-center">
-                <div class="logo logo--with-solid"></div>
-              </div>
-              <p>Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
-            <div class="slide__right">
-              <div class="text-center">
-                <div class="logo logo--with-solid"></div>
-              </div>
-              <p>Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
-            <div class="slide__right">
-              <div class="text-center">
-                <div class="logo logo--with-solid"></div>
-              </div>
-              <p>Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section--formats">
-      <h2 class="h2">Качественно новое пространство для жизни</h2>
-      <p class="subheader">Разнообразие форматов квартир, широкий выбор планировочных решений и продуманная инфраструктура.</p>
-      <div class="grid grid--container">
-        <div class="tabs">
-          <div class="tabs__header-container">
-            <div class="tabs__header">
-              <div class="tabs__link tabs__link--active">Объекты в продаже</div>
-              <div class="tabs__link">Реализованные проекты</div>
-            </div>
-            <div class="tabs__buttons"><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">На карте</div></a></div>
-          </div>
-          <div class="tabs__content tabs__content--active">
-            <div class="row">
-              <div class="col col--lg-flex col--xl-4 col--sm-5">
-                <div class="object-card" style="background-image: url(img/card-1.jpg);">
-                  <div class="object-card__container">
-                    <div class="object-card__title">ЖК «Янтарный 4»</div>
-                    <div class="object-card__address"><img src="./img/address.png" alt=""><span>ул. Симеренко, 71.</span></div>
-                    <div class="object-card__price">от 1 500 000 до 4 150 000 руб.</div><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                      <div class="megalink__text">подробнее</div></a>
-                    <div class="like"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col col--lg-flex col--xl-8 col--sm-7">
-                <div class="object-card" style="background-image: url(img/card-2.jpg);">
-                  <div class="object-card__container">
-                    <div class="object-card__title">ЖК «Семейный парк»</div>
-                    <div class="object-card__info">
-                      <div class="object-card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
-                      <div class="object-card__time"><img src="./img/clock-white.png" alt=""><span>Старт продаж. Срок сдачи — 3й квартал 2018</span></div>
-                    </div>
-                    <div class="object-card__price">от 800 000 до 2 500 000 руб.</div><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                      <div class="megalink__text">подробнее</div></a>
-                    <div class="like"></div>
-                    <div class="object-card__logo"><img src="./img/park.png" alt=""></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tabs__content">
-            <div class="row">
-              <div class="col col--sm-4">
-                <div class="card">
-                  <div class="card__img" style="background-image: url(./img/cards/1.jpg);">
-                    <div class="card__img-container">
-                      <div class="card__title">ЖК «Янтарный 3»</div>
-                      <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
-                      <div class="like"></div>
-                    </div>
-                  </div>
-                  <div class="card__container">
-                    <div class="card__table">
-                      <div class="card__row"><span>Этажность</span><span>16</span></div>
-                      <div class="card__row"><span>Количество литеров</span><span>2</span></div>
-                    </div>
-                    <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                      <div class="megalink__text">подробнее</div></a>
-                    <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col col--sm-4">
-                <div class="card">
-                  <div class="card__img" style="background-image: url(./img/cards/2.jpg);">
-                    <div class="card__img-container">
-                      <div class="card__title">ЖК «Янтарный 3»</div>
-                      <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
-                      <div class="like"></div>
-                    </div>
-                  </div>
-                  <div class="card__container">
-                    <div class="card__table">
-                      <div class="card__row"><span>Этажность</span><span>16</span></div>
-                      <div class="card__row"><span>Количество литеров</span><span>2</span></div>
-                    </div>
-                    <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                      <div class="megalink__text">подробнее</div></a>
-                    <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col col--sm-4">
-                <div class="card">
-                  <div class="card__img" style="background-image: url(./img/cards/3.jpg);">
-                    <div class="card__img-container">
-                      <div class="card__title">ЖК «Янтарный 3»</div>
-                      <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
-                      <div class="like"></div>
-                    </div>
-                  </div>
-                  <div class="card__container">
-                    <div class="card__table">
-                      <div class="card__row"><span>Этажность</span><span>16</span></div>
-                      <div class="card__row"><span>Количество литеров</span><span>2</span></div>
-                    </div>
-                    <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                      <div class="megalink__text">подробнее</div></a>
-                    <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="white-block">
-      <div class="grid grid--container">
-        <div class="row row--lg-center">
-          <div class="col col--md-flex col--md-3">
-            <div class="white-block__left">
-              <div class="white-block__title">Скидка 2%</div>
-              <div class="white-block__subtitle">при 100% оплате и ипотеке</div>
-            </div>
-          </div>
-          <div class="col col--md-flex col--md-9">
-            <div class="white-block__right">
-              <div class="white-block__second-header">Рассрочки</div>
-              <div class="white-block__text">На 3 месяца без удорожания (от 40% первоначальный взнос) <br>На 6 мес с удорожанием (2% на остаток, от 40% первоначальный взнос)</div>
-              <div class="white-block__img"><img src="./img/coin.png" alt=""></div>
-            </div>
-          </div>
+        <div class="breadcrumbs__container"><a class="breadcrumbs__link" href="">Главная</a><a class="breadcrumbs__link" href="">Объекты в продаже</a>
+          <div class="breadcrumbs__link breadcrumbs__link--active">ЖК «Семейный парк»</div>
         </div>
       </div>
     </div>
-    <section class="section section--formats">
+    <section class="section section--gray">
       <div class="grid grid--container">
-        <h2 class="h2">Редкие форматы квартир</h2>
-        <p class="subheader">Казалось бы, незначительные улучшения кардинально меняют качество жизни обладателей наших квартир.</p>
-        <div class="formats">
-          <div class="item">
-            <div class="item__container" style="background-image: url(./img/formats/1.jpg);">
-              <div class="item__text">Для гармоничных</div>
+        <h2 class="h2">Все, что нужно для комфортной жизни в городе</h2>
+        <p class="subheader">Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.</p>
+        <div class="comfort">
+          <div class="comfort__left">
+            <div class="comfort__title">Развитый район</div>
+            <div class="comfort__text">
+              <p>ЖК «Семейный Парк» расположен в новом микрорайоне Молодежный в Северо-западной части г. Краснодара. Здесь создается новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.</p>
+              <p>В жилом комплексе мы предусмотрели возможность для семейного отдыха и активного досуга - благоустроенные площадки, спортивный клуб, кафе. Мини-маркет, аптека, медицинский центр, салон красоты - все необходимое для комфортной жизни рядом с домом.<br>Безусловные преимущества комплекса: высокое качество строительства, яркая архитектура, комфортная плотность застройки, теплосберегающая технология отделки фасадов домов и при этом - доступная стоимость жилья.</p>
             </div>
-            <div class="block">
-              <div class="block__title">Дизайн проекты квартир</div>
-              <p class="block__anons">Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item__container" style="background-image: url(./img/formats/2.jpg);">
-              <div class="item__text">Для гармоничных</div>
-            </div>
-            <div class="block">
-              <div class="block__title">Дизайн проекты квартир</div>
-              <p class="block__anons">Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
+            <div class="comfort__info">
+              <div class="comfort__address"><img src="./img/address-red.png" alt=""><strong>Прикубанский, 9-я Тихая.</strong></div>
+              <div class="comfort__date"><img src="./img/clock-red.png" alt=""><strong>Срок сдачи — 3й квартал 2018</strong></div>
             </div>
           </div>
-          <div class="item">
-            <div class="item__container" style="background-image: url(./img/formats/2.jpg);">
-              <div class="item__text">Для гармоничных</div>
-            </div>
-            <div class="block">
-              <div class="block__title">Дизайн проекты квартир</div>
-              <p class="block__anons">Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item__container" style="background-image: url(./img/formats/3.jpg);">
-              <div class="item__text">Для гармоничных</div>
-            </div>
-            <div class="block">
-              <div class="block__title">Дизайн проекты квартир</div>
-              <p class="block__anons">Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.</p><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Подробнее</div></a>
-            </div>
-          </div>
-          <div class="circle">
-            <div class="circle__icon"><img src="./img/divider.png" alt=""></div>
-            <div class="circle__text">В центре жизни</div>
+          <div class="comfort__right">
+            <div class="comfort__img" style="background-image: url(img/comfort.jpg);"></div>
           </div>
         </div>
       </div>
     </section>
-    <div class="white-block">
-      <div class="grid grid--container">
-        <div class="row row--lg-center">
-          <div class="col col--md-flex col--md-3">
-            <div class="white-block__left">
-              <div class="white-block__title">Проект<br>в жизнь</div>
-            </div>
-          </div>
-          <div class="col col--md-flex col--md-9">
-            <div class="white-block__right">
-              <div class="white-block__text">Воплотить дизайн-проект в жизнь помогут наши профессиональные команды строителей! Все работы проводятся с учетом законодательства и только с качественными строительными материалами!</div>
-            </div>
+    <section>
+      <div class="why">
+        <div class="why__images">
+          <div class="image image--active" style="background-image: url(img/park-img.jpg);"></div>
+          <div class="image" style="background-image: url(img/fitness.jpg);"></div>
+          <div class="image image--active" style="background-image: url(img/park-img.jpg);"></div>
+          <div class="image" style="background-image: url(img/fitness.jpg);"></div>
+          <div class="image image--active" style="background-image: url(img/park-img.jpg);"></div>
+        </div>
+        <div class="why__container">
+          <div class="grid grid--container">
+            <div class="why__title">Почему мы?</div>
+            <div class="why__text">Проектируя ЖК «Семейный парк», мы хотели, чтобы жизнь в нем протекала гармонично. Собрав все лучшее из опыта строительства в одном месте, мы постарались создать для жильцов максимум комфорта. При этом стоимость жилья будет оставаться на уровне "эконом"</div>
           </div>
         </div>
-      </div>
-    </div>
-    <section class="section section--news">
-      <h2 class="h2">Новости и спецпредложения</h2>
-      <p class="subheader">Новости и самые выгодные предложения для подписчиков</p>
-      <div class="grid grid--container">
-        <div class="tabs">
-          <div class="tabs__header-container">
-            <div class="tabs__header">
-              <div class="tabs__link tabs__link--active">Новости</div>
-              <div class="tabs__link">Спецпредложения</div>
-            </div>
-            <div class="tabs__buttons"><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Все новости и акции</div></a></div>
-          </div>
-          <div class="tabs__content tabs__content--active">
-            <div class="news-slider slider">
-              <div class="news-slider__item">
-                <div class="news-slider__hover">
-                  <div class="news-slider__hover-container">
-                    <div class="news-slider__hover-title"><span>Яркая жизнь</span>вместе<br>с МегаАльянс</div>
-                    <div class="news-slider__hover-ico"><img src="./img/microphone.png" alt=""></div>
-                  </div>
-                </div>
-                <div class="news-slider__img" style="background-image: url(./img/news/1.jpg);"></div>
-                <div class="news-slider__container">
-                  <div class="news-slider__date">5 мая 2017</div>
-                  <div class="news-slider__title">Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.</div>
-                  <div class="news-slider__down"><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                      <div class="megalink__text">Подробнее</div></a></div>
-                </div>
+        <div class="why__align">
+          <div class="grid grid--container">
+            <div class="why__icons">
+              <div class="icon">
+                <div class="icon__img"><img src="./img/why/park.png" alt=""></div>
+                <div class="icon__text">Парковые<br>зоны</div>
               </div>
-              <div class="news-slider__item">
-                <div class="news-slider__hover">
-                  <div class="news-slider__hover-container">
-                    <div class="news-slider__hover-title"><span>Яркая жизнь</span>вместе<br>с МегаАльянс</div>
-                    <div class="news-slider__hover-ico"><img src="./img/microphone.png" alt=""></div>
-                  </div>
-                </div>
-                <div class="news-slider__img" style="background-image: url(./img/news/2.jpg);"></div>
-                <div class="news-slider__container">
-                  <div class="news-slider__date">5 мая 2017</div>
-                  <div class="news-slider__title">Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.</div>
-                  <div class="news-slider__down"><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                      <div class="megalink__text">Подробнее</div></a></div>
-                </div>
+              <div class="icon">
+                <div class="icon__img"><img src="./img/why/globus.png" alt=""></div>
+                <div class="icon__text">Детские<br>площадки</div>
               </div>
-              <div class="news-slider__item">
-                <div class="news-slider__hover">
-                  <div class="news-slider__hover-container">
-                    <div class="news-slider__hover-title"><span>Яркая жизнь</span>вместе<br>с МегаАльянс</div>
-                    <div class="news-slider__hover-ico"><img src="./img/microphone.png" alt=""></div>
-                  </div>
-                </div>
-                <div class="news-slider__img" style="background-image: url(./img/news/3.jpg);"></div>
-                <div class="news-slider__container">
-                  <div class="news-slider__date">5 мая 2017</div>
-                  <div class="news-slider__title">Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.</div>
-                  <div class="news-slider__down"><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                      <div class="megalink__text">Подробнее</div></a></div>
-                </div>
+              <div class="icon">
+                <div class="icon__img"><img src="./img/why/fitness.png" alt=""></div>
+                <div class="icon__text">Фитнес<br>зал</div>
               </div>
-              <div class="news-slider__item">
-                <div class="news-slider__hover">
-                  <div class="news-slider__hover-container">
-                    <div class="news-slider__hover-title"><span>Яркая жизнь</span>вместе<br>с МегаАльянс</div>
-                    <div class="news-slider__hover-ico"><img src="./img/microphone.png" alt=""></div>
-                  </div>
-                </div>
-                <div class="news-slider__img" style="background-image: url(./img/news/4.jpg);"></div>
-                <div class="news-slider__container">
-                  <div class="news-slider__date">5 мая 2017</div>
-                  <div class="news-slider__title">Выставка Недвижимости в Экспоград – Юг 21-23 апреля, как это было.</div>
-                  <div class="news-slider__down"><a class="megalink" href="">
-                      <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
-                      <div class="megalink__text">Подробнее</div></a></div>
-                </div>
+              <div class="icon">
+                <div class="icon__img"><img src="./img/why/markets.png" alt=""></div>
+                <div class="icon__text">Мини-маркеты</div>
               </div>
-            </div>
-          </div>
-          <div class="tabs__content">
-            <div class="offers-slider slider">
-              <div class="slide"><img src="./img/spec.png" alt="">
-                <div class="slide__box">
-                  <div class="slide__icon"><img src="./img/wallet.png" alt=""></div>
-                  <div class="slide__container">
-                    <div class="slide__title">Успей купить квартиру до повышения цен</div>
-                    <div class="slide__phone">8 861 292-46-52</div>
-                    <div class="slide__date">Акция действует до 15 сентября 2017 г.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="slide"><img src="./img/spec.png" alt="">
-                <div class="slide__box">
-                  <div class="slide__icon"><img src="./img/wallet.png" alt=""></div>
-                  <div class="slide__container">
-                    <div class="slide__title">Успей купить квартиру до повышения цен</div>
-                    <div class="slide__phone">8 861 292-46-52</div>
-                    <div class="slide__date">Акция действует до 15 сентября 2017 г.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="slide"><img src="./img/spec.png" alt="">
-                <div class="slide__box">
-                  <div class="slide__icon"><img src="./img/wallet.png" alt=""></div>
-                  <div class="slide__container">
-                    <div class="slide__title">Успей купить квартиру до повышения цен</div>
-                    <div class="slide__phone">8 861 292-46-52</div>
-                    <div class="slide__date">Акция действует до 15 сентября 2017 г.</div>
-                  </div>
-                </div>
+              <div class="icon">
+                <div class="icon__img"><img src="./img/why/farm.png" alt=""></div>
+                <div class="icon__text">Аптеки</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section--banks">
-      <h2 class="h2">Смотрите, выгодная ипотека</h2>
-      <p class="subheader">Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условия</p>
+    <section class="section section--gray">
       <div class="grid grid--container">
+        <h2 class="h2">Условия покупки</h2>
+        <p class="subheader">Наши сотрудники будут рады помочь Вам выбрать и оформить кредит на самых оптимальных условиях.</p>
         <div class="tabs">
           <div class="tabs__header-container">
             <div class="tabs__header">
               <div class="tabs__link tabs__link--active">Ипотека</div>
               <div class="tabs__link">Материнский капитал</div>
               <div class="tabs__link">Рассрочка без %</div>
-            </div>
-            <div class="tabs__buttons">
-              <div class="item item--type-1">
-                <div class="item__icon"><img src="./img/plus.png" alt=""></div>
-                <div class="item__text">Все банки партнеры</div>
-              </div>
-              <div class="item item--type-2">
-                <div class="item__icon"><img src="./img/calc.png" alt=""></div>
-                <div class="item__text">Ипотечный калькулятор</div>
-              </div>
+              <div class="tabs__link">Военная ипотека</div>
+              <div class="tabs__link">МФЦ</div>
             </div>
           </div>
           <div class="tabs__content tabs__content--active">
+            <div class="index-slider slider">
+              <div class="slide" style="background-image: url(img/slides/1.jpg);">
+                <div class="slide__right">
+                  <div class="text-center">
+                    <div class="logo logo--with-solid"></div>
+                  </div>
+                  <p>Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.</p><a class="megalink" href="">
+                    <div class="megalink__icon"><img src="./img/megalink-white.png" alt=""></div>
+                    <div class="megalink__text">Подробнее</div></a>
+                </div>
+              </div>
+            </div>
             <div class="banks">
               <div class="bank">
                 <div class="bank__top">
@@ -570,191 +281,137 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.</p>
                 </div>
               </div>
-              <div class="bank">
-                <div class="bank__top">
-                  <div class="bank__info">
-                    <div class="bank__logo"><img src="./img/vtb.png" alt=""></div>
-                    <div class="bank__percent">от 7,4%</div>
-                  </div>
-                  <div class="bank__table">
-                    <div class="item">
-                      <div class="item__label">Ставка по кредиту</div>
-                      <div class="item__text">от 7,4%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Минимальный взнос</div>
-                      <div class="item__text">от 15%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Срок кредита</div>
-                      <div class="item__text">до 7 лет</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Макс. сумма кредита</div>
-                      <div class="item__text">до 25 млн. руб.</div>
-                    </div>
-                  </div>
-                  <div class="bank__arrow"><img src="./img/arrow.png" alt=""></div>
-                </div>
-                <div class="bank__bottom">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.</p>
-                </div>
-              </div>
             </div>
           </div>
           <div class="tabs__content">
-            <div class="banks">
-              <div class="bank">
-                <div class="bank__top">
-                  <div class="bank__logo"><img src="./img/sberbank.png" alt=""></div>
-                  <div class="bank__percent">от 7,4%</div>
-                  <div class="bank__table">
-                    <div class="item">
-                      <div class="item__label">Ставка по кредиту</div>
-                      <div class="item__text">от 7,4%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Минимальный взнос</div>
-                      <div class="item__text">от 15%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Срок кредита</div>
-                      <div class="item__text">до 7 лет</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Макс. сумма кредита</div>
-                      <div class="item__text">до 25 млн. руб.</div>
-                    </div>
-                  </div>
-                  <div class="bank__arrow"><img src="./img/arrow.png" alt=""></div>
-                </div>
-                <div class="bank__bottom">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.</p>
-                </div>
-              </div>
+            <p>slide</p>
+          </div>
+          <div class="tabs__content">
+            <p>slide</p>
+          </div>
+          <div class="tabs__content">
+            <p>slide</p>
+          </div>
+          <div class="tabs__content">
+            <p>slide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="grid grid--container">
+        <h2 class="h2">Медиатека</h2>
+        <div class="tabs">
+          <div class="tabs__header-container">
+            <div class="tabs__header">
+              <div class="tabs__link tabs__link--active">Фото</div>
+              <div class="tabs__link">Видео</div>
+              <div class="tabs__link">Ход строительства</div>
             </div>
           </div>
           <div class="tabs__content">
-            <div class="banks">
-              <div class="bank">
-                <div class="bank__top">
-                  <div class="bank__logo"><img src="./img/sberbank.png" alt=""></div>
-                  <div class="bank__percent">от 7,4%</div>
-                  <div class="bank__table">
-                    <div class="item">
-                      <div class="item__label">Ставка по кредиту</div>
-                      <div class="item__text">от 7,4%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Минимальный взнос</div>
-                      <div class="item__text">от 15%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Срок кредита</div>
-                      <div class="item__text">до 7 лет</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Макс. сумма кредита</div>
-                      <div class="item__text">до 25 млн. руб.</div>
-                    </div>
-                  </div>
-                  <div class="bank__arrow"><img src="./img/arrow.png" alt=""></div>
-                </div>
-                <div class="bank__bottom">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.</p>
+            <p>slide</p>
+          </div>
+          <div class="tabs__content tabs__content--active">
+            <div class="video" style="background-image: url(img/video.jpg);">
+              <div class="video__buttons"><span>Смотреть ролик</span><span>Скачать ролик</span></div>
+            </div>
+          </div>
+          <div class="tabs__content">
+            <p>slide</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--blue">
+      <div class="grid grid--container">
+        <h2 class="h2">Дизайн-проекты квартир</h2>
+        <p class="subheader">Мы поможем воплотить дизайн-проект в жизнь и получить идеальный интерьер как с картинки!</p>
+        <div class="row">
+          <div class="col col--sm-4">
+            <div class="card">
+              <div class="card__img" style="background-image: url(./img/cards/1.jpg);">
+                <div class="card__img-container">
+                  <div class="card__title">ЖК «Янтарный 3»</div>
+                  <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
+                  <div class="like"></div>
                 </div>
               </div>
-              <div class="bank">
-                <div class="bank__top">
-                  <div class="bank__logo"><img src="./img/sberbank.png" alt=""></div>
-                  <div class="bank__percent">от 7,4%</div>
-                  <div class="bank__table">
-                    <div class="item">
-                      <div class="item__label">Ставка по кредиту</div>
-                      <div class="item__text">от 7,4%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Минимальный взнос</div>
-                      <div class="item__text">от 15%</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Срок кредита</div>
-                      <div class="item__text">до 7 лет</div>
-                    </div>
-                    <div class="item">
-                      <div class="item__label">Макс. сумма кредита</div>
-                      <div class="item__text">до 25 млн. руб.</div>
-                    </div>
-                  </div>
-                  <div class="bank__arrow"><img src="./img/arrow.png" alt=""></div>
+              <div class="card__container">
+                <div class="card__table">
+                  <div class="card__row"><span>Этажность</span><span>16</span></div>
+                  <div class="card__row"><span>Количество литеров</span><span>2</span></div>
                 </div>
-                <div class="bank__bottom">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.</p>
+                <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
+                  <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                  <div class="megalink__text">подробнее</div></a>
+                <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--sm-4">
+            <div class="card">
+              <div class="card__img" style="background-image: url(./img/cards/2.jpg);">
+                <div class="card__img-container">
+                  <div class="card__title">ЖК «Янтарный 3»</div>
+                  <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
+                  <div class="like"></div>
                 </div>
+              </div>
+              <div class="card__container">
+                <div class="card__table">
+                  <div class="card__row"><span>Этажность</span><span>16</span></div>
+                  <div class="card__row"><span>Количество литеров</span><span>2</span></div>
+                </div>
+                <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
+                  <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                  <div class="megalink__text">подробнее</div></a>
+                <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--sm-4">
+            <div class="card">
+              <div class="card__img" style="background-image: url(./img/cards/3.jpg);">
+                <div class="card__img-container">
+                  <div class="card__title">ЖК «Янтарный 3»</div>
+                  <div class="card__address"><img src="./img/address.png" alt=""><span>ул. Прикубанский, 9-я Тихая.</span></div>
+                  <div class="like"></div>
+                </div>
+              </div>
+              <div class="card__container">
+                <div class="card__table">
+                  <div class="card__row"><span>Этажность</span><span>16</span></div>
+                  <div class="card__row"><span>Количество литеров</span><span>2</span></div>
+                </div>
+                <div class="card__price">Квартиры <strong>от 2 550 000 до 5 450 000</strong></div><a class="megalink" href="">
+                  <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                  <div class="megalink__text">подробнее</div></a>
+                <div class="card__status"><img src="./img/clock-gray.png" alt=""><span>дома сданы</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section section--mortage">
+    <section class="section section--gray">
       <div class="grid grid--container">
-        <h2 class="h2">Расчитать ипотеку</h2>
-        <p class="subheader">Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям</p>
-        <form class="form">
-          <div class="row">
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Стоимость квартиры</label>
-                <input type="number" value="1900000">
-                <div class="form-control__text">руб.</div>
-              </div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Возраст</label>
-                <input type="number" value="25">
-              </div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Гражданство</label>
-                <select class="custom-select">
-                  <option>Российская Федерация</option>
-                  <option>Российская Федерация</option>
-                  <option>Российская Федерация</option>
-                </select>
-                <div class="form-control__icon"><i class="fa fa-angle-down"></i></div>
-              </div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control form-control--inline">
-                <label>Первоначальный взнос</label>
-                <input id="initial-pay-input" type="number" value="1900000">
-                <div class="form-control__text">руб.</div>
-              </div>
-              <div id="initial-pay"></div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control form-control--inline">
-                <label>Срок кредита</label>
-                <input id="credit-term-input" type="number" value="10">
-                <div class="form-control__text">лет</div>
-              </div>
-              <div id="credit-term"></div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="calc"><span>Сумма кредита: </span>
-                <div class="calc__result"><span>1 400 000</span> руб.</div>
-              </div>
+        <h2 class="h2">Расположение объекта</h2>
+        <p class="subheader">Жителей ЖК «Семейный Парк» приятно порадуют маршруты во все районы города и отсутствие пробок.</p>
+        <div class="tabs">
+          <div class="tabs__header-container">
+            <div class="tabs__header map-center-change">
+              <div class="tabs__link tabs__link--active">Объект</div>
+              <div class="tabs__link">Детский сад</div>
+              <div class="tabs__link">Школа</div>
+              <div class="tabs__link">Аптеки</div>
+              <div class="tabs__link">Больницы</div>
+              <div class="tabs__link">Кафе, рестораны</div>
+              <div class="tabs__link">Банк</div>
             </div>
           </div>
-        </form>
-      </div>
-    </section>
-    <section class="section--mortage-star">
-      <div class="grid grid--container">
-        <div class="mortage-star">Приведенные расчеты носят предварительный характер. Окончательный расчет суммы кредита и размер ежемесячного платежа производятся банком после предоставления полного комплекта документов и проведения оценки платежеспособности клиента.</div>
+        </div>
+        <div id="map"></div>
       </div>
     </section>
     <section class="section--short-news">

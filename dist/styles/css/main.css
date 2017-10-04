@@ -900,11 +900,11 @@ p {
   font-weight: 300;
 }
 .hero {
-  background: url("../../img/hero.jpg") no-repeat bottom center;
+  background-repeat: no-repeat;
+  background-position: bottom center;
   background-size: cover;
   min-height: 60rem;
   height: calc(100vh - 15rem);
-  margin-bottom: 8rem;
   width: 100%;
 }
 .hero__container {
@@ -946,6 +946,9 @@ p {
 }
 .hero-form .btn {
   margin-left: 1rem;
+}
+.hero--small {
+  height: calc(100vh - 26.5rem);
 }
 .hero-slider {
   margin-bottom: 7.291666666666667% !important;
@@ -1053,6 +1056,12 @@ p {
 }
 .section--short-news {
   padding: 4rem 0;
+}
+.section--blue {
+  background-color: #e5eff3;
+}
+.section--gray {
+  background-color: #f3f6f9;
 }
 .index-slider .slide {
   min-height: 48rem;
@@ -1747,6 +1756,139 @@ p {
     margin-right: 5rem;
   }
 }
+.comfort {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comfort__left {
+  padding: 8rem;
+}
+.comfort__title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.comfort__img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  width: 48rem;
+}
+.comfort__info {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comfort__address {
+  margin-right: 1rem;
+}
+.comfort__address,
+.comfort__date {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.comfort__address img,
+.comfort__date img {
+  display: block;
+  margin-right: 1rem;
+}
+.comfort__address strong,
+.comfort__date strong {
+  font-weight: 500;
+}
+.why {
+  height: 70rem;
+  overflow: hidden;
+  position: relative;
+}
+.why__images {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.why__images .image {
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: all 1s ease;
+  width: 100%;
+}
+.why__images .image--active {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+.why__container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  z-index: 30;
+}
+.why__align {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+.why__icons {
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.why__icons .icon {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 3rem 5rem;
+  width: 100%;
+}
+.why__icons .icon__img {
+  margin-right: 2rem;
+}
+.why__icons .icon__img img {
+  display: block;
+}
+.why__icons .icon__text {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.why__icons .icon:hover {
+  background-color: #eb251c;
+}
+.video {
+  height: 64rem;
+}
 .grid--container {
   max-width: 1540px;
 }
@@ -1914,6 +2056,36 @@ p {
 .subnav__link:hover {
   color: #eb251c;
 }
+.breadcrumbs {
+  padding: 5rem 0;
+}
+.breadcrumbs__link {
+  color: #8795a3;
+  display: inline-block;
+  font-size: 1.4rem;
+  position: relative;
+  line-height: 1;
+  margin-right: 3rem;
+  text-decoration: none;
+}
+.breadcrumbs__link:after {
+  content: '\f105';
+  color: #eb251c;
+  font-family: FontAwesome;
+  font-weight: 600;
+  position: absolute;
+  right: -1.6rem;
+  top: 0;
+}
+.breadcrumbs__link--active:after {
+  display: none;
+}
+.breadcrumbs__link--active:hover {
+  color: #8795a3 !important;
+}
+.breadcrumbs__link:hover {
+  color: #eb251c;
+}
 .like {
   background-image: url("../../img/like.png");
   background-size: contain;
@@ -1997,6 +2169,10 @@ p {
   -webkit-transform: translateY(1px);
   -ms-transform: translateY(1px);
   transform: translateY(1px);
+}
+#map {
+  width: 100%;
+  height: 40rem;
 }
 .pre-footer {
   background-color: #95a3b3;

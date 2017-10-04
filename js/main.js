@@ -138,58 +138,125 @@ $(document).ready(function() {
   });
 
   // Бегунок nouislider первоначальный взнос
-  const initialPay = document.getElementById('initial-pay');
-  noUiSlider.create(initialPay, {
-    range: {
-      min: 0,
-      max: 1.7
-    },
-    connect: [true, false],
-    start: 1,
-    step: 0.1,
-    pips: {
-      mode: 'values',
-      values: [0, 0.4, 0.9, 1.3, 1.7, 2],
-      density: 4
-    }
-  });
+  // const initialPay = document.getElementById('initial-pay');
+  // noUiSlider.create(initialPay, {
+  //   range: {
+  //     min: 0,
+  //     max: 1.7
+  //   },
+  //   connect: [true, false],
+  //   start: 1,
+  //   step: 0.1,
+  //   pips: {
+  //     mode: 'values',
+  //     values: [0, 0.4, 0.9, 1.3, 1.7, 2],
+  //     density: 4
+  //   }
+  // });
 
-  initialPay.noUiSlider.on('update', function ( values, handle ) {
-    $('#initial-pay-input').val(values[handle] * 1000000);
-    let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
-    let resultFormat = moneyFormat.to(result);
-    $('.calc__result span').text(resultFormat);
-  });
+  // initialPay.noUiSlider.on('update', function ( values, handle ) {
+  //   $('#initial-pay-input').val(values[handle] * 1000000);
+  //   let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
+  //   let resultFormat = moneyFormat.to(result);
+  //   $('.calc__result span').text(resultFormat);
+  // });
 
-  // Бегунок nouislider срок кредита
-  const creditTerm = document.getElementById('credit-term');
-  noUiSlider.create(creditTerm, {
-    format: wNumb({
-      decimals: 0
-    }),
-    range: {
-      min: 1,
-      max: 30
-    },
-    connect: [true, false],
-    start: 8,
-    step: 1,
-    pips: {
-      mode: 'values',
-      values: [1, 8, 16, 23, 30],
-      density: 4
-    }
-  });
+  // // Бегунок nouislider срок кредита
+  // const creditTerm = document.getElementById('credit-term');
+  // noUiSlider.create(creditTerm, {
+  //   format: wNumb({
+  //     decimals: 0
+  //   }),
+  //   range: {
+  //     min: 1,
+  //     max: 30
+  //   },
+  //   connect: [true, false],
+  //   start: 8,
+  //   step: 1,
+  //   pips: {
+  //     mode: 'values',
+  //     values: [1, 8, 16, 23, 30],
+  //     density: 4
+  //   }
+  // });
 
-  creditTerm.noUiSlider.on('update', function ( values, handle ) {
-    $('#credit-term-input').val(values[handle]);
-    let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
-    let resultFormat = moneyFormat.to(result);
-    $('.calc__result span').text(resultFormat);
-  });
+  // creditTerm.noUiSlider.on('update', function ( values, handle ) {
+  //   $('#credit-term-input').val(values[handle]);
+  //   let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
+  //   let resultFormat = moneyFormat.to(result);
+  //   $('.calc__result span').text(resultFormat);
+  // });
 
   $('.like').on('click', function () {
     $(this).toggleClass('like--active');
   });
 
+  $('.why .icon').on('mouseenter', function () {
+    var index = $(this).index();
+    console.log('sdghsfdsdghsfd')
+    $('.why .image').removeClass('image--active');
+    $('.why .image').eq(index).addClass('image--active');
+  })
+
+});
+
+
+// Карта яндекс
+ymaps.ready(function () {
+  let data = {
+    "type": "FeatureCollection",
+    "features": [
+      {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [45.067600, 38.949726]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [45.068894, 38.949804]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [45.069472, 38.947401]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [45.068970, 38.951210]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 4, "geometry": {"type": "Point", "coordinates": [45.066210, 38.951145]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 5, "geometry": {"type": "Point", "coordinates": [45.068963, 38.944332]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 6, "geometry": {"type": "Point", "coordinates": [45.065351, 38.947165]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+      {"type": "Feature", "id": 7, "geometry": {"type": "Point", "coordinates": [45.068256, 38.953506]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}}
+    ]
+  }
+
+  var myMap;
+
+  myMap = new ymaps.Map('map', {
+    center: [45.067600, 38.949726],
+    zoom: 16
+  }, {
+    searchControlProvider: 'yandex#search'
+  });
+  let objectManager = new ymaps.ObjectManager({
+    clusterize: true,
+    gridSize: 32,
+    clusterDisableClickZoom: true
+  });
+
+  objectManager.objects.options.set('preset', 'islands#redDotIcon');
+  objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
+
+  myMap.geoObjects.add(objectManager);
+
+  objectManager.add(data, {
+    iconLayout: 'default#image',
+    iconImageHref: 'http://gretnagreencreations.co.uk/img/map.png'
+  });
+  
+  // var myPlacemark = new ymaps.Placemark([45.067790, 38.949896], {}, {
+  //   iconLayout: 'default#image',
+  //   iconImageHref: 'http://gretnagreencreations.co.uk/img/map.png',
+  //   iconImageSize: [30, 42]
+  // })
+
+  // myMap.geoObjects.add(myPlacemark)
+
+  function setCenter (center) {
+    myMap.setCenter(center);
+  }
+
+  $('.map-center-change .tabs__link').on('click', function () {
+    let index = $(this).index();
+    let coordinates = data.features[index].geometry.coordinates;
+    setCenter(coordinates);
+  })
 });

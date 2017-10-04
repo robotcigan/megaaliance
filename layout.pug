@@ -8,6 +8,8 @@ html(lang="ru")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet", href="styles/css/vendor.css")
     link(rel="stylesheet", href="styles/css/main.css")
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(src="mapbasics.js" type="text/javascript")
   body
 
     header.top-header
@@ -60,6 +62,13 @@ html(lang="ru")
               a(href="#") Ход сроительства
 
     block content
+
+    section.section--short-news
+      .grid.grid--container
+        .short-news
+          .short-news__left Новости продаж
+          .short-news__right
+            .short-news__text Коммерческие помещения! Квартиры с ремонтом от 954 000 рублей ЖК "Семейный Парк"!
 
     section.pre-footer
       .grid.grid--container

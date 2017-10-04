@@ -1,0 +1,88 @@
+.comfort
+  background-color #fff
+  display flex
+  &__left
+    padding 8rem
+  &__title
+    font-size 2.4rem
+    font-weight 500
+    margin-bottom 4rem
+  &__img
+    flex-shrink 0
+    height 100%
+    width 48rem
+  &__info
+    align-items center
+    display flex
+  &__address
+    margin-right 1rem
+  &__address,
+  &__date
+    align-items center
+    display flex
+    img
+      display block
+      margin-right 1rem
+    strong
+      font-weight 500
+
+
+.why
+  height 70rem
+  overflow hidden
+  position relative
+  &__images
+    height 100%
+    left 0
+    position absolute
+    top 0
+    width 100%
+    .image
+      background-size cover
+      height 100%
+      left 0
+      opacity 0
+      position absolute
+      top 0
+      transform scale(1.05)
+      transition all 1s ease
+      width 100%
+      &--active
+        opacity 1
+        transform none
+  &__container
+    align-items center
+    display flex
+    height 100%
+    // position relative
+    z-index 30
+  &__align
+    bottom 0
+    position absolute
+    width 100%
+    z-index 20
+  &__icons
+    bottom 0
+    display flex
+    width 100%
+    .icon
+      align-items center
+      display flex
+      justify-content center
+      padding 3rem 5rem
+      width 100%
+      &__img
+        margin-right 2rem
+        img
+          display block
+      &__text
+        color #fff
+        font-size 1.8rem
+        font-weight 500
+      &:hover
+        background-color $primary
+
+
+.video
+  height 64rem
+
