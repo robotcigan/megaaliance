@@ -49,7 +49,7 @@ block content
                 img(src="./img/icons/type.png", alt="")
               .icon__text Квартира<br>по типу
             a(href="").icon
-              .icon__symbol
+              .icon__symbol.icon__symbol--fix
                 img(src="./img/icons/house.png", alt="")
               .icon__text Ипотека
             a(href="").icon
@@ -73,7 +73,7 @@ block content
     .grid.grid--container
       h2.h2 Застройщик квартир в Краснодаре
       p.subheader В  нашем активе — как отдельные дома, так и масштабные жилые комплексы
-      .index-slider.slider
+      .red-slider.slider
         - for (var i = 0; i < 3; i++)
           .slide(style="background-image: url(img/slides/1.jpg)")
             .slide__left На рынке недвижимости Краснодара более 8 лет.
@@ -449,12 +449,6 @@ block content
     .grid.grid--container
       .mortage-star Приведенные расчеты носят предварительный характер. Окончательный расчет суммы кредита и размер ежемесячного платежа производятся банком после предоставления полного комплекта документов и проведения оценки платежеспособности клиента.
 
-  section.section--short-news
-    .grid.grid--container
-      .short-news
-        .short-news__left Новости продаж
-        .short-news__right
-          .short-news__text Коммерческие помещения! Квартиры с ремонтом от 954 000 рублей ЖК "Семейный Парк"!
 
 
 

@@ -101,7 +101,7 @@
   textarea,
   .select2-selection--single
     background #fff
-    border none
+    border 1px solid #eaeaea
     border-radius $radius
     display block
     font-family $font
@@ -190,23 +190,23 @@
   &__label
     background transparent
     border-radius $radius
-    border 2px solid $light-gray
+    border $border
     cursor pointer
-    circle(2.4rem)
+    circle(1.8rem)
     display inline-block
     margin-right 1rem
     position relative
     vertical-align middle
     z-index 1
     &:after
-      color $primary
+      color $main
       content "\f00c"
       display none
       font-family 'FontAwesome'
-      font-size 1.5rem
-      left 3px
+      font-size 1.3rem
+      left 2px
       position absolute
-      top 2px
+      top 1px
       z-index 10
   input
     display none
@@ -219,6 +219,8 @@
     display inline-block
     cursor pointer
     vertical-align middle
+  a
+    border-bottom 1px dotted #bbb
 
 .radio
   cursor pointer

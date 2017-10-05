@@ -5,51 +5,27 @@ block content
   .hero.hero--small(style="background-image: url(img/object.jpg)")
     .hero__container
       .grid.grid--container
-        .hero-slider.slider
-          .slide
-            .slide__title 2-комнатная квартира по цене 1-комнатной
-            .slide__subtitle Предлагаем двухкомнатные квартиры по цене от 1 300 000 рублей.
-            .slide__sub Количество ограничено!
-          .slide
-            .slide__title Квартиры все включено
-            .slide__subtitle Предлагаем двухкомнатные квартиры по цене от 1 300 000 рублей.
-            .slide__sub Количество ограничено!
-          .slide
-            .slide__title Реализуем коммерчиские помещения
-            .slide__subtitle Предлагаем двухкомнатные квартиры по цене от 1 300 000 рублей.
-            .slide__sub Количество ограничено!
-        form.hero-form
-          .hero-form__control
-            select.custom-select
-              option Квартира
-              option Квартира
-              option Квартира
-          .hero-form__control
-            select.custom-select
-              option Студия
-              option Студия
-              option Студия
-          .hero-form__control
-            input(type="text" placeholder="Срок сдачи").datepicker
-          .hero-form__control
-            input(type="number" placeholder="от")
-          .hero-form__control
-            input(type="number" placeholder="до")
-          .hero-form__control
-            input(type="number" placeholder="площадь")
-          input(type="submit" value="Найти").btn
+        
+        .hero__info
+          .hero__info-container
+            .hero__address Прикубанский округ, 9-я Тихая
+            .hero__title ЖК «Семейный парк»
+            .hero__subtitle Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.
+            a(href="").btn Старт продаж
+          .hero__logo
+            img(src="./img/park.png")
         .hero__icons
           .hero__icons-left
             a(href="").icon
-              .icon__symbol
-                img(src="./img/icons/params.png", alt="")
-              .icon__text Квартира<br>по параметрам
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/star.png", alt="")
+              .icon__text Преимущества
             a(href="").icon
               .icon__symbol
                 img(src="./img/icons/type.png", alt="")
               .icon__text Квартира<br>по типу
             a(href="").icon
-              .icon__symbol
+              .icon__symbol.icon__symbol--fix
                 img(src="./img/icons/house.png", alt="")
               .icon__text Ипотека
             a(href="").icon
@@ -137,6 +113,83 @@ block content
 
   section.section.section--gray
     .grid.grid--container
+      h2.h2 Есть выбор
+      p.subheader Комплекс состоит из двух современных домов: 
+        strong Литер 1 — десятиэтажный, Литер 2 —девятнадцатиэтажный.
+      .choice
+        .choice__left
+          .choice__control.choice-control
+            label.choice-control__label Литер
+            .choice-control__arrow.choice-control__arrow--top
+              i.fa.fa-angle-up
+            input(type="text" value="1" data-max="3").choice-control__input
+            .choice-control__arrow.choice-control__arrow--bottom
+              i.fa.fa-angle-down
+          .choice__control.choice-control
+            label.choice-control__label Подъезд
+            .choice-control__arrow.choice-control__arrow--top
+              i.fa.fa-angle-up
+            input(type="text" value="2" data-max="6").choice-control__input
+            .choice-control__arrow.choice-control__arrow--bottom
+              i.fa.fa-angle-down
+          .choice__control.choice-control
+            label.choice-control__label Этаж
+            .choice-control__arrow.choice-control__arrow--top
+              i.fa.fa-angle-up
+            input(type="text" value="5" data-max="19").choice-control__input
+            .choice-control__arrow.choice-control__arrow--bottom
+              i.fa.fa-angle-down
+
+        .choice__right
+
+          .choice__plans
+
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Генплан
+
+            .plans
+              .plans__header
+                .plans__label Этаж:
+                .plans__numbers <span>5</span>/19
+              .plans__img
+                img(src="./img/plans.png", alt="")
+              .plans__another
+
+
+          .choice__img
+            img(src="./img/plan.png", alt="")
+
+          .choice__info
+            .mega-btn
+              img(src="./img/glass.png", alt="")
+              span Записаться на просмотр
+            .choice__title 1-комнатная квартира
+            .choice__table
+              .choice__row
+                span Общая площадь:
+                span 37,16 кв.м.
+              .choice__row
+                span Жилая лощадь:
+                span 14,66 кв.м.
+              .choice__row
+                span Жилая лощадь:
+                span 14,66 кв.м.
+            .choice__price Стоимость квартиры
+            .choice__price-number от 34 000 руб. за кв.м.
+            .mega-btns.choice__buttons
+              .mega-btn
+                img(src="./img/calc.png", alt="")
+                span Ипотечный<br>калькулятор
+              .mega-btn
+                img(src="./img/tassel.png", alt="")
+                span Варианты отделок
+            .btn Зарезервировать
+
+
+  section.section.section--gray
+    .grid.grid--container
       h2.h2 Условия покупки
       p.subheader Наши сотрудники будут рады помочь Вам выбрать и оформить кредит на самых оптимальных условиях.
       .tabs
@@ -149,11 +202,10 @@ block content
             .tabs__link МФЦ
 
         .tabs__content.tabs__content--active
-          .index-slider.slider
-            .slide(style="background-image: url(img/slides/1.jpg)")
+          .red-slider.red-slider--with-offset.slider
+            .slide(style="background-image: url(img/family.jpg)")
               .slide__right
-                .text-center
-                  .logo.logo--with-solid
+                .slide__title Ипотека
                 p Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.
                 a(href="").megalink
                   .megalink__icon
@@ -186,6 +238,14 @@ block content
                     img(src="./img/arrow.png", alt="")
                 .bank__bottom
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
+          
+          .mega-btns
+            .mega-btn
+              img(src="./img/plus.png", alt="")
+              span Все банки партнеры
+            .mega-btn
+              img(src="./img/calc.png", alt="")
+              span Ипотечный<br>калькулятор
 
         .tabs__content
           p slide
@@ -210,9 +270,13 @@ block content
           p slide
         .tabs__content.tabs__content--active
           .video(style="background-image: url(img/video.jpg)")
-            .video__buttons
-              span Смотреть ролик
-              span Скачать ролик
+            .mega-btns.video__buttons
+              .mega-btn
+                img(src="./img/video-big.png", alt="")
+                span Смотреть ролик
+              .mega-btn
+                img(src="./img/download.png", alt="")
+                span Скачать ролик
         .tabs__content
           p slide
 
@@ -224,30 +288,21 @@ block content
         - for (var i = 1; i < 4; i++)
           .col.col--sm-4
             .card
-              .card__img(style="background-image: url(./img/cards/" + i + ".jpg)")
+              .card__img(style="background-image: url(./img/design/" + i + ".jpg)")
                 .card__img-container
-                  .card__title ЖК «Янтарный 3»
-                  .card__address
-                    img(src="./img/address.png", alt="")
-                    span ул. Прикубанский, 9-я Тихая.
                   .like
               .card__container
                 .card__table
                   .card__row
-                    span Этажность
-                    span 16
+                    span Количество комнат
+                    span 3
                   .card__row
-                    span Количество литеров
-                    span 2
-                .card__price Квартиры 
-                  strong от 2 550 000 до 5 450 000
+                    span Квадратные метры
+                    span 68
                 a(href="").megalink
                   .megalink__icon
                     img(src="./img/megalink.png", alt="")
                   .megalink__text подробнее
-                .card__status
-                  img(src="./img/clock-gray.png", alt="")
-                  span дома сданы
 
   section.section.section--gray
     .grid.grid--container

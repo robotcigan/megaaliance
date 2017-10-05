@@ -1,0 +1,46 @@
+.red-slider
+  .slide
+    min-height 48rem
+    position relative
+    &__left
+      align-items center
+      background-color $primary
+      bottom 0
+      color #fff
+      display flex
+      font-size 2rem
+      font-weight 500
+      height 23rem
+      justify-content center
+      position absolute
+      left (125 / $container-width * 100)%
+      line-height 1.2
+      margin auto
+      padding 4rem
+      top 0
+      width 24rem
+    &__right
+      background-color $primary
+      color #fff
+      height 100%
+      padding 7rem
+      position absolute
+      right 0
+      width 48rem
+    &__title
+      font-size 2.4rem
+      font-weight 600
+      margin-bottom 2.8rem
+      margin-top 4rem
+      position relative
+      &:after
+        palka()
+        background-color #fff
+        top -3.5rem
+    .megalink
+      &:hover
+        .megalink
+          &__text
+            color #fff
+  &--with-offset
+    margin-bottom 3.5rem

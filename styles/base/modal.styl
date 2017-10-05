@@ -2,17 +2,51 @@
   animation bigFadeUp .3s forwards ease
   background #fff
   box-shadow 0 1rem 2rem rgba($main, .1)
-  border-radius $radius 0 $radius $radius
+  border-radius $radius
   display none
   margin 10rem auto
-  padding 4rem
   position relative
-  width 72rem
+  width 120rem
+  &__align
+    display flex
+  &__left
+    align-items center
+    display flex
+    justify-content center
+    height 100%
+    padding 9rem
+    width 45rem
+  &__circle
+    align-items center
+    background-color $primary
+    border-radius 50%
+    circle(26rem)
+    color #fff
+    display flex
+    flex-direction column
+    justify-content center
+    padding 3rem
+    text-align center
+  &__offer
+    font-size 2.4rem
+    font-weight 600
+    margin-bottom 1rem
+  &__sub-offer
+    font-size 1.8rem
+    font-weight 500
+    line-height 1.3
+  &__container
+    padding 7rem
   &__title
     font-size 2.4rem
     font-weight 500
-    line-height 1
+    line-height 1.2
     margin-bottom 4rem
+    span
+      font-weight 300
+  &__subtitle
+    font-size 2rem
+    margin-bottom 6rem
   &__plate
     background-color $light-gray
     margin-left -4rem
@@ -29,13 +63,13 @@
     iframe
       height 100%
       width 100%
-    .mfp-close,
-    .mfp-close:active
-      color #fff !important
-      font-size 3.2rem
-      opacity 1
-      right -5rem !important
-      top -1.3rem !important
+    // .mfp-close,
+    // .mfp-close:active
+    //   color #fff !important
+    //   font-size 3.2rem
+    //   opacity 1
+    //   right -5rem !important
+    //   top -1.3rem !important
 
 .mfp-ready
   .modal
@@ -43,21 +77,31 @@
 
 .mfp-close-btn-in .mfp-close,
 .mfp-close-btn-in .mfp-close:active
-  // background-color $primary
+  background-color $primary
+  border-radius 50%
   circle(4rem)
-  color $main
+  color #fff
   font-size 4rem
+  left 0
+  line-height 1
+  margin auto
   opacity 1
   padding 0
   text-align center
-  top 2.9rem
-  right 2.4rem
+  top -12rem
+  right 0
+  &:after
+    bottom -3.5rem
+    content 'Закрыть'
+    font-size 1.8rem
+    left -1.2rem
+    position absolute
 
 .mfp-close
   circle(6rem)
 
 .open-image
-  display block
+  display flex
 
 .mfp-gallery .mfp-close,
 .mfp-gallery .mfp-close:active

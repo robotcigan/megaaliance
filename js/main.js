@@ -81,7 +81,7 @@ $(document).ready(function() {
     slidesToScroll: 1
   })
 
-  $('.index-slider').slick({
+  $('.red-slider').slick({
     // autoplay: true,
     // autoplaySpeed: 5000,
     dots: true,
@@ -138,55 +138,57 @@ $(document).ready(function() {
   });
 
   // Бегунок nouislider первоначальный взнос
-  // const initialPay = document.getElementById('initial-pay');
-  // noUiSlider.create(initialPay, {
-  //   range: {
-  //     min: 0,
-  //     max: 1.7
-  //   },
-  //   connect: [true, false],
-  //   start: 1,
-  //   step: 0.1,
-  //   pips: {
-  //     mode: 'values',
-  //     values: [0, 0.4, 0.9, 1.3, 1.7, 2],
-  //     density: 4
-  //   }
-  // });
+  if ($('#initial-pay').length) {
+    const initialPay = document.getElementById('initial-pay');
+    noUiSlider.create(initialPay, {
+      range: {
+        min: 0,
+        max: 1.7
+      },
+      connect: [true, false],
+      start: 1,
+      step: 0.1,
+      pips: {
+        mode: 'values',
+        values: [0, 0.4, 0.9, 1.3, 1.7, 2],
+        density: 4
+      }
+    });
 
-  // initialPay.noUiSlider.on('update', function ( values, handle ) {
-  //   $('#initial-pay-input').val(values[handle] * 1000000);
-  //   let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
-  //   let resultFormat = moneyFormat.to(result);
-  //   $('.calc__result span').text(resultFormat);
-  // });
+    initialPay.noUiSlider.on('update', function ( values, handle ) {
+      $('#initial-pay-input').val(values[handle] * 1000000);
+      let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
+      let resultFormat = moneyFormat.to(result);
+      $('.calc__result span').text(resultFormat);
+    });
 
-  // // Бегунок nouislider срок кредита
-  // const creditTerm = document.getElementById('credit-term');
-  // noUiSlider.create(creditTerm, {
-  //   format: wNumb({
-  //     decimals: 0
-  //   }),
-  //   range: {
-  //     min: 1,
-  //     max: 30
-  //   },
-  //   connect: [true, false],
-  //   start: 8,
-  //   step: 1,
-  //   pips: {
-  //     mode: 'values',
-  //     values: [1, 8, 16, 23, 30],
-  //     density: 4
-  //   }
-  // });
+    // Бегунок nouislider срок кредита
+    const creditTerm = document.getElementById('credit-term');
+    noUiSlider.create(creditTerm, {
+      format: wNumb({
+        decimals: 0
+      }),
+      range: {
+        min: 1,
+        max: 30
+      },
+      connect: [true, false],
+      start: 8,
+      step: 1,
+      pips: {
+        mode: 'values',
+        values: [1, 8, 16, 23, 30],
+        density: 4
+      }
+    });
 
-  // creditTerm.noUiSlider.on('update', function ( values, handle ) {
-  //   $('#credit-term-input').val(values[handle]);
-  //   let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
-  //   let resultFormat = moneyFormat.to(result);
-  //   $('.calc__result span').text(resultFormat);
-  // });
+    creditTerm.noUiSlider.on('update', function ( values, handle ) {
+      $('#credit-term-input').val(values[handle]);
+      let result = parseInt($('#credit-term-input').val()) * parseInt($('#initial-pay-input').val());
+      let resultFormat = moneyFormat.to(result);
+      $('.calc__result span').text(resultFormat);
+    });
+  }
 
   $('.like').on('click', function () {
     $(this).toggleClass('like--active');
@@ -194,10 +196,48 @@ $(document).ready(function() {
 
   $('.why .icon').on('mouseenter', function () {
     var index = $(this).index();
-    console.log('sdghsfdsdghsfd')
     $('.why .image').removeClass('image--active');
     $('.why .image').eq(index).addClass('image--active');
-  })
+  });
+
+  let choiceInput = (self, operationType) => {
+    let input = self.closest('.choice-control').find('input');
+    let val = parseInt(input.val());
+    let max = input.data('max');
+    if (operationType === 'plus') {
+      input.val(val + 1);
+    } else if (operationType === 'del') {
+      input.val(val - 1);
+    }
+    if (input.val() < 1) {
+      input.val(1)
+    }
+    if (input.val() > max) {
+      input.val(max)
+    }
+  }
+
+  $('.choice-control__arrow--top').on('click', function () {
+    choiceInput($(this), 'plus');
+  });
+  $('.choice-control__arrow--bottom').on('click', function () {
+    choiceInput($(this), 'del');
+  });
+
+  $('.choice-control input').on('keyup change', function() {
+    choiceInput($(this), 'keyup');
+  });
+  // $('.choice-control__arrow--top').on('click', function () {
+  //   let input = $(this).closest('.choice-control').find('input');
+  //   let val = parseInt(input.val());
+  //   input.val(val + 1)
+  // });
+
+  // $('.choice-control__arrow--bottom').on('click', function () {
+  //   let input = $(this).closest('.choice-control').find('input');
+  //   let val = parseInt(input.val());
+  //   input.val(val - 1)
+  // });
 
 });
 
@@ -241,14 +281,6 @@ ymaps.ready(function () {
     iconLayout: 'default#image',
     iconImageHref: 'http://gretnagreencreations.co.uk/img/map.png'
   });
-  
-  // var myPlacemark = new ymaps.Placemark([45.067790, 38.949896], {}, {
-  //   iconLayout: 'default#image',
-  //   iconImageHref: 'http://gretnagreencreations.co.uk/img/map.png',
-  //   iconImageSize: [30, 42]
-  // })
-
-  // myMap.geoObjects.add(myPlacemark)
 
   function setCenter (center) {
     myMap.setCenter(center);

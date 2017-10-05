@@ -14,6 +14,10 @@
 
 @import 'modifications/modifications.styl'
 
+@import 'components/hero.styl'
+@import 'components/banks.styl'
+@import 'components/red-slider.styl'
+
 @import 'pages/index.styl'
 @import 'pages/object.styl'
 
@@ -37,6 +41,22 @@
     .megalink
       &__icon
         transform translateX(.5rem)
+
+.mega-btns
+  display flex
+  .mega-btn
+    &:not(:last-child)
+      margin-right 4rem
+
+.mega-btn
+  align-items center
+  display flex
+  img
+    display block
+    margin-right 1rem
+  span
+    font-weight 500
+
 
 .top-header
   background-color $gray
@@ -213,6 +233,8 @@
     background-color #fff
     padding 3rem 2.5rem
     position relative
+  &__table
+    margin-bottom 2rem
   &__row
     border-bottom 1px solid #eaeaea
     display flex
@@ -221,6 +243,26 @@
     padding-bottom 1.2rem
   &__price
     margin-bottom 2.5rem
+    position relative
+    &:after
+      background-color $primary
+      content ''
+      height 34px
+      position absolute
+      right -2.5rem
+      top -1rem
+      width 4px
+  &__button
+    align-items center
+    display flex
+    img
+      margin-right 1rem
+    span
+      color #fff
+      font-weight 600
+    &:hover
+      span
+        color $primary
   &__status
     bottom 2.5rem
     color $gray - 10%

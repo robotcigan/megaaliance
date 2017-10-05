@@ -1,0 +1,119 @@
+.hero
+  background-repeat no-repeat
+  background-position bottom center
+  background-size cover
+  min-height 60rem
+  height calc(100vh - 15rem)
+  // margin-bottom $main-offset
+  width 100%
+  &__container
+    align-items flex-end
+    display flex
+    height 100%
+  &-form
+    border-radius $radius
+    height 5.4rem
+    margin-bottom 10rem
+    display flex
+    &__control
+      width 100%
+      input,
+      select,
+      .select2-selection--single
+        border none
+        border-radius 0
+        font-family $font
+        font-size 1.4rem
+        height 5.4rem !important
+        padding-left 2rem
+        width 100%
+      .select2-selection--single
+        padding-top 1.8rem
+      &:not(:last-child)
+        border-right $border
+    .btn
+      margin-left 1rem
+  &--small
+    height calc(100vh - 26.5rem)
+
+.hero-slider
+  // margin-bottom 14rem !important
+  margin-bottom (70 / 960 * 100)% !important
+  .slide
+    color #fff
+    &__title
+      font-size 4.8rem
+      font-weight 600
+      margin-bottom 3rem
+    &__subtitle
+      font-size 2.2rem
+      font-weight 500
+      margin-bottom .5rem
+    &__sub
+      font-size 2.2rem
+      font-weight 400
+  .slick-dots
+    margin-top 3.6rem
+    position initial
+    text-align left
+
+.hero
+  &__info
+    align-items flex-end
+    color #fff
+    display flex
+    justify-content space-between
+    margin-bottom 10rem
+  &__address
+    font-size 4rem
+    font-weight 300
+    margin-bottom 3rem
+  &__title
+    font-size 6rem
+    font-weight 600
+    margin-bottom 3rem
+  &__subtitle
+    font-size 2.2rem
+    font-weight 500
+    margin-bottom 2rem
+
+.hero__icons
+  display flex
+  justify-content space-between
+  margin-bottom 6rem
+  &-left
+    display flex
+  .icon
+    align-items center
+    cursor pointer
+    display flex
+    margin-right 7rem
+    &__symbol
+      align-items center
+      border 2px solid #fff
+      border-radius 50%
+      circle(57px)
+      display flex
+      justify-content center
+      margin-right 1rem
+      vertical-align middle
+      transition all .1s ease
+      img
+        display block
+      &--fix
+        img
+          transform translateY(-1px)
+    &__text
+      color #fff
+      font-size 1.4rem
+      font-weight 600
+      line-height 1.2
+    &:hover
+      .icon
+        &__symbol
+          background-color $primary
+          border-color $primary
+  &-absolute
+    position absolute
+    top 22rem
+    right 0

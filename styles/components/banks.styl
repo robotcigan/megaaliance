@@ -1,0 +1,56 @@
+.banks
+  .bank
+    margin-bottom 1rem
+    &__top
+      align-items center
+      background-color #fff
+      cursor pointer
+      display flex
+      justify-content space-between
+      padding 4rem 4rem
+      transition all .6s ease
+      will-change filter
+    &__info
+      align-items center
+      display flex
+      justify-content space-between
+      margin-right 2rem
+      width (410 / $container-width * 100)%
+    &__logo
+      margin-right 1rem
+    &__percent
+      font-size 3rem
+      font-weight 300
+      flex-shrink 0
+    &__table
+      display flex
+      justify-content center
+      .item
+        margin-right 7rem
+        &__label
+          color $secondary
+          font-weight 300
+          margin-bottom 1rem
+        &__text
+          font-size 1.8rem
+          font-weight 500
+    &__arrow
+      transition transform .3s ease
+      img
+        display block
+    &__bottom
+      background-color #fff
+      border-top $border
+      display none
+      padding 4rem 6rem
+    &--active
+      .bank
+        &__arrow
+          transform rotate(180deg)
+    &:not(.bank--active):hover
+      .bank__top
+        transform translateY(-4px)
+        filter: drop-shadow(0 16px 24px rgba(135, 149, 163, .45))
+  
+  & + .mega-btns
+    margin-top 3rem

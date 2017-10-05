@@ -16,7 +16,7 @@ html(lang="ru")
       .grid.grid--container
         .top-header__container
           .top-header__phone 8 861 204-18-83
-          .top-header__callback Обратный звонок
+          a(href="#callback").top-header__callback.modal-open Обратный звонок
           .top-header__item
             .top-header__icon
               img(src="./img/clock.png", alt="")
@@ -29,7 +29,7 @@ html(lang="ru")
     header.main-header
       .grid.grid--container
         .main-header__container
-          a(href="").logo
+          a(href="./pages.html").logo
           .nav
             .nav__link
               a(href="") О компании
@@ -118,38 +118,30 @@ html(lang="ru")
 
 
     #callback.modal
-      .modal__title Заявка
-      form.form
-        .form-control
-          label Интересующее оборудование или услуги
-          input(type="text")
-        .form-control
-          label Как вас зовут?
-          input(type="text")
-        .form-control
-          label Телефон
-          input(type="tel").phone-mask
-        .form-control
-          label Электронная почта
-          input(type="email")
-        .form-control
-          label Название компании
-          input(type="text")
-        .form-control
-          label Город
-          input(type="text")
-        .checkbox.mini-offset
-          input(type="checkbox" id="checkbox")
-          label(for="checkbox").checkbox__label
-          label.checkbox__text(for="checkbox") Я согласен на обработку 
-            a(href="").link персональных данных
-        .row
-          .col.col--sm-6
-            .form-control
-              input(type="text")
-          .col.col--sm-6
-            img(src="./img/captcha.png", alt="")
-        button.btn Отправить
+      .modal__align
+        .modal__left(style="background-image: url(/img/modal.jpg)")
+          .modal__circle
+            .modal__offer Скидки до 20%!
+            .modal__sub-offer Однокомнатные квартиры от 954 тыс руб.
+        .modal__right
+          .modal__container
+            .modal__title Хотите, мы бесплатно перезвоним Вам и все обсудим 
+              span или ответим в чате?
+            form.form
+              .row
+                .col.col--sm-6
+                  .form-control
+                    input(type="text").phone-mask
+                .col.col--sm-6
+                  button.btn Хорошо, жду звонка
+              .modal__subtitle Сейчас неудобно? Выберите удобное время для звонка.
+              .checkbox.mini-offset
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Я согласен на обработку 
+                  a(href="") персональных данных
+
+
 
     script(src="./js/jquery.min.js")
     script(src="./js/jquery.easeScroll.js")
@@ -160,4 +152,5 @@ html(lang="ru")
     script(src="./js/jquery.magnific-popup.min.js")
     script(src="./js/flatpickr.min.js")
     script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/yamaps-rounded-buttons.js")
     script(src="./js/main.js")
