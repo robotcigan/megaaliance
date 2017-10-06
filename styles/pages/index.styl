@@ -18,6 +18,30 @@
     background-color #e5eff3
   &--gray
     background-color #f3f6f9
+  &__container
+    position relative
+  &__close
+    align-items center
+    background-color $primary
+    border-radius 50%
+    color #fff
+    circle(47px)
+    cursor pointer
+    display flex
+    font-size 3.2rem
+    justify-content center
+    padding-right 1px
+    padding-bottom 1px
+    position absolute
+    right 0
+    top 0
+    &:before
+      color $main
+      content 'Закрыть'
+      font-size 1.6rem
+      font-weight 500
+      left -8rem
+      position absolute
 
 
 .object-card
@@ -414,16 +438,7 @@
     top -1rem
     
 
-.short-news
-  display flex
-  &__left
-    color $primary
-    padding-left 3rem
-    width 26rem
-
 @media(max-width 1540px)
-  .grid.grid--container
-    padding 0 1.5rem
   .object-card
     &__logo
       bottom initial

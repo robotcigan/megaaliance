@@ -2,9 +2,17 @@ extends layout.pug
 
 
 block content
-  .hero.hero--small(style="background-image: url(img/object.jpg)")
+  .hero.hero--small
+    .hero-shit-slider.slider
+      .slide(style="background-image: url(img/object.jpg)")
+      .slide(style="background-image: url(img/object-2.jpg)")
     .hero__container
-      .grid.grid--container
+      .hero-shit-slider__arrow.hero-shit-slider__arrow--left
+        i.fa.fa-angle-left
+      .hero-shit-slider__arrow.hero-shit-slider__arrow--right
+        i.fa.fa-angle-right
+      
+      .hero__padding
         
         .hero__info
           .hero__info-container
@@ -36,7 +44,7 @@ block content
             a(href="").icon
               .icon__symbol
                 img(src="./img/icons/address.png", alt="")
-              .icon__text Отделы<br>продаж
+              .icon__text Отделы продаж
           .hero__icons-absolute
             a(href="").icon
               .icon__symbol
@@ -54,6 +62,11 @@ block content
     .grid.grid--container
       h2.h2 Все, что нужно для комфортной жизни в городе
       p.subheader Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.
+      .subheader-btn
+        a(href="").megalink
+          .megalink__icon
+            img(src="./img/megalink.png", alt="")
+          .megalink__text Документы на строительство
       .comfort
         .comfort__left
           .comfort__title Развитый район
@@ -117,76 +130,92 @@ block content
       p.subheader Комплекс состоит из двух современных домов: 
         strong Литер 1 — десятиэтажный, Литер 2 —девятнадцатиэтажный.
       .choice
-        .choice__left
-          .choice__control.choice-control
-            label.choice-control__label Литер
-            .choice-control__arrow.choice-control__arrow--top
-              i.fa.fa-angle-up
-            input(type="text" value="1" data-max="3").choice-control__input
-            .choice-control__arrow.choice-control__arrow--bottom
-              i.fa.fa-angle-down
-          .choice__control.choice-control
-            label.choice-control__label Подъезд
-            .choice-control__arrow.choice-control__arrow--top
-              i.fa.fa-angle-up
-            input(type="text" value="2" data-max="6").choice-control__input
-            .choice-control__arrow.choice-control__arrow--bottom
-              i.fa.fa-angle-down
-          .choice__control.choice-control
-            label.choice-control__label Этаж
-            .choice-control__arrow.choice-control__arrow--top
-              i.fa.fa-angle-up
-            input(type="text" value="5" data-max="19").choice-control__input
-            .choice-control__arrow.choice-control__arrow--bottom
-              i.fa.fa-angle-down
+        .choice__wrap
+          .choice__left
+            .choice__control.choice-control
+              label.choice-control__label Литер
+              .choice-control__arrow.choice-control__arrow--top
+                i.fa.fa-angle-up
+              input(type="text" value="1" data-max="3").choice-control__input
+              .choice-control__arrow.choice-control__arrow--bottom
+                i.fa.fa-angle-down
+            .choice__control.choice-control
+              label.choice-control__label Подъезд
+              .choice-control__arrow.choice-control__arrow--top
+                i.fa.fa-angle-up
+              input(type="text" value="2" data-max="6").choice-control__input
+              .choice-control__arrow.choice-control__arrow--bottom
+                i.fa.fa-angle-down
+            .choice__control.choice-control
+              label.choice-control__label Этаж
+              .choice-control__arrow.choice-control__arrow--top
+                i.fa.fa-angle-up
+              input(type="text" value="5" data-max="19").choice-control__input
+              .choice-control__arrow.choice-control__arrow--bottom
+                i.fa.fa-angle-down
 
-        .choice__right
+          .choice__right
 
-          .choice__plans
+            .choice__plans
 
-            a(href="").megalink
-              .megalink__icon
-                img(src="./img/megalink.png", alt="")
-              .megalink__text Генплан
+              .choice__btn
+                a(href="").megalink
+                  .megalink__icon
+                    img(src="./img/megalink.png", alt="")
+                  .megalink__text Генплан
 
-            .plans
-              .plans__header
-                .plans__label Этаж:
-                .plans__numbers <span>5</span>/19
-              .plans__img
-                img(src="./img/plans.png", alt="")
-              .plans__another
+              .plans
+                .plans__header
+                  .plans__label Этаж:
+                  .plans__numbers <span>5</span>/19
+                .plans__img
+                  img(src="./img/plans.png", alt="")
+                .plans__another
+                  .plans__label Похожие планировки
+                  .plans__plan-container
+                    .plan.plan--active
+                      .plan__img
+                        img(src="./img/plan.png", alt="")
+                      span 2EM7_9.9-1_T
+                    .plan
+                      .plan__img
+                        img(src="./img/plan.png", alt="")
+                      span 2EM7_9.9-1_T
 
 
-          .choice__img
-            img(src="./img/plan.png", alt="")
+            .choice__img
+              img(src="./img/plan.png", alt="")
 
-          .choice__info
-            .mega-btn
-              img(src="./img/glass.png", alt="")
-              span Записаться на просмотр
-            .choice__title 1-комнатная квартира
-            .choice__table
-              .choice__row
-                span Общая площадь:
-                span 37,16 кв.м.
-              .choice__row
-                span Жилая лощадь:
-                span 14,66 кв.м.
-              .choice__row
-                span Жилая лощадь:
-                span 14,66 кв.м.
-            .choice__price Стоимость квартиры
-            .choice__price-number от 34 000 руб. за кв.м.
-            .mega-btns.choice__buttons
-              .mega-btn
-                img(src="./img/calc.png", alt="")
-                span Ипотечный<br>калькулятор
-              .mega-btn
-                img(src="./img/tassel.png", alt="")
-                span Варианты отделок
-            .btn Зарезервировать
+            .choice__info
+              .choice__btn
+                .mega-btn
+                  img(src="./img/glass.png", alt="")
+                  span Записаться на просмотр
+              .choice__title 1-комнатная квартира
+              .choice__table
+                .choice__row
+                  span Общая площадь:
+                  span 37,16 кв.м.
+                .choice__row
+                  span Жилая лощадь:
+                  span 14,66 кв.м.
+                .choice__row
+                  span Жилая лощадь:
+                  span 14,66 кв.м.
+              .choice__price Стоимость квартиры
+              .choice__price-number от 34 000 руб. за кв.м.
+              .mega-btns.choice__buttons
+                .mega-btn
+                  img(src="./img/calc.png", alt="")
+                  span Ипотечный<br>калькулятор
+                .mega-btn
+                  img(src="./img/tassel.png", alt="")
+                  span Варианты отделок
+              .btn Зарезервировать
 
+        .choice__compass
+          img(src="./img/compass.png", alt="")
+          span Для выбора квартиры нажмите план этажа
 
   section.section.section--gray
     .grid.grid--container
@@ -203,7 +232,9 @@ block content
 
         .tabs__content.tabs__content--active
           .red-slider.red-slider--with-offset.slider
-            .slide(style="background-image: url(img/family.jpg)")
+            //- .slide(style="background-image: url(img/family.jpg)")
+            .slide
+              .slide__left(style="background-image: url(img/family.jpg)")
               .slide__right
                 .slide__title Ипотека
                 p Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.
@@ -265,6 +296,10 @@ block content
             .tabs__link.tabs__link--active Фото
             .tabs__link Видео
             .tabs__link Ход строительства
+          .tabs__buttons.tabs__buttons--special
+            a(href="").mega-btn
+              img(src="./img/camera-red.png", alt="")
+              span Веб камера
 
         .tabs__content
           p slide
@@ -284,9 +319,9 @@ block content
     .grid.grid--container
       h2.h2 Дизайн-проекты квартир
       p.subheader Мы поможем воплотить дизайн-проект в жизнь и получить идеальный интерьер как с картинки!
-      .row
-        - for (var i = 1; i < 4; i++)
-          .col.col--sm-4
+      .card-slider.slider.row
+        - for (var i = 1; i < 5; i++)
+          .col.col--md-4
             .card
               .card__img(style="background-image: url(./img/design/" + i + ".jpg)")
                 .card__img-container

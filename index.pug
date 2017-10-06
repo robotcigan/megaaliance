@@ -52,7 +52,7 @@ block content
               .icon__symbol.icon__symbol--fix
                 img(src="./img/icons/house.png", alt="")
               .icon__text Ипотека
-            a(href="").icon
+            a(href="#calculator").icon.calculator-open
               .icon__symbol
                 img(src="./img/icons/calc.png", alt="")
               .icon__text Ипотечный<br>калькулятор
@@ -75,8 +75,9 @@ block content
       p.subheader В  нашем активе — как отдельные дома, так и масштабные жилые комплексы
       .red-slider.slider
         - for (var i = 0; i < 3; i++)
-          .slide(style="background-image: url(img/slides/1.jpg)")
-            .slide__left На рынке недвижимости Краснодара более 8 лет.
+          .slide
+            .slide__left(style="background-image: url(img/slides/1.jpg)")
+              .slide__square На рынке недвижимости Краснодара более 8 лет.
             .slide__right
               .text-center
                 .logo.logo--with-solid
@@ -318,7 +319,7 @@ block content
               .item__icon
                 img(src="./img/plus.png", alt="")
               .item__text Все банки партнеры
-            .item.item--type-2
+            a(href="#calculator").item.item--type-2.calculator-open
               .item__icon
                 img(src="./img/calc.png", alt="")
               .item__text Ипотечный калькулятор
@@ -402,48 +403,50 @@ block content
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
 
       
-  section.section.section--mortage
+  section#calculator.section.section--mortage
     .grid.grid--container
-      h2.h2 Расчитать ипотеку
-      p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
-      form.form
-        .row
-          .col.col--lg-4
-            .form-control
-              label Стоимость квартиры
-              input(type="number" value="1900000")
-              .form-control__text руб.
-          .col.col--lg-4
-            .form-control
-              label Возраст
-              input(type="number" value="25")
-          .col.col--lg-4
-            .form-control
-              label Гражданство
-              select.custom-select
-                option Российская Федерация
-                option Российская Федерация
-                option Российская Федерация
-              .form-control__icon
-                i.fa.fa-angle-down
-          .col.col--lg-4
-            .form-control.form-control--inline
-              label Первоначальный взнос
-              input(id="initial-pay-input" type="number" value="1900000")
-              .form-control__text руб.
-            #initial-pay
-          .col.col--lg-4
-            .form-control.form-control--inline
-              label Срок кредита
-              input(id="credit-term-input" type="number" value="10")
-              .form-control__text лет
-            #credit-term
-          .col.col--lg-4
-            .calc
-              span Сумма кредита: 
-              .calc__result
-                span 1 400 000
-                |  руб.
+      .section__container
+        h2.h2 Расчитать ипотеку
+        p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
+        .section__close ×
+        form.form
+          .row
+            .col.col--lg-4
+              .form-control
+                label Стоимость квартиры
+                input(type="number" value="1900000")
+                .form-control__text руб.
+            .col.col--lg-4
+              .form-control
+                label Возраст
+                input(type="number" value="25")
+            .col.col--lg-4
+              .form-control
+                label Гражданство
+                select.custom-select
+                  option Российская Федерация
+                  option Российская Федерация
+                  option Российская Федерация
+                .form-control__icon
+                  i.fa.fa-angle-down
+            .col.col--lg-4
+              .form-control.form-control--inline
+                label Первоначальный взнос
+                input(id="initial-pay-input" type="number" value="5000")
+                .form-control__text руб.
+              #initial-pay
+            .col.col--lg-4
+              .form-control.form-control--inline
+                label Срок кредита
+                input(id="credit-term-input" type="number" value="10")
+                .form-control__text лет
+              #credit-term
+            .col.col--lg-4
+              .calc
+                span Сумма кредита: 
+                .calc__result
+                  span 1 400 000
+                  |  руб.
 
   section.section--mortage-star
     .grid.grid--container

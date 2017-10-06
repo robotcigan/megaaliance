@@ -49,6 +49,16 @@ $(document).ready(function() {
     });
   }
 
+  if ( $('.money-mask').length ) {
+    $('.money-mask').inputmask('currency', {
+      digits: 2,
+      autoGroup: true,
+      prefix: "",
+      rightAlign: false,
+      groupSeparator: " "
+    })
+  }
+
   // Датапикер
   $('.datepicker').flatpickr({
     dateFormat: "d.m.Y",
@@ -79,7 +89,26 @@ $(document).ready(function() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1
-  })
+  });
+
+  $('.hero-shit-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+  $('.slick-slider').slick('setPosition');
+
+  $('.hero-shit-slider__arrow--left').on('click', function () {
+    $('.hero-shit-slider').slick('slickPrev');
+  });
+  $('.hero-shit-slider__arrow--right').on('click', function () {
+    $('.hero-shit-slider').slick('slickNext');
+  });
 
   $('.red-slider').slick({
     // autoplay: true,
@@ -102,6 +131,30 @@ $(document).ready(function() {
   });
 
   $('.news-slider').slick({
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+  $('.card-slider').slick({
     // autoplay: true,
     // autoplaySpeed: 5000,
     dots: true,
@@ -194,12 +247,15 @@ $(document).ready(function() {
     $(this).toggleClass('like--active');
   });
 
+  // Блок почему мы с фотками
   $('.why .icon').on('mouseenter', function () {
     var index = $(this).index();
     $('.why .image').removeClass('image--active');
     $('.why .image').eq(index).addClass('image--active');
   });
 
+
+  // Выбор хаты
   let choiceInput = (self, operationType) => {
     let input = self.closest('.choice-control').find('input');
     let val = parseInt(input.val());
@@ -227,17 +283,23 @@ $(document).ready(function() {
   $('.choice-control input').on('keyup change', function() {
     choiceInput($(this), 'keyup');
   });
-  // $('.choice-control__arrow--top').on('click', function () {
-  //   let input = $(this).closest('.choice-control').find('input');
-  //   let val = parseInt(input.val());
-  //   input.val(val + 1)
-  // });
 
-  // $('.choice-control__arrow--bottom').on('click', function () {
-  //   let input = $(this).closest('.choice-control').find('input');
-  //   let val = parseInt(input.val());
-  //   input.val(val - 1)
-  // });
+  // Переход по якорям
+  $(".calculator-open").on("click", function (event) {
+    $('.section--mortage').slideDown();
+    event.preventDefault();
+    let id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 400);
+  });
+
+  $('.section__close').on('click', function () {
+    $(this).closest('.section').slideUp();
+  });
+
+  $('.calculator-open').on('click', function () {
+    $('.section--mortage').slideDown();
+  });
 
 });
 

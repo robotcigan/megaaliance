@@ -51,9 +51,15 @@
         </div>
       </div>
     </header>
-    <div class="hero hero--small" style="background-image: url(img/object.jpg);">
+    <div class="hero hero--small">
+      <div class="hero-shit-slider slider">
+        <div class="slide" style="background-image: url(img/object.jpg);"></div>
+        <div class="slide" style="background-image: url(img/object-2.jpg);"></div>
+      </div>
       <div class="hero__container">
-        <div class="grid grid--container">
+        <div class="hero-shit-slider__arrow hero-shit-slider__arrow--left"><i class="fa fa-angle-left"></i></div>
+        <div class="hero-shit-slider__arrow hero-shit-slider__arrow--right"><i class="fa fa-angle-right"></i></div>
+        <div class="hero__padding">
           <div class="hero__info">
             <div class="hero__info-container">
               <div class="hero__address">Прикубанский округ, 9-я Тихая</div>
@@ -74,7 +80,7 @@
                 <div class="icon__text">Ипотечный<br>калькулятор</div></a></div>
             <div class="hero__icons-right"><a class="icon" href="">
                 <div class="icon__symbol"><img src="./img/icons/address.png" alt=""></div>
-                <div class="icon__text">Отделы<br>продаж</div></a></div>
+                <div class="icon__text">Отделы продаж</div></a></div>
             <div class="hero__icons-absolute"><a class="icon" href="">
                 <div class="icon__symbol"><img src="./img/icons/camera.png" alt=""></div>
                 <div class="icon__text">Следить за ходом<br>строительства</div></a></div>
@@ -93,6 +99,9 @@
       <div class="grid grid--container">
         <h2 class="h2">Все, что нужно для комфортной жизни в городе</h2>
         <p class="subheader">Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.</p>
+        <div class="subheader-btn"><a class="megalink" href="">
+            <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+            <div class="megalink__text">Документы на строительство</div></a></div>
         <div class="comfort">
           <div class="comfort__left">
             <div class="comfort__title">Развитый район</div>
@@ -159,57 +168,73 @@
         <h2 class="h2">Есть выбор</h2>
         <p class="subheader">Комплекс состоит из двух современных домов: <strong>Литер 1 — десятиэтажный, Литер 2 —девятнадцатиэтажный.</strong></p>
         <div class="choice">
-          <div class="choice__left">
-            <div class="choice__control choice-control">
-              <label class="choice-control__label">Литер</label>
-              <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
-              <input class="choice-control__input" type="text" value="1" data-max="3">
-              <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
+          <div class="choice__wrap">
+            <div class="choice__left">
+              <div class="choice__control choice-control">
+                <label class="choice-control__label">Литер</label>
+                <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
+                <input class="choice-control__input" type="text" value="1" data-max="3">
+                <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
+              </div>
+              <div class="choice__control choice-control">
+                <label class="choice-control__label">Подъезд</label>
+                <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
+                <input class="choice-control__input" type="text" value="2" data-max="6">
+                <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
+              </div>
+              <div class="choice__control choice-control">
+                <label class="choice-control__label">Этаж</label>
+                <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
+                <input class="choice-control__input" type="text" value="5" data-max="19">
+                <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
+              </div>
             </div>
-            <div class="choice__control choice-control">
-              <label class="choice-control__label">Подъезд</label>
-              <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
-              <input class="choice-control__input" type="text" value="2" data-max="6">
-              <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
-            </div>
-            <div class="choice__control choice-control">
-              <label class="choice-control__label">Этаж</label>
-              <div class="choice-control__arrow choice-control__arrow--top"><i class="fa fa-angle-up"></i></div>
-              <input class="choice-control__input" type="text" value="5" data-max="19">
-              <div class="choice-control__arrow choice-control__arrow--bottom"><i class="fa fa-angle-down"></i></div>
-            </div>
-          </div>
-          <div class="choice__right">
-            <div class="choice__plans"><a class="megalink" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Генплан</div></a>
-              <div class="plans">
-                <div class="plans__header">
-                  <div class="plans__label">Этаж:</div>
-                  <div class="plans__numbers"><span>5</span>/19</div>
+            <div class="choice__right">
+              <div class="choice__plans">
+                <div class="choice__btn"><a class="megalink" href="">
+                    <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                    <div class="megalink__text">Генплан</div></a></div>
+                <div class="plans">
+                  <div class="plans__header">
+                    <div class="plans__label">Этаж:</div>
+                    <div class="plans__numbers"><span>5</span>/19</div>
+                  </div>
+                  <div class="plans__img"><img src="./img/plans.png" alt=""></div>
+                  <div class="plans__another">
+                    <div class="plans__label">Похожие планировки</div>
+                    <div class="plans__plan-container">
+                      <div class="plan plan--active">
+                        <div class="plan__img"><img src="./img/plan.png" alt=""></div><span>2EM7_9.9-1_T</span>
+                      </div>
+                      <div class="plan">
+                        <div class="plan__img"><img src="./img/plan.png" alt=""></div><span>2EM7_9.9-1_T</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="plans__img"><img src="./img/plans.png" alt=""></div>
-                <div class="plans__another"></div>
               </div>
-            </div>
-            <div class="choice__img"><img src="./img/plan.png" alt=""></div>
-            <div class="choice__info">
-              <div class="mega-btn"><img src="./img/glass.png" alt=""><span>Записаться на просмотр</span></div>
-              <div class="choice__title">1-комнатная квартира</div>
-              <div class="choice__table">
-                <div class="choice__row"><span>Общая площадь:</span><span>37,16 кв.м.</span></div>
-                <div class="choice__row"><span>Жилая лощадь:</span><span>14,66 кв.м.</span></div>
-                <div class="choice__row"><span>Жилая лощадь:</span><span>14,66 кв.м.</span></div>
+              <div class="choice__img"><img src="./img/plan.png" alt=""></div>
+              <div class="choice__info">
+                <div class="choice__btn">
+                  <div class="mega-btn"><img src="./img/glass.png" alt=""><span>Записаться на просмотр</span></div>
+                </div>
+                <div class="choice__title">1-комнатная квартира</div>
+                <div class="choice__table">
+                  <div class="choice__row"><span>Общая площадь:</span><span>37,16 кв.м.</span></div>
+                  <div class="choice__row"><span>Жилая лощадь:</span><span>14,66 кв.м.</span></div>
+                  <div class="choice__row"><span>Жилая лощадь:</span><span>14,66 кв.м.</span></div>
+                </div>
+                <div class="choice__price">Стоимость квартиры</div>
+                <div class="choice__price-number">от 34 000 руб. за кв.м.</div>
+                <div class="mega-btns choice__buttons">
+                  <div class="mega-btn"><img src="./img/calc.png" alt=""><span>Ипотечный<br>калькулятор</span></div>
+                  <div class="mega-btn"><img src="./img/tassel.png" alt=""><span>Варианты отделок</span></div>
+                </div>
+                <div class="btn">Зарезервировать</div>
               </div>
-              <div class="choice__price">Стоимость квартиры</div>
-              <div class="choice__price-number">от 34 000 руб. за кв.м.</div>
-              <div class="mega-btns choice__buttons">
-                <div class="mega-btn"><img src="./img/calc.png" alt=""><span>Ипотечный<br>калькулятор</span></div>
-                <div class="mega-btn"><img src="./img/tassel.png" alt=""><span>Варианты отделок</span></div>
-              </div>
-              <div class="btn">Зарезервировать</div>
             </div>
           </div>
+          <div class="choice__compass"><img src="./img/compass.png" alt=""><span>Для выбора квартиры нажмите план этажа</span></div>
         </div>
       </div>
     </section>
@@ -229,7 +254,8 @@
           </div>
           <div class="tabs__content tabs__content--active">
             <div class="red-slider red-slider--with-offset slider">
-              <div class="slide" style="background-image: url(img/family.jpg);">
+              <div class="slide">
+                <div class="slide__left" style="background-image: url(img/family.jpg);"></div>
                 <div class="slide__right">
                   <div class="slide__title">Ипотека</div>
                   <p>Нашей ключевой задачей является своевременная реализация качественных и современных проектов, которые обеспечивают максимальный комфорт и соответствуют актуальным требованиям безопасности.</p><a class="megalink" href="">
@@ -330,6 +356,7 @@
               <div class="tabs__link">Видео</div>
               <div class="tabs__link">Ход строительства</div>
             </div>
+            <div class="tabs__buttons tabs__buttons--special"><a class="mega-btn" href=""><img src="./img/camera-red.png" alt=""><span>Веб камера</span></a></div>
           </div>
           <div class="tabs__content">
             <p>slide</p>
@@ -352,8 +379,8 @@
       <div class="grid grid--container">
         <h2 class="h2">Дизайн-проекты квартир</h2>
         <p class="subheader">Мы поможем воплотить дизайн-проект в жизнь и получить идеальный интерьер как с картинки!</p>
-        <div class="row">
-          <div class="col col--sm-4">
+        <div class="card-slider slider row">
+          <div class="col col--md-4">
             <div class="card">
               <div class="card__img" style="background-image: url(./img/design/1.jpg);">
                 <div class="card__img-container">
@@ -370,7 +397,7 @@
               </div>
             </div>
           </div>
-          <div class="col col--sm-4">
+          <div class="col col--md-4">
             <div class="card">
               <div class="card__img" style="background-image: url(./img/design/2.jpg);">
                 <div class="card__img-container">
@@ -387,9 +414,26 @@
               </div>
             </div>
           </div>
-          <div class="col col--sm-4">
+          <div class="col col--md-4">
             <div class="card">
               <div class="card__img" style="background-image: url(./img/design/3.jpg);">
+                <div class="card__img-container">
+                  <div class="like"></div>
+                </div>
+              </div>
+              <div class="card__container">
+                <div class="card__table">
+                  <div class="card__row"><span>Количество комнат</span><span>3</span></div>
+                  <div class="card__row"><span>Квадратные метры</span><span>68</span></div>
+                </div><a class="megalink" href="">
+                  <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                  <div class="megalink__text">подробнее</div></a>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-4">
+            <div class="card">
+              <div class="card__img" style="background-image: url(./img/design/4.jpg);">
                 <div class="card__img-container">
                   <div class="like"></div>
                 </div>
@@ -449,11 +493,11 @@
     <footer class="main-footer">
       <div class="grid grid--container">
         <div class="row">
-          <div class="col col--sm-3">
+          <div class="col col--md-3">
             <div class="logo logo--white"></div>
             <div class="copy">Квартиры от застройщика в Краснодаре<br>&copy; 2015—2017</div><a class="wf" href="">Создание сайта в Webformula</a>
           </div>
-          <div class="col col--sm-2">
+          <div class="col col--md-2">
             <div class="main-footer-nav">
               <div class="main-footer-nav__link"><a href="">О компании</a></div>
               <div class="main-footer-nav__link"><a href="">Объекты в продаже</a></div>
@@ -461,14 +505,14 @@
               <div class="main-footer-nav__link"><a href="">Риэлторам</a></div>
             </div>
           </div>
-          <div class="col col--sm-3">
+          <div class="col col--md-3">
             <div class="socials"><a class="social" href=""><i class="fa fa-vk"></i></a><a class="social" href=""><i class="fa fa-facebook"></i></a><a class="social" href=""><i class="fa fa-odnoklassniki"></i></a><a class="social" href=""><i class="fa fa-instagram"></i></a></div>
             <div class="main-footer-nav main-footer-nav--gray">
               <div class="main-footer-nav__link"><a href="">Политика конфиденциальности</a></div>
               <div class="main-footer-nav__link"><a href="">Карта сайта</a></div>
             </div>
           </div>
-          <div class="col col--sm-4">
+          <div class="col col--md-4">
             <p class="text-gray">Официальный сай застройщика ООО «МегаАльянс».Новости, отзывы покупателей, мнение о квартальной застройке.</p>
             <p>350062, Краснодар,Пр-т им. Константина Образцова, 2<br>понедельник - пятница, с 9:00 до 18:00</p><a class="btn" href="">Офисы продаж</a>
           </div>

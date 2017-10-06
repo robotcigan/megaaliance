@@ -107,7 +107,7 @@
                 <div class="icon__symbol"><img src="./img/icons/type.png" alt=""></div>
                 <div class="icon__text">Квартира<br>по типу</div></a><a class="icon" href="">
                 <div class="icon__symbol icon__symbol--fix"><img src="./img/icons/house.png" alt=""></div>
-                <div class="icon__text">Ипотека</div></a><a class="icon" href="">
+                <div class="icon__text">Ипотека</div></a><a class="icon calculator-open" href="#calculator">
                 <div class="icon__symbol"><img src="./img/icons/calc.png" alt=""></div>
                 <div class="icon__text">Ипотечный<br>калькулятор</div></a></div>
             <div class="hero__icons-right"><a class="icon" href="">
@@ -125,8 +125,10 @@
         <h2 class="h2">Застройщик квартир в Краснодаре</h2>
         <p class="subheader">В  нашем активе — как отдельные дома, так и масштабные жилые комплексы</p>
         <div class="red-slider slider">
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
+          <div class="slide">
+            <div class="slide__left" style="background-image: url(img/slides/1.jpg);">
+              <div class="slide__square">На рынке недвижимости Краснодара более 8 лет.</div>
+            </div>
             <div class="slide__right">
               <div class="text-center">
                 <div class="logo logo--with-solid"></div>
@@ -136,8 +138,10 @@
                 <div class="megalink__text">Подробнее</div></a>
             </div>
           </div>
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
+          <div class="slide">
+            <div class="slide__left" style="background-image: url(img/slides/1.jpg);">
+              <div class="slide__square">На рынке недвижимости Краснодара более 8 лет.</div>
+            </div>
             <div class="slide__right">
               <div class="text-center">
                 <div class="logo logo--with-solid"></div>
@@ -147,8 +151,10 @@
                 <div class="megalink__text">Подробнее</div></a>
             </div>
           </div>
-          <div class="slide" style="background-image: url(img/slides/1.jpg);">
-            <div class="slide__left">На рынке недвижимости Краснодара более 8 лет.</div>
+          <div class="slide">
+            <div class="slide__left" style="background-image: url(img/slides/1.jpg);">
+              <div class="slide__square">На рынке недвижимости Краснодара более 8 лет.</div>
+            </div>
             <div class="slide__right">
               <div class="text-center">
                 <div class="logo logo--with-solid"></div>
@@ -502,11 +508,9 @@
               <div class="item item--type-1">
                 <div class="item__icon"><img src="./img/plus.png" alt=""></div>
                 <div class="item__text">Все банки партнеры</div>
-              </div>
-              <div class="item item--type-2">
+              </div><a class="item item--type-2 calculator-open" href="#calculator">
                 <div class="item__icon"><img src="./img/calc.png" alt=""></div>
-                <div class="item__text">Ипотечный калькулятор</div>
-              </div>
+                <div class="item__text">Ипотечный калькулятор</div></a>
             </div>
           </div>
           <div class="tabs__content tabs__content--active">
@@ -698,59 +702,62 @@
         </div>
       </div>
     </section>
-    <section class="section section--mortage">
+    <section class="section section--mortage" id="calculator">
       <div class="grid grid--container">
-        <h2 class="h2">Расчитать ипотеку</h2>
-        <p class="subheader">Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям</p>
-        <form class="form">
-          <div class="row">
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Стоимость квартиры</label>
-                <input type="number" value="1900000">
-                <div class="form-control__text">руб.</div>
+        <div class="section__container">
+          <h2 class="h2">Расчитать ипотеку</h2>
+          <p class="subheader">Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям</p>
+          <div class="section__close">×</div>
+          <form class="form">
+            <div class="row">
+              <div class="col col--lg-4">
+                <div class="form-control">
+                  <label>Стоимость квартиры</label>
+                  <input type="number" value="1900000">
+                  <div class="form-control__text">руб.</div>
+                </div>
+              </div>
+              <div class="col col--lg-4">
+                <div class="form-control">
+                  <label>Возраст</label>
+                  <input type="number" value="25">
+                </div>
+              </div>
+              <div class="col col--lg-4">
+                <div class="form-control">
+                  <label>Гражданство</label>
+                  <select class="custom-select">
+                    <option>Российская Федерация</option>
+                    <option>Российская Федерация</option>
+                    <option>Российская Федерация</option>
+                  </select>
+                  <div class="form-control__icon"><i class="fa fa-angle-down"></i></div>
+                </div>
+              </div>
+              <div class="col col--lg-4">
+                <div class="form-control form-control--inline">
+                  <label>Первоначальный взнос</label>
+                  <input id="initial-pay-input" type="number" value="5000">
+                  <div class="form-control__text">руб.</div>
+                </div>
+                <div id="initial-pay"></div>
+              </div>
+              <div class="col col--lg-4">
+                <div class="form-control form-control--inline">
+                  <label>Срок кредита</label>
+                  <input id="credit-term-input" type="number" value="10">
+                  <div class="form-control__text">лет</div>
+                </div>
+                <div id="credit-term"></div>
+              </div>
+              <div class="col col--lg-4">
+                <div class="calc"><span>Сумма кредита: </span>
+                  <div class="calc__result"><span>1 400 000</span> руб.</div>
+                </div>
               </div>
             </div>
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Возраст</label>
-                <input type="number" value="25">
-              </div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control">
-                <label>Гражданство</label>
-                <select class="custom-select">
-                  <option>Российская Федерация</option>
-                  <option>Российская Федерация</option>
-                  <option>Российская Федерация</option>
-                </select>
-                <div class="form-control__icon"><i class="fa fa-angle-down"></i></div>
-              </div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control form-control--inline">
-                <label>Первоначальный взнос</label>
-                <input id="initial-pay-input" type="number" value="1900000">
-                <div class="form-control__text">руб.</div>
-              </div>
-              <div id="initial-pay"></div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="form-control form-control--inline">
-                <label>Срок кредита</label>
-                <input id="credit-term-input" type="number" value="10">
-                <div class="form-control__text">лет</div>
-              </div>
-              <div id="credit-term"></div>
-            </div>
-            <div class="col col--lg-4">
-              <div class="calc"><span>Сумма кредита: </span>
-                <div class="calc__result"><span>1 400 000</span> руб.</div>
-              </div>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
     <section class="section--mortage-star">
@@ -780,11 +787,11 @@
     <footer class="main-footer">
       <div class="grid grid--container">
         <div class="row">
-          <div class="col col--sm-3">
+          <div class="col col--md-3">
             <div class="logo logo--white"></div>
             <div class="copy">Квартиры от застройщика в Краснодаре<br>&copy; 2015—2017</div><a class="wf" href="">Создание сайта в Webformula</a>
           </div>
-          <div class="col col--sm-2">
+          <div class="col col--md-2">
             <div class="main-footer-nav">
               <div class="main-footer-nav__link"><a href="">О компании</a></div>
               <div class="main-footer-nav__link"><a href="">Объекты в продаже</a></div>
@@ -792,14 +799,14 @@
               <div class="main-footer-nav__link"><a href="">Риэлторам</a></div>
             </div>
           </div>
-          <div class="col col--sm-3">
+          <div class="col col--md-3">
             <div class="socials"><a class="social" href=""><i class="fa fa-vk"></i></a><a class="social" href=""><i class="fa fa-facebook"></i></a><a class="social" href=""><i class="fa fa-odnoklassniki"></i></a><a class="social" href=""><i class="fa fa-instagram"></i></a></div>
             <div class="main-footer-nav main-footer-nav--gray">
               <div class="main-footer-nav__link"><a href="">Политика конфиденциальности</a></div>
               <div class="main-footer-nav__link"><a href="">Карта сайта</a></div>
             </div>
           </div>
-          <div class="col col--sm-4">
+          <div class="col col--md-4">
             <p class="text-gray">Официальный сай застройщика ООО «МегаАльянс».Новости, отзывы покупателей, мнение о квартальной застройке.</p>
             <p>350062, Краснодар,Пр-т им. Константина Образцова, 2<br>понедельник - пятница, с 9:00 до 18:00</p><a class="btn" href="">Офисы продаж</a>
           </div>

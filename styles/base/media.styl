@@ -3,13 +3,22 @@
 // html.mobile-menu-was-open
 //   overflow hidden
 
+@media(max-width 1800px)
+  .grid--container
+    max-width 94%
+    padding 0
+  .hero
+    &__padding
+      padding 0 3%
+
 @media(max-width 1630px)
   .nav
     margin-right 0
 
 @media(max-width 1550px)
-  .grid--container
-    max-width 96%
+  .hero
+    &__padding
+      padding 0 2%
   .nav
     &__link
       & > a
@@ -37,7 +46,58 @@
   body
     &.body--cursor-pointer
       cursor pointer
+  .card
+    &__img
+      min-height 18rem
   .pre-footer
+    &__container
+      padding 0
+      &:before
+        display none
     &__arm
       right 0
 
+@media(max-width 1000px)
+  .pre-footer
+    .btn--big
+      font-size 1.8rem
+      padding 2.4rem
+
+@media(max-width 769px)
+  .grid--container
+    max-width initial
+  .main-footer
+    padding 4rem 0
+  .card
+    margin-bottom 3rem
+    &__img
+      height 24rem
+  .wf
+    margin-bottom 4rem
+
+@media(max-width 700px)
+  .pre-footer
+    padding 4rem 0
+    &__container
+      display flex
+      justify-content space-between
+    &__arm
+      display none
+    .btn--big
+      text-align center
+      padding 1.4rem
+      width 48%
+
+@media(max-width 500px)
+  .card
+    &__img
+      height 20rem
+  .pre-footer
+    &__container
+      flex-direction column
+    .btn--big
+      padding 2rem
+      width 100%
+    .btn + .btn
+      margin-left 0
+      margin-top 1rem

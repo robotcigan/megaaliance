@@ -4,8 +4,24 @@
   background-size cover
   min-height 60rem
   height calc(100vh - 15rem)
+  position relative
   // margin-bottom $main-offset
   width 100%
+  &-shit-slider
+    height 100%
+    position absolute
+    top 0
+    z-index -1
+    width 100%
+    .slide
+      background-position bottom center
+      background-size cover
+      min-height 60rem
+      height calc(100vh - 26.5rem)
+      width 100%
+  &__padding
+    padding 0 (184 / 1900 * 100)%
+    width 100%
   &__container
     align-items flex-end
     display flex
@@ -87,7 +103,8 @@
     align-items center
     cursor pointer
     display flex
-    margin-right 7rem
+    // margin-right 7rem
+    margin-right (80 / 1000 * 100)%
     &__symbol
       align-items center
       border 2px solid #fff
@@ -113,7 +130,40 @@
         &__symbol
           background-color $primary
           border-color $primary
+  &-right
+    .icon
+      margin-right 0
   &-absolute
     position absolute
-    top 22rem
-    right 0
+    top 7rem
+    right (180 / 1900 * 100)%
+    .icon
+      width 100%
+    
+
+.hero-shit-slider
+  &__arrow
+    align-items center
+    background-color $primary
+    border-radius 50%
+    color #fff
+    cursor pointer
+    display flex
+    justify-content center
+    height 5.7rem
+    width 5.7rem
+    position absolute
+    top calc(50% - 2.8rem)
+    z-index 9999
+    &--left
+      left 4rem
+      .fa
+        transform translateX(-1px)
+    &--right
+      right 4rem
+      .fa
+        transform translateX(1px)
+    .fa
+      font-size 2.4rem
+      font-weight 600
+
