@@ -8,8 +8,7 @@ html(lang="ru")
     meta(name="format-detection" content="telephone=no")
     link(rel="stylesheet", href="styles/css/vendor.css")
     link(rel="stylesheet", href="styles/css/main.css")
-    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
-    script(src="mapbasics.js" type="text/javascript")
+    //- script(src="mapbasics.js" type="text/javascript")
   body
 
     header.top-header
@@ -17,11 +16,11 @@ html(lang="ru")
         .top-header__container
           .top-header__phone 8 861 204-18-83
           a(href="#callback").top-header__callback.modal-open Обратный звонок
-          .top-header__item
+          .top-header__item.top-header__time
             .top-header__icon
               img(src="./img/clock.png", alt="")
             .top-header__text Пн- Пт, с 9:00 до 18:00 (ежедневно без выходных)
-          .top-header__item
+          .top-header__item.top-header__likes
             .top-header__icon
               img(src="./img/heart.png", alt="")
             .top-header__text Избранное
@@ -129,10 +128,10 @@ html(lang="ru")
               span или ответим в чате?
             form.form
               .row
-                .col.col--sm-6
+                .col.col--lg-6
                   .form-control
                     input(type="text").phone-mask
-                .col.col--sm-6
+                .col.col--lg-6
                   button.btn Хорошо, жду звонка
               .modal__subtitle Сейчас неудобно? Выберите удобное время для звонка.
               .checkbox.mini-offset
@@ -143,8 +142,9 @@ html(lang="ru")
 
 
 
-    script(src="./js/jquery.min.js")
+    script(src="./js/jquery-2.2.1.min.js")
     script(src="./js/jquery.easeScroll.js")
+    script(src="./js/jquery.scrollme.js")
     script(src="./js/slick.min.js")
     script(src="./js/select2.min.js")
     script(src="./js/nouislider.min.js")
@@ -152,5 +152,5 @@ html(lang="ru")
     script(src="./js/jquery.magnific-popup.min.js")
     script(src="./js/flatpickr.min.js")
     script(src="./js/jquery.inputmask.bundle.min.js")
-    script(src="./js/yamaps-rounded-buttons.js")
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
     script(src="./js/main.js")

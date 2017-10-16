@@ -1,0 +1,103 @@
+.parallax
+  background-posititon center
+  background-repeat no-repeat
+  background-size cover
+  display flex
+  justify-content space-between
+  height 54rem
+  overflow hidden
+  position relative
+  width 100%
+  &__hero
+    transform translateX((100 / $container-width * 100)%)
+    align-self flex-end
+    img
+      display block
+  &__container
+    // position absolute
+    // right (150 / $container-width * 100)%
+    // top 10rem
+    align-self center
+    padding-right (100 / $container-width * 100)%
+    width (700 / $container-width * 100)%
+  &__title
+    color #fff
+    font-size 4.8rem
+    font-weight 300
+    margin-bottom 5rem
+  &__text
+    color #fff
+    line-height 1.6
+    margin-bottom 5rem
+
+.contact
+  background-color #fff
+  margin-bottom 3rem
+  &__top
+    min-height 16rem
+    padding 3.5rem
+  &__title
+    font-size 1.8rem
+    font-weight 500
+    margin-bottom 3rem
+  &__address
+    span
+      display block
+      margin-bottom 1.5rem
+  &__bottom
+    background-color #fafbfd
+    border-left 4px solid $primary
+    padding 3.5rem 3.1rem
+  &__row
+    &:not(:last-child)
+      margin-bottom 1rem
+  &__label
+    display inline-block
+    min-width 7rem
+    vertical-align middle
+  &__info
+    display inline-block
+    vertical-align middle
+    &--email
+      color $primary
+
+
+.text-block
+  background-color #fff
+  padding (100 / $container-width * 100)% (250 / $container-width * 100)%
+  
+
+.preim
+  display flex
+  margin-bottom 3rem
+  width 100%
+  &__left
+    align-items center
+    background-color #d9e5ea
+    display flex
+    flex-shrink 0
+    justify-content center
+    width 25%
+    text-align center
+    img
+      display inline-block
+  &__right
+    background-color #fff
+    line-height 1.6
+    padding 5rem
+    width 75%
+
+
+
+@media(max-width 500px)
+  .preim
+    display block
+    &__left
+      padding 4rem
+      width 100%
+    &__right
+      padding 2rem
+      width 100%
+
+
+

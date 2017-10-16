@@ -110,15 +110,28 @@
   top 2.8rem
 
 
-  
+@media(max-width 1200px)
+  .modal
+    width 96%
+    &__left
+      background-color $primary
+      background-image none !important
+      border-radius $radius 0 0 $radius
+      width 35%
+    &__circle
+      background-color transparent
+      flex-shrink 0
+      padding 2rem
+    &__container
+      padding 7% 5%
+    &__title
+      font-size 2rem
+      margin-bottom 3rem
 
 @media(max-width 767px)
   .mfp-container
     padding 0
   .modal
-    padding 2.4rem 4%
-    right 0
-    width 94%
     &__plate
       margin-left -4.3%
       margin-right -4.3%
@@ -127,5 +140,23 @@
     .mfp-close:active
       font-size 4rem
       opacity 1
-      top 1.4rem
+      top -8rem
       right .4rem
+      &:after
+        bottom -2rem
+        font-size 1.4rem
+        left -.5rem
+    .mini-offset
+      margin-bottom 0
+
+
+@media(max-width 700px)
+  .modal
+    &__left
+      display none
+    &__container
+      padding 6% 4%
+    &__subtitle
+      margin-bottom 3rem
+    .checkbox
+      display flex

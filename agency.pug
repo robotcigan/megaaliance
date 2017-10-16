@@ -1,0 +1,166 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/agency.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        .breadcrumbs__link.breadcrumbs__link--active Агенствам
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 О компании «МегаАльянс»
+      p.subheader Почему стоит выбрать из многообразия предложений нашу компанию?
+
+      .parallax(style="background-image: url(img/parallax/about-bg.jpg)")
+        .parallax__hero
+          img.animateme(src="./img/parallax/agency-hero.png", alt=""
+            data-when="enter"
+            data-from="0"
+            data-to="1.5"
+            data-translatex="60")
+        .parallax__container
+          .parallax__title Репутация честной <br>и открытой компании
+          .parallax__text Компания "МегаАльянс" открыта для сотрудничества и приглашает к работе риэлторские компании Краснодара и России. <br> Мы всегда рады развитию взаимовыгодных долгосрочных партнерских отношений и стремимся к достижению высоких профессиональных результатов. <br>Вместе мы сможем добиться большего!
+          a(href="").btn Сотрудничать
+
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container
+      h2.h2 Наши преимущества
+      .preims.row
+        .col.col--xl-6.col--sm-flex
+          .preim
+            .preim__left
+              img(src="./img/preim/1.png", alt="")
+            .preim__right Надежный застройщик. За плечами компании многолетний опыт успешного строительства и реализации объектов.
+        .col.col--xl-6.col--sm-flex
+          .preim
+            .preim__left
+              img(src="./img/preim/2.png", alt="")
+            .preim__right Честная система взаимодействия. Все этапы сделки прозрачны от начала до конца. Выплаты риэлторских вознаграждений осуществляются своевременно и в срок.
+        .col.col--xl-6.col--sm-flex
+          .preim
+            .preim__left
+              img(src="./img/preim/3.png", alt="")
+            .preim__right Программы мотивации. Мы ценим ваш труд и готовы предложить достойное вознаграждение.
+        .col.col--xl-6.col--sm-flex
+          .preim
+            .preim__left
+              img(src="./img/preim/4.png", alt="")
+            .preim__right Окажем любую информационную поддержку. Каждый рабочий день компании ваш персональный менеджер.
+
+
+  section.section.section--blue
+    .grid.grid--container
+      .row
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Выписка из ЕГРЮЛ
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name ОГРН и ИНН
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Огрюл
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Аудиторское заключение за 2016 год
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name ДДУ Литер 1 ЖК Семейный Парк
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name ДДУ ЖК Янтарный-4
+              .file__size размер: 213 Кб
+        .col.col--lg-3.col--md-4.col--sm-6
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name ДДУ Литер 2 ЖК Семейный Парк
+              .file__size размер: 213 Кб

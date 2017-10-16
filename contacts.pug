@@ -1,0 +1,215 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/contacts.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link О компании
+        .breadcrumbs__link.breadcrumbs__link--active Контактная информация
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Контактная информация
+      p.subheader На все возникшие у вас вопросы, ответят наши менеджеры. Контактную информацию вы можете найти ниже.
+
+      .row
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Офис компании
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info (861) 272-25-55
+              .contact__row
+                .contact__label режим работы:
+                .contact__info Пн - Пт, с 9:00 до 18:00
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Приемная руководителя
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info (861) 272-25-55
+              .contact__row
+                .contact__label e-mail:
+                .contact__info.contact__info--email office@megaalyans.ru
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел кадров
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info (861) 272-25-55
+              .contact__row
+                .contact__label e-mail:
+                .contact__info.contact__info--email job@megaalyans.ru
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Бухгалтерия
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info (861) 272-74-44
+              .contact__row
+                .contact__label e-mail:
+                .contact__info.contact__info--email account@megaalyans.ru
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел рекламы
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info 8 861 270 00 20 доб. 106
+              .contact__row
+                .contact__label e-mail:
+                .contact__info.contact__info--email reklama.ma@mail.ru
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел снабжения
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info (861) 273-82-90
+              .contact__row
+                .contact__label e-mail:
+                .contact__info.contact__info--email 2738260@bk.ru
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел продаж
+              .contact__address 
+                span 350062, Краснодар 
+                | Пр-т им. Константина Образцова, 2
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info 8 (861) 204-18-82
+              .contact__row
+                .contact__label режим работы:
+                .contact__info 9:00 - 19:00 без перерывов и выходных
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел продаж
+              .contact__address г. Краснодар, ул. Душистая 60
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info 8 (861) 238 43 43
+              .contact__row
+                .contact__label режим работы:
+                .contact__info 9:00 - 19:00 без перерывов и выходных
+        .col.col--md-6.col--lg-4
+          .contact
+            .contact__top
+              .contact__title Отдел продаж на объекте
+              .contact__address ул. Симиренко, 71
+            .contact__bottom
+              .contact__row
+                .contact__label тел.:
+                .contact__info 8 (988) 488-40-44
+              .contact__row
+                .contact__label режим работы:
+                .contact__info 9:00 - 19:00 без перерывов и выходных
+
+  section.section.section--blue
+    .grid.grid--container
+      .tabs
+        .tabs__header-container
+          .tabs__header.map-center-change
+            .tabs__link.tabs__link--active Офис компании
+            .tabs__link Офисы продаж
+            .tabs__link Объекты
+
+      #map.map
+        .map__align
+          .map__info
+            .text-center
+              .logo.logo--with-solid
+            p.map__address ЖК «Семейный Парк»
+            p.map__p Прикубанский округ, 9-я Тихая

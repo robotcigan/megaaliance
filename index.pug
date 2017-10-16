@@ -30,13 +30,18 @@ block content
               option Студия
               option Студия
           .hero-form__control
-            input(type="text" placeholder="Срок сдачи").datepicker
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
           .hero-form__control
             input(type="number" placeholder="от")
           .hero-form__control
             input(type="number" placeholder="до")
           .hero-form__control
-            input(type="number" placeholder="площадь")
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
           input(type="submit" value="Найти").btn
         .hero__icons
           .hero__icons-left
@@ -60,7 +65,7 @@ block content
             a(href="").icon
               .icon__symbol
                 img(src="./img/icons/address.png", alt="")
-              .icon__text Отделы<br>продаж
+              .icon__text Отделы продаж
           .hero__icons-absolute
             a(href="").icon
               .icon__symbol
@@ -76,7 +81,7 @@ block content
       .red-slider.slider
         - for (var i = 0; i < 3; i++)
           .slide
-            .slide__left(style="background-image: url(img/slides/1.jpg)")
+            .slide__left(style="background-image: url(img/slides/2.jpg)")
               .slide__square На рынке недвижимости Краснодара более 8 лет.
             .slide__right
               .text-center
@@ -88,9 +93,9 @@ block content
                 .megalink__text Подробнее
 
   section.section.section--formats
-    h2.h2 Качественно новое пространство для жизни
-    p.subheader Разнообразие форматов квартир, широкий выбор планировочных решений и продуманная инфраструктура.
     .grid.grid--container
+      h2.h2 Качественно новое пространство для жизни
+      p.subheader Разнообразие форматов квартир, широкий выбор планировочных решений и продуманная инфраструктура.
       .tabs
         .tabs__header-container
           .tabs__header
@@ -104,7 +109,7 @@ block content
 
         .tabs__content.tabs__content--active
           .row
-            .col.col--lg-flex.col--xl-4.col--sm-5
+            .col.col--lg-flex.col--xl-4.col--lg-5
               .object-card(style="background-image: url(img/card-1.jpg)")
                 .object-card__container
                   .object-card__title ЖК «Янтарный 4»
@@ -118,7 +123,7 @@ block content
                     .megalink__text подробнее
                   .like
 
-            .col.col--lg-flex.col--xl-8.col--sm-7
+            .col.col--lg-flex.col--xl-8.col--lg-7
               .object-card(style="background-image: url(img/card-2.jpg)")
                 .object-card__container
                   .object-card__title ЖК «Семейный парк»
@@ -191,7 +196,7 @@ block content
       .formats
         .item
           .item__container(style="background-image: url(./img/formats/1.jpg)")
-            .item__text Для гармоничных
+            .item__text Для молодых
           .block
             .block__title Дизайн проекты квартир
             p.block__anons Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.
@@ -221,7 +226,7 @@ block content
               .megalink__text Подробнее
         .item
           .item__container(style="background-image: url(./img/formats/3.jpg)")
-            .item__text Для гармоничных
+            .item__text Для тех, кто не любит скучать
           .block
             .block__title Дизайн проекты квартир
             p.block__anons Наше настроение, внутрення гармония, успех и дела начинаются дома! Мы стараемся разрабатывать личные интерьеры исключительно для его обладателей. Мы работаем во всех стилях и занимаемся разработкой интерьеров разной сложности.
@@ -241,15 +246,15 @@ block content
       .row.row--lg-center
         .col.col--md-flex.col--md-3
           .white-block__left
-            .white-block__title Проект<br>в жизнь
+            .white-block__title Проект <br>в жизнь
         .col.col--md-flex.col--md-9
           .white-block__right
             .white-block__text Воплотить дизайн-проект в жизнь помогут наши профессиональные команды строителей! Все работы проводятся с учетом законодательства и только с качественными строительными материалами!
 
   section.section.section--news
-    h2.h2 Новости и спецпредложения
-    p.subheader Новости и самые выгодные предложения для подписчиков
     .grid.grid--container
+      h2.h2 Новости и спецпредложения
+      p.subheader Новости и самые выгодные предложения для подписчиков
       .tabs
         .tabs__header-container
           .tabs__header
@@ -305,9 +310,9 @@ block content
 
 
   section.section.section--banks
-    h2.h2 Смотрите, выгодная ипотека
-    p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условия
     .grid.grid--container
+      h2.h2 Смотрите, выгодная ипотека
+      p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условия
       .tabs
         .tabs__header-container
           .tabs__header

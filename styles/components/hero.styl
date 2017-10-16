@@ -28,9 +28,10 @@
     height 100%
   &-form
     border-radius $radius
-    height 5.4rem
-    margin-bottom 10rem
     display flex
+    // height 5.4rem
+    margin-bottom 10rem
+    position relative
     &__control
       width 100%
       input,
@@ -43,14 +44,26 @@
         height 5.4rem !important
         padding-left 2rem
         width 100%
+        -webkit-appearance none
       .select2-selection--single
         padding-top 1.8rem
       &:not(:last-child)
         border-right $border
     .btn
       margin-left 1rem
+    .form-control
+      margin-bottom 0
+  &__link
+    bottom -3.5rem
+    position absolute
+    right 15rem
+  &__logo
+    img
+      max-width 100%
   &--small
     height calc(100vh - 26.5rem)
+  &--inner
+    height 60rem
 
 .hero-slider
   // margin-bottom 14rem !important
@@ -103,6 +116,7 @@
     align-items center
     cursor pointer
     display flex
+    flex-shrink 0
     // margin-right 7rem
     margin-right (80 / 1000 * 100)%
     &__symbol
@@ -111,6 +125,7 @@
       border-radius 50%
       circle(57px)
       display flex
+      flex-shrink 0
       justify-content center
       margin-right 1rem
       vertical-align middle
@@ -166,4 +181,88 @@
     .fa
       font-size 2.4rem
       font-weight 600
+
+
+
+@media(max-width 1200px)
+  .hero
+    &-slider
+      margin-bottom 2rem !important
+      .slide
+        &__title
+          font-size 3.2rem
+        &__subtitle
+          font-size 1.8rem
+        &__sub
+          font-size 1.8rem
+      .slick-dots
+        margin-top 1.6rem
+    &-shit-slider
+      &__arrow
+        display none
+
+@media(max-width 1000px)
+  .hero
+    height initial
+    min-height initial
+    &__container
+      display block
+      // padding-top 8rem
+      padding-top 7%
+    &-form
+      flex-wrap wrap
+      justify-content space-between
+      margin-bottom 7%
+      &__control
+        display block
+        margin-bottom 1rem
+        width 50%
+    &__link
+      margin-top 3.5rem
+      position initial
+    &__icons
+      display none
+    .btn
+      margin-top 2rem
+    &--small
+      .hero
+        margin-top 20rem
+        &__container
+          padding-top 15rem
+        &__address
+          font-size 2.4rem
+          margin-bottom 1rem
+        &__title
+          font-size 4rem
+        &__subtitle
+          font-size 1.8rem
+        &__info
+          margin-bottom 4rem
+        &__logo
+          width 10rem
+
+@media(max-width 767px)
+  .hero
+    &__info
+      display block
+    &__title
+      font-size 3rem
+      margin-bottom 2rem
+    &__subtitle
+      font-size 1.6rem
+      font-weight 400
+    &__logo
+      position absolute
+      top 2rem
+      width 15rem
+      img
+        max-width 100%
+    &--small
+      .hero
+        &__container
+          padding-top 12rem
+        &__address
+          font-size 1.8rem
+        &__title
+          font-size 3.3rem
 

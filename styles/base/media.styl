@@ -46,6 +46,8 @@
   body
     &.body--cursor-pointer
       cursor pointer
+  .grid--container
+    max-width: 96%
   .card
     &__img
       min-height 18rem
@@ -56,6 +58,9 @@
         display none
     &__arm
       right 0
+  .map
+    &__align
+      padding-right 5%
 
 @media(max-width 1000px)
   .pre-footer
@@ -66,6 +71,7 @@
 @media(max-width 769px)
   .grid--container
     max-width initial
+    padding 0 16px
   .main-footer
     padding 4rem 0
   .card
@@ -74,6 +80,19 @@
       height 24rem
   .wf
     margin-bottom 4rem
+
+@media(max-width 767px)
+  .section
+    padding 4rem 0
+  .breadcrumbs
+    &__link
+      &:not(:last-child)
+        margin-right 2rem
+      &:after
+        right -1.3rem
+  .map
+    &__align
+      display none
 
 @media(max-width 700px)
   .pre-footer

@@ -1,0 +1,143 @@
+.top-header
+  background-color $gray
+  overflow hidden
+  padding 1.2rem 0
+  &__container
+    display flex
+    justify-content flex-end
+  &__phone
+    align-items center
+    background-color $light-gray
+    display flex
+    font-weight 500
+    font-size 1.8rem
+    margin -2rem 0
+    padding 0 3rem
+  &__callback
+    align-items center
+    background-color $primary
+    color #fff
+    display flex
+    font-weight 500
+    font-size 1.8rem
+    margin -2rem 0
+    margin-right 4.5rem
+    padding 0 3rem
+  &__item
+    display inline-block
+    &:not(:last-child)
+      margin-right 9rem
+  &__icon
+    display inline-block
+    margin-right 1rem
+    vertical-align middle
+  &__text
+    display inline-block
+    vertical-align middle
+
+.main-header
+  // padding 2.5rem 0
+  position relative
+  &__container
+    align-items center
+    display flex
+    justify-content space-between
+
+.logo
+  background-image url('../../img/logo.png')
+  background-position center
+  background-repeat no-repeat
+  background-size contain
+  display block
+  flex-shrink 0
+  height 57px
+  text-decoration none
+  width 203px
+  &--white
+    background-image url('../../img/logo-white.png')
+  &--with-solid
+    background-image url('../../img/logo-with-solid.png')
+    display inline-block
+    height 85px
+    margin-bottom 4rem
+    width 180px
+
+.nav
+  display flex
+  margin-right -2.5rem
+  &__link
+    // background-color teal
+    // border-left 1px solid #eee
+    display block
+    font-weight 400
+    text-decoration none
+    // padding .6rem 2.5rem
+    & > a
+      display block
+      padding 4.5rem 2.5rem
+    &:after
+      content ''
+      display block
+      background-color $primary
+      height 2px
+      transition width .25s ease
+      // transform translateY(2.6rem)
+      width 0
+    &:hover .subnav
+      opacity 1
+      transform none
+    &:hover
+    &--active
+      &:after
+        width 100%
+
+.subnav
+  background-color #f8f9fa
+  border-top 1px solid #f1efef
+  bottom -5.7rem
+  opacity 0
+  padding 2rem 0
+  position absolute
+  // transform translateY(1rem)
+  transition all .3s ease
+  left 0
+  width 100%
+  &__link
+    margin-right 5rem
+    &:hover
+      color $primary
+      
+
+
+@media(max-width 1200px)
+  .top-header
+    &__time
+      display none
+    &__phone
+      padding 0 2rem
+    &__callback
+      padding 0 2rem
+  .nav
+    display none
+
+@media(max-width 767px)
+  .top-header
+    &__container
+      display flex
+      justify-content space-between
+    &__callback
+      font-size 1.4rem
+      margin-right 1rem
+      padding 0 1rem
+    &__phone
+      background-color initial
+      font-size 1.4rem
+      margin-right 1rem
+      padding 0
+    &__likes
+      .top-header
+        &__icon
+          margin-right 0
+        &__text
+          display none
+

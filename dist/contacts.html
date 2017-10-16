@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>МегаАльянс</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="styles/css/vendor.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="grid grid--container">
+        <div class="top-header__container">
+          <div class="top-header__phone">8 861 204-18-83</div><a class="top-header__callback modal-open" href="#callback">Обратный звонок</a>
+          <div class="top-header__item top-header__time">
+            <div class="top-header__icon"><img src="./img/clock.png" alt=""></div>
+            <div class="top-header__text">Пн- Пт, с 9:00 до 18:00 (ежедневно без выходных)</div>
+          </div>
+          <div class="top-header__item top-header__likes">
+            <div class="top-header__icon"><img src="./img/heart.png" alt=""></div>
+            <div class="top-header__text">Избранное</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="main-header">
+      <div class="grid grid--container">
+        <div class="main-header__container"><a class="logo" href="./pages.html"></a>
+          <div class="nav">
+            <div class="nav__link"><a href="">О компании</a>
+              <div class="subnav">
+                <div class="grid grid--container"><a class="subnav__link" href="">О компании</a><a class="subnav__link" href="">О компании</a></div>
+              </div>
+            </div>
+            <div class="nav__link"><a href="">Объекты в продаже</a>
+              <div class="subnav">
+                <div class="grid grid--container"><a class="subnav__link" href="">История</a><a class="subnav__link" href="">Руководство</a><a class="subnav__link" href="">Менеджеры</a><a class="subnav__link" href="">Документы</a><a class="subnav__link" href="">Партнеры</a><a class="subnav__link" href="">Вакансии</a><a class="subnav__link" href="">Контакты</a></div>
+              </div>
+            </div>
+            <div class="nav__link"><a href="#">Выбор квартир</a></div>
+            <div class="nav__link"><a href="#">Покупателям</a></div>
+            <div class="nav__link"><a href="#">Проекты</a></div>
+            <div class="nav__link"><a href="#">Новости и акции</a></div>
+            <div class="nav__link"><a href="#">Риэлторам</a></div>
+            <div class="nav__link"><a href="#">Ход сроительства</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero hero--inner" style="background-image: url(img/heroes/contacts.jpg);">
+      <div class="hero__container">
+        <div class="grid grid--container">
+          <form class="hero-form">
+            <div class="hero-form__control">
+              <select class="custom-select">
+                <option>Квартира</option>
+                <option>Квартира</option>
+                <option>Квартира</option>
+              </select>
+            </div>
+            <div class="hero-form__control">
+              <select class="custom-select">
+                <option>Студия</option>
+                <option>Студия</option>
+                <option>Студия</option>
+              </select>
+            </div>
+            <div class="hero-form__control">
+              <input class="datepicker" type="text" placeholder="Срок сдачи" data-input>
+            </div>
+            <div class="hero-form__control">
+              <input type="number" placeholder="от">
+            </div>
+            <div class="hero-form__control">
+              <input type="number" placeholder="до">
+            </div>
+            <div class="hero-form__control">
+              <input type="number" placeholder="Площадь">
+            </div>
+            <div class="hero__link"><a class="megalink megalink--white" href="">
+                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
+                <div class="megalink__text">Поиск по карте</div></a></div>
+            <input class="btn" type="submit" value="Найти">
+          </form>
+          <div class="hero__icons">
+            <div class="hero__icons-left"><a class="icon" href="">
+                <div class="icon__symbol"><img src="./img/icons/params.png" alt=""></div>
+                <div class="icon__text">Квартира<br>по параметрам</div></a><a class="icon" href="">
+                <div class="icon__symbol"><img src="./img/icons/type.png" alt=""></div>
+                <div class="icon__text">Квартира<br>по типу</div></a><a class="icon" href="">
+                <div class="icon__symbol icon__symbol--fix"><img src="./img/icons/house.png" alt=""></div>
+                <div class="icon__text">Ипотека</div></a><a class="icon calculator-open" href="#calculator">
+                <div class="icon__symbol"><img src="./img/icons/calc.png" alt=""></div>
+                <div class="icon__text">Ипотечный<br>калькулятор</div></a></div>
+            <div class="hero__icons-right"><a class="icon" href="">
+                <div class="icon__symbol"><img src="./img/icons/address.png" alt=""></div>
+                <div class="icon__text">Отделы продаж</div></a></div>
+            <div class="hero__icons-absolute"><a class="icon" href="">
+                <div class="icon__symbol"><img src="./img/icons/camera.png" alt=""></div>
+                <div class="icon__text">Следить за ходом<br>строительства</div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="breadcrumbs">
+      <div class="grid grid--container">
+        <div class="breadcrumbs__container"><a class="breadcrumbs__link" href="">Главная</a><a class="breadcrumbs__link" href="">О компании</a>
+          <div class="breadcrumbs__link breadcrumbs__link--active">Контактная информация</div>
+        </div>
+      </div>
+    </div>
+    <section class="section section--gray scrollme">
+      <div class="grid grid--container scrollme">
+        <h2 class="h2">Контактная информация</h2>
+        <p class="subheader">На все возникшие у вас вопросы, ответят наши менеджеры. Контактную информацию вы можете найти ниже.</p>
+        <div class="row">
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Офис компании</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">(861) 272-25-55</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">режим работы:</div>
+                  <div class="contact__info">Пн - Пт, с 9:00 до 18:00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Приемная руководителя</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">(861) 272-25-55</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">e-mail:</div>
+                  <div class="contact__info contact__info--email">office@megaalyans.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел кадров</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">(861) 272-25-55</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">e-mail:</div>
+                  <div class="contact__info contact__info--email">job@megaalyans.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Бухгалтерия</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">(861) 272-74-44</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">e-mail:</div>
+                  <div class="contact__info contact__info--email">account@megaalyans.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел рекламы</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">8 861 270 00 20 доб. 106</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">e-mail:</div>
+                  <div class="contact__info contact__info--email">reklama.ma@mail.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел снабжения</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">(861) 273-82-90</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">e-mail:</div>
+                  <div class="contact__info contact__info--email">2738260@bk.ru</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел продаж</div>
+                <div class="contact__address"> <span>350062, Краснодар </span>Пр-т им. Константина Образцова, 2</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">8 (861) 204-18-82</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">режим работы:</div>
+                  <div class="contact__info">9:00 - 19:00 без перерывов и выходных</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел продаж</div>
+                <div class="contact__address">г. Краснодар, ул. Душистая 60</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">8 (861) 238 43 43</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">режим работы:</div>
+                  <div class="contact__info">9:00 - 19:00 без перерывов и выходных</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--md-6 col--lg-4">
+            <div class="contact">
+              <div class="contact__top">
+                <div class="contact__title">Отдел продаж на объекте</div>
+                <div class="contact__address">ул. Симиренко, 71</div>
+              </div>
+              <div class="contact__bottom">
+                <div class="contact__row">
+                  <div class="contact__label">тел.:</div>
+                  <div class="contact__info">8 (988) 488-40-44</div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__label">режим работы:</div>
+                  <div class="contact__info">9:00 - 19:00 без перерывов и выходных</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section--blue">
+      <div class="grid grid--container">
+        <div class="tabs">
+          <div class="tabs__header-container">
+            <div class="tabs__header map-center-change">
+              <div class="tabs__link tabs__link--active">Офис компании</div>
+              <div class="tabs__link">Офисы продаж</div>
+              <div class="tabs__link">Объекты</div>
+            </div>
+          </div>
+        </div>
+        <div class="map" id="map">
+          <div class="map__align">
+            <div class="map__info">
+              <div class="text-center">
+                <div class="logo logo--with-solid"></div>
+              </div>
+              <p class="map__address">ЖК «Семейный Парк»</p>
+              <p class="map__p">Прикубанский округ, 9-я Тихая</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section--short-news">
+      <div class="grid grid--container">
+        <div class="short-news">
+          <div class="short-news__left">Новости продаж</div>
+          <div class="short-news__right">
+            <div class="short-news__text">Коммерческие помещения! Квартиры с ремонтом от 954 000 рублей ЖК "Семейный Парк"!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pre-footer">
+      <div class="grid grid--container">
+        <div class="pre-footer__container">
+          <div class="btn btn--big btn--dotted">Задать вопрос</div>
+          <div class="btn btn--big btn--dotted">Подписаться на акции</div>
+          <div class="pre-footer__arm"><img src="./img/arm.png" alt=""></div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="grid grid--container">
+        <div class="row">
+          <div class="col col--md-3">
+            <div class="logo logo--white"></div>
+            <div class="copy">Квартиры от застройщика в Краснодаре<br>&copy; 2015—2017</div><a class="wf" href="">Создание сайта в Webformula</a>
+          </div>
+          <div class="col col--md-2">
+            <div class="main-footer-nav">
+              <div class="main-footer-nav__link"><a href="">О компании</a></div>
+              <div class="main-footer-nav__link"><a href="">Объекты в продаже</a></div>
+              <div class="main-footer-nav__link"><a href="">Новости и Акции</a></div>
+              <div class="main-footer-nav__link"><a href="">Риэлторам</a></div>
+            </div>
+          </div>
+          <div class="col col--md-3">
+            <div class="socials"><a class="social" href=""><i class="fa fa-vk"></i></a><a class="social" href=""><i class="fa fa-facebook"></i></a><a class="social" href=""><i class="fa fa-odnoklassniki"></i></a><a class="social" href=""><i class="fa fa-instagram"></i></a></div>
+            <div class="main-footer-nav main-footer-nav--gray">
+              <div class="main-footer-nav__link"><a href="">Политика конфиденциальности</a></div>
+              <div class="main-footer-nav__link"><a href="">Карта сайта</a></div>
+            </div>
+          </div>
+          <div class="col col--md-4">
+            <p class="text-gray">Официальный сай застройщика ООО «МегаАльянс».Новости, отзывы покупателей, мнение о квартальной застройке.</p>
+            <p>350062, Краснодар,Пр-т им. Константина Образцова, 2<br>понедельник - пятница, с 9:00 до 18:00</p><a class="btn" href="">Офисы продаж</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="callback">
+      <div class="modal__align">
+        <div class="modal__left" style="background-image: url(/img/modal.jpg);">
+          <div class="modal__circle">
+            <div class="modal__offer">Скидки до 20%!</div>
+            <div class="modal__sub-offer">Однокомнатные квартиры от 954 тыс руб.</div>
+          </div>
+        </div>
+        <div class="modal__right">
+          <div class="modal__container">
+            <div class="modal__title">Хотите, мы бесплатно перезвоним Вам и все обсудим <span>или ответим в чате?</span></div>
+            <form class="form">
+              <div class="row">
+                <div class="col col--lg-6">
+                  <div class="form-control">
+                    <input class="phone-mask" type="text">
+                  </div>
+                </div>
+                <div class="col col--lg-6">
+                  <button class="btn">Хорошо, жду звонка</button>
+                </div>
+              </div>
+              <div class="modal__subtitle">Сейчас неудобно? Выберите удобное время для звонка.</div>
+              <div class="checkbox mini-offset">
+                <input type="checkbox" id="checkbox">
+                <label class="checkbox__label" for="checkbox"></label>
+                <label class="checkbox__text" for="checkbox">Я согласен на обработку <a href="">персональных данных</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-2.2.1.min.js"></script>
+    <script src="./js/jquery.easeScroll.js"></script>
+    <script src="./js/jquery.scrollme.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/wNumb.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/flatpickr.min.js"></script>
+    <script src="./js/jquery.inputmask.bundle.min.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

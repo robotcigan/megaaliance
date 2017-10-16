@@ -107,13 +107,14 @@
       color #fff
       font-size 2.4rem
       font-weight 600
+      text-align center
     .block
       background-color #fff
       height 100%
       opacity 0
-      padding-left 6rem
-      padding-top 6rem
-      padding-right 10rem
+      padding-left (60 / 770 * 100)%
+      padding-top (60 / 770 * 100)%
+      padding-right (100 / 770 * 100)%
       transform translateY(-100%)
       transition opacity .4s ease
       &__title
@@ -139,6 +140,8 @@
       &__text
         opacity 0
         translateY(2rem)
+      &:after
+        display none
         
 
 
@@ -154,11 +157,13 @@
   position absolute
   transition all .3s ease
   &:after
+    background url('../../img/formats-circle.png')
+    background-size cover
     border-radius 50%
     content ''
-    circle(28rem)
+    circle(31rem)
     center()
-    opacity .5
+    left -10%
   &__icon
     margin-bottom 2rem
     margin-top -2.5rem
@@ -238,7 +243,7 @@
   &__container
     min-height 24rem
     padding 2rem
-    padding-top 4rem
+    // padding-top 4rem
     position relative
     z-index 5
   &__date
@@ -306,9 +311,9 @@
         color #fff
       &__title
         color #fff
-      // &__down
-      //   bottom 0
-      //   position absolute
+  &__down
+    bottom 3.5rem
+    position absolute
 
 .offers-slider
   .slide
@@ -321,7 +326,8 @@
       margin auto
       max-height 27rem
       padding 5rem
-      padding-right 15rem
+      // padding-right 15rem
+      padding-right (170 / $container-width * 100)%
       position absolute
       top 0
       right 0
@@ -392,35 +398,14 @@
     position absolute
     top .4rem
     width 44px
+  span
+    display inline-block
+    margin-bottom .5rem
   &__result
     color $primary
     display inline-block
     font-weight 500
 
-.noUi
-  &-value-large
-    &:nth-child(2)
-      padding-left 4rem
-    &:last-child
-      padding-right 4.5rem
-
-#initial-pay
-  .noUi
-    &-value-large
-      &:nth-child(2),
-      &:last-child
-        &:after
-          content ' млн'
-
-#credit-term
-  .noUi
-    &-value-large
-      &:nth-child(2)
-        &:after
-          content ' год'
-      &:last-child
-        &:after
-          content ' лет'
 
 .mortage-star
   font-size 1.4rem
@@ -453,14 +438,120 @@
     .item:not(:last-child)
       margin-right 1rem
 
+
 @media(max-width 1200px)
-  .banks
-    .bank
-      &__top
-        flex-wrap wrap
-      &__info
-        justify-content initial
-        margin-bottom 4rem
-        width 100%
-      &__logo
-        margin-right 5rem
+  .object-card
+    margin-bottom 3rem
+    &__container
+      padding 2rem
+      padding-top 15rem
+    &__logo
+      left 2rem
+      width 10rem
+      img
+        max-width 100%
+    &__title
+      font-size 2.8rem
+    &__info
+      display block
+    &__price
+      font-size 2.2rem
+      margin-bottom 2rem
+  .formats
+    .item
+      height 24rem
+      width 100%
+      .block
+        display none
+    .circle
+      display none
+  .white-block
+    &__left
+      padding-left 0
+    &__right
+      padding-left 0
+      &:after
+        display none
+  .offers-slider
+    .slide
+      &__box
+        height 23rem
+        max-height initial
+        padding 3%
+      &__icon
+        margin-right 2rem
+      &__title
+        font-size 2.4rem
+  .news-slider
+    &__item
+      .news-slider
+        &__hover
+          opacity 1
+          transform none
+        &__img
+          transform translateY(100%)
+          &:after
+            opacity 1
+        &__date
+          color #fff
+        &__title
+          color #fff
+      .megalink
+        opacity 1
+        transform none
+
+@media(max-width 1000px)
+  .section
+    &__close
+      top -1.2rem
+      &:before
+        display none
+
+@media(max-width 767px)
+  .white-block
+    padding-bottom 12rem
+    &__title
+      font-size 4rem
+      br
+        display none
+    &__img
+      bottom -37rem
+      left 0
+      margin auto
+      padding-bottom 10rem
+      right 0
+      text-align center
+  .formats
+    .item
+      height 16rem
+
+@media(max-width 500px)
+  .offers-slider
+    .slide__box
+      bottom 2.3rem
+      display block
+      height initial
+      margin initial
+      top initial
+      width 100%
+    .slide__icon
+      display none
+    .slick-slide
+      padding-bottom 17rem
+      img
+        max-width 200%
+    .slide
+      &__title
+        font-size 2rem
+        margin-bottom 1rem
+      &__phone
+        font-size 2rem
+
+@media(max-width 370px)
+  .section
+    &__close
+      circle(35px)
+      font-size 2.4rem
+      padding-right 0
+      top -3.2rem
+

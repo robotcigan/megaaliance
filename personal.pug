@@ -1,0 +1,81 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/about.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        .breadcrumbs__link.breadcrumbs__link--active Согласие на обработку персональных данных
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Согласие на обработку персональных данных
+
+      .text-block
+        p.big-offset Во исполнение Федерального закона от 27 июля 2006 года № 152-ФЗ «О персональных данных», Постановление Правительство Российской Федерации от 15 сентября 2008 г. №687 даю согласие Обществу с ограниченной ответственностью «МегаАльянс» на автоматизированную, а также без использования средств автономизации, обработку моих персональных данных, а именно действия (операции) с персональными данными, включая сбор, систематизацию, накопление, хранение, уточнение, (обновление, изменение), использование, распространение (в том числе передачу, за исключением передачи моих персональных данных без моего дополнительного письменного согласия государственным или муниципальным органом управления, правоохранительным органам), обезличивание, блокирование, уничтожение персональных данных, в целях обеспечения российского законодательства, в том числе Федерального Закона № 214-ФЗ от 30.12.2004г. «Об участии в долевом строительстве многоквартирных домов и иных объектов недвижимости» и иных нормативно-правовых актов, улучшения обслуживания клиентов, направления рекламных материалов, составления обезличенной статистики, формирования ценовой и маркетинговой политики организации. Под персональными данными я понимаю любую информацию, относящуюся ко мне как к объекту персональных данных, в том числе мою фамилию, имя, отчество, год, месяц, дата и место рождения, адрес, паспортные данные, контактный телефон, адрес электронной почты, идентификационный номер налогоплательщика, свидетельство государственного пенсионного образования, условия заключенных с ООО «МегаАльянс» договоров, профессия, должность, образование и любую другую предоставленную информацию. С порядком отзыва согласия в соответствии п.5. ст. 21 ФЗ №152-ФЗ от 27.07.2006г. «О персональных данных» на обработку персональных данных ознакомлен. Настоящее согласие выдано без ограничения срока действия.
+        .file
+          .file__icon
+            img(src="./img/pdf.png", alt="")
+          .file__content
+            a(href="" download).file__name Свидетельство о постановке на налоговый учет
+            .file__size размер: 213 Кб

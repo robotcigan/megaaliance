@@ -14,12 +14,14 @@
 
 @import 'modifications/modifications.styl'
 
+@import 'components/header.styl'
 @import 'components/hero.styl'
 @import 'components/banks.styl'
 @import 'components/red-slider.styl'
 
 @import 'pages/index.styl'
 @import 'pages/object.styl'
+@import 'pages/inner.styl'
 
 // .grid--container
 //   max-width 1540px
@@ -46,6 +48,8 @@
     .megalink
       &__icon
         transform translateX(.5rem)
+  &--white
+    color #fff
 
 .mega-btns
   display flex
@@ -65,116 +69,8 @@
 .calculator-open
   cursor pointer
 
-.top-header
-  background-color $gray
-  overflow hidden
-  padding 1.2rem 0
-  &__container
-    display flex
-    justify-content flex-end
-  &__phone
-    align-items center
-    background-color $light-gray
-    display flex
-    font-weight 500
-    font-size 1.8rem
-    margin -2rem 0
-    padding 0 3rem
-  &__callback
-    align-items center
-    background-color $primary
-    color #fff
-    display flex
-    font-weight 500
-    font-size 1.8rem
-    margin -2rem 0
-    margin-right 4.5rem
-    padding 0 3rem
-  &__item
-    display inline-block
-    &:not(:last-child)
-      margin-right 9rem
-  &__icon
-    display inline-block
-    margin-right 1rem
-    vertical-align middle
-  &__text
-    display inline-block
-    vertical-align middle
-
-.main-header
-  // padding 2.5rem 0
-  position relative
-  &__container
-    align-items center
-    display flex
-    justify-content space-between
-
-.logo
-  background-image url('../../img/logo.png')
-  background-position center
-  background-repeat no-repeat
-  background-size contain
-  display block
-  flex-shrink 0
-  height 57px
-  text-decoration none
-  width 203px
-  &--white
-    background-image url('../../img/logo-white.png')
-  &--with-solid
-    background-image url('../../img/logo-with-solid.png')
-    display inline-block
-    height 85px
-    margin-bottom 4rem
-    width 180px
-
-.nav
-  display flex
-  margin-right -2.5rem
-  &__link
-    // background-color teal
-    // border-left 1px solid #eee
-    display block
-    font-weight 400
-    text-decoration none
-    // padding .6rem 2.5rem
-    & > a
-      display block
-      padding 4.5rem 2.5rem
-    &:after
-      content ''
-      display block
-      background-color $primary
-      height 2px
-      transition width .25s ease
-      // transform translateY(2.6rem)
-      width 0
-    &:hover .subnav
-      opacity 1
-      transform none
-    &:hover
-    &--active
-      &:after
-        width 100%
-
-.subnav
-  background-color #f8f9fa
-  border-top 1px solid #f1efef
-  bottom -5.7rem
-  opacity 0
-  padding 2rem 0
-  position absolute
-  // transform translateY(1rem)
-  transition all .3s ease
-  left 0
-  width 100%
-  &__link
-    margin-right 5rem
-    &:hover
-      color $primary
-
 .breadcrumbs
+  background-color #fff
   padding 5rem 0
   &__link
     color $secondary
@@ -182,7 +78,6 @@
     font-size 1.4rem
     position relative
     line-height 1
-    margin-right 3rem
     text-decoration none
     &:after
       content '\f105'
@@ -197,6 +92,8 @@
         display none
       &:hover
         color $secondary !important
+    &:not(:last-child)
+      margin-right 3rem
     &:hover
       color $primary
 
@@ -283,9 +180,55 @@
       transform translateY(1px)
 
 
-#map
+.map
   width 100%
   height 64rem
+  max-height 60vh
+  opacity 0
+  position relative
+  transition opacity .3s ease
+  &__align
+    align-items center
+    display flex
+    height 100%
+    justify-content flex-end
+    padding-right (300 / $container-width * 100)%
+    position absolute
+    width 100%
+  &__info
+    background-color rgba($primary, .9)
+    color #fff
+    padding 5rem 3rem
+    text-align center
+    z-index 20
+  .logo
+    margin-bottom 1rem
+  &__address
+    font-size 2rem
+    font-weight 600
+    margin-bottom 0
+  &__p
+    font-size 1.6rem
+    font-weight 500
+    margin-bottom 0
+  &--active
+    opacity 1
+
+.file
+  align-items flex-start
+  display flex
+  margin-bottom 9rem
+  &__icon
+    margin-right 2rem
+    img
+      display block
+  &__name
+    font-weight 500
+    text-decoration none
+  &__size
+    color #838383
+    margin-top 1rem
+
 
 .short-news
   display flex
@@ -363,6 +306,7 @@
     circle(4rem)
     color #303334
     display flex
+    flex-shrink 0
     justify-content center
     .fa
       font-size 1.8rem

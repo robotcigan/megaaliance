@@ -19,6 +19,8 @@
       width (410 / $container-width * 100)%
     &__logo
       margin-right 1rem
+      img
+        max-width 100%
     &__percent
       font-size 3rem
       font-weight 300
@@ -65,6 +67,15 @@
         position absolute
         right 4rem
         top (25 / 150 * 100)%
+      &__top
+        flex-wrap wrap
+      &__info
+        justify-content initial
+        margin-bottom 4rem
+        width 100%
+      &__logo
+        margin-right 5rem
+
 
 @media(max-width 768px)
   .banks
@@ -79,5 +90,24 @@
         padding 2rem
   
 
-
-
+@media(max-width 600px)
+  .banks
+    .bank
+      &__info
+        display block
+        margin-bottom 2rem
+        margin-right 0
+      &__logo
+        max-width 80%
+        margin-bottom 1rem
+        margin-right 2rem
+      &__percent
+        font-size 1.8rem
+      &__arrow
+        right 2rem
+      &__table
+        display block
+        .item
+          margin-bottom 1rem
+          &__label
+            margin-bottom .4rem
