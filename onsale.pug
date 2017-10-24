@@ -1,0 +1,142 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/onsales.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link Жилые комплексы
+        .breadcrumbs__link.breadcrumbs__link--active Объекты в продаже
+
+
+  section.section.section--formats
+    .grid.grid--container
+      h2.h2 Качественно новое пространство для жизни
+      p.subheader Разнообразие форматов квартир, широкий выбор планировочных решений и продуманная инфраструктура.
+     
+      .row
+        .col.col--lg-flex.col--xl-4.col--lg-5
+          .object-card(style="background-image: url(img/card-1.jpg)")
+            .object-card__container
+              .object-card__title ЖК «Янтарный 4»
+              .object-card__address
+                img(src="./img/address.png", alt="")
+                span ул. Симеренко, 71.
+              .object-card__price от 1 500 000 до 4 150 000 руб.
+              a(href="").megalink
+                .megalink__icon
+                  img(src="./img/megalink.png", alt="")
+                .megalink__text подробнее
+              .like
+
+        .col.col--lg-flex.col--xl-8.col--lg-7
+          .object-card(style="background-image: url(img/card-2.jpg)")
+            .object-card__container
+              .object-card__title ЖК «Семейный парк»
+              .object-card__info
+                .object-card__address
+                  img(src="./img/address.png", alt="")
+                  span ул. Прикубанский, 9-я Тихая.
+                .object-card__time
+                  img(src="./img/clock-white.png", alt="")
+                  span Старт продаж. Срок сдачи — 3й квартал 2018
+              .object-card__price от 800 000 до 2 500 000 руб.
+              a(href="").megalink
+                .megalink__icon
+                  img(src="./img/megalink.png", alt="")
+                .megalink__text подробнее
+              .like
+              .object-card__logo
+                img(src="./img/park.png", alt="")
+
+      a(href="").megalink
+        .megalink__icon
+          img(src="./img/megalink.png", alt="")
+        .megalink__text Реализованные проекты
+
+
+  section.section.section--gray
+    .grid.grid--container
+      h2.h2 Расположение объекта
+      p.subheader Жителей ЖК «Семейный Парк» приятно порадуют маршруты во все районы города и отсутствие пробок.
+      .tabs
+        .tabs__header-container
+          .tabs__header.map-center-change
+            .tabs__link.tabs__link--active Объект
+            .tabs__link Детский сад
+            .tabs__link Школа
+            .tabs__link Аптеки
+            .tabs__link Больницы
+            .tabs__link Кафе, рестораны
+            .tabs__link Банк
+
+      #map.map
+        .map__align
+          .map__info
+            .text-center
+              .logo.logo--with-solid
+            p.map__address ЖК «Семейный Парк»
+            p.map__p Прикубанский округ, 9-я Тихая
+
+
+
+

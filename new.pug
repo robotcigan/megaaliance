@@ -1,0 +1,112 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/news.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link Пресс-центр
+        a(href="").breadcrumbs__link Новости
+        .breadcrumbs__link.breadcrumbs__link--active Фото отчет с 6 международной выставки недвижимости «Ярмарка Жилья»
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Фото отчет с 6 международной выставки недвижимости «Ярмарка Жилья»
+      .text-block
+        article.article
+          .article__date 5 мая 2017
+          .article__img.article__img--big
+            img(src="./img/news/big.jpg", alt="")
+          .gallery
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-2.jpg").article__img
+              img(src="./img/news/small-2.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-2.jpg").article__img
+              img(src="./img/news/small-2.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-1.jpg").article__img
+              img(src="./img/news/small-1.jpg", alt="")
+            a(href="./img/news/small-2.jpg").article__img
+              img(src="./img/news/small-2.jpg", alt="")
+
+
+          p С 30 сентября по 2 октября на базе СК «Баскет Холл» прошла шестая по счету выставка недвижимости «Ярмарка Жилья». <br>Компания «МегаАльянс» в очередной раз продемонстрировала посетителям свои масштабные проекты — ЖК «Семейный Парк» и ЖК «Янтарный-4». <br>В дни выставки стенд компании посетили более тысячи человек.
+          p Подробный фото отчет можно посмотреть здесь : 
+            a(href="") http://geometria.ru/events/high-life/2016/10/1/945712
+
+
+
+
+
+
+

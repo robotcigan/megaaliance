@@ -1,0 +1,183 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/finished.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link Жилые комплексы
+        a(href="").breadcrumbs__link Реализованные проекты
+        .breadcrumbs__link.breadcrumbs__link--active ЖК Янтарный 3
+
+
+  section.section.section--gray
+    .grid.grid--container.scrollme
+      h2.h2 ЖК «Янтарный 3»
+      p.subheader Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.
+
+      .white-gray
+        .white-gray__white
+          p 3я очередь ЖК «Янтарный» - это динамичный архитектурный ансамбль, расположенный на проспекте Константина Образцова. Комплекс состоит из двух 16-этажных одноподъездных домов и насчитывает 189 квартир.
+          p Территория комплекса огорожена по всему периметру, во дворе установлены камеры видеонаблюдения. Ворота и шлагбаумы на въездах ограничивают доступ для посторонних. На придомовой территории расположились современные детские и спортивные площадки, футбольное и баскетбольное поля, тренажеры для кардио и силовых тренировок. Порадует жителей и гостей комплекса собственная мангальная зона, где так приятно будет проводить вечера в компании родных и близких. жилья.
+          p Особая гордость ЖК «Янтарный-3» это собственный сад с множеством растений, который с каждым годом будет становиться все пышней и краше.
+          .white-gray__info
+            .white-gray__address
+              img(src="./img/address-red.png", alt="")
+              strong проспект Константина Образцова.
+            .white-gray__date
+              img(src="./img/clock-red.png", alt="")
+              strong Дом сдан
+        .white-gray__gray
+          .white-gray__title Документы
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Разрешение на ввод в эксплуатацию
+              .file__size размер: 213 Кб
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Присвоение адреса земельному участку
+              .file__size размер: 213 Кб
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Разрешение на ввод к эксплуатацию. Парковка
+              .file__size размер: 213 Кб
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Присвоение адреса подземная автостоянка
+              .file__size размер: 213 Кб
+
+  section.section.section--blue
+    .grid.grid--container
+      h2.h2 Медиатека
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Фото
+            .tabs__link Видео
+
+        .tabs__content.tabs__content--active
+          .photos.slider
+            - for (var i = 0; i < 5; i++)
+              .photo
+                .photo__img(style="background-image: url(img/photo.jpg)")
+                .photo__container
+                  .photo__title Придворовая территория
+          
+        .tabs__content
+          .video(style="background-image: url(img/video.jpg)")
+            .mega-btns.video__buttons
+              .mega-btn
+                img(src="./img/video-big.png", alt="")
+                span Смотреть ролик
+              .mega-btn
+                img(src="./img/download.png", alt="")
+                span Скачать ролик
+
+
+  section.section.section--gray
+    .grid.grid--container
+
+      h2.h2 Расположение объекта
+      p.subheader Жителей ЖК «Янтарный 3»  приятно порадуют маршруты во все районы города и отсутствие пробок.
+
+      #map.map
+        .map__align
+          .map__info
+            .text-center
+              .logo.logo--with-solid
+            p.map__address ЖК «Семейный Парк»
+            p.map__p Прикубанский округ, 9-я Тихая
+
+
+
+  section.section.section--blue
+    .grid.grid--container
+      h2.h2 Отзывы жильцов
+
+      .reviews.simple-slider-dots.slider
+        - for (var i = 0; i < 3; i++)
+          .review
+            .review__name Анастасия
+            .review__text Вот мы и заселились в свою новую и уютную квартиру в ЖК «Янтарный-3» . И что хочу сказать, новый дом это новый дом. Все коммуникации современные, дома возведены просторно, большой холл в подъезде и чистый современный лифт. Ремонтными работами не стали себя утруждать, а взяли жилье уже с готовым ремонтом, хорошо что компания МегаАльянс предусмотрела этот момент. У нас кстати многие соседи так поступили, очень удобно получилось. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

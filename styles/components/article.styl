@@ -1,0 +1,50 @@
+.article
+  &__date
+    color #d9e5ea
+    margin-bottom 3rem
+  &__img
+    // display inline-block
+    margin-bottom 1rem
+    margin-right 1rem
+    width calc(20% - .8rem)
+    &:nth-child(5n)
+      margin-right 0
+    img
+      // max-width 100%
+      display block
+      width 100%
+    &--big
+      // max-width initial
+      width 100% !important
+    &:hover
+      border none !important
+  .gallery
+    display flex
+    flex-wrap wrap
+    margin-bottom 2rem
+    // margin-left -.2rem
+  a
+    color $primary
+    &:hover
+      border-bottom 1px solid rgba($primary, .3)
+
+
+
+@media(max-width 1600px)
+  .article
+    &__img
+      width calc(25% - .8rem)
+      &:nth-child(4n)
+        margin-right 0
+      &:nth-child(5n)
+        margin-right 1rem
+@media(max-width 500px)
+  .article
+    &__img
+      width calc(50% - .5rem)
+      &:nth-child(2n)
+        margin-right 0
+      &:nth-child(4n)
+        margin-right 1r
+
+

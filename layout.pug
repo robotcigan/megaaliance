@@ -37,7 +37,7 @@ html(lang="ru")
                   a(href="").subnav__link О компании
                   a(href="").subnav__link О компании
             .nav__link
-              a(href="") Объекты в продаже
+              a(href="") Жилые комплексы
               .subnav
                 .grid.grid--container
                   a(href="").subnav__link История
@@ -50,15 +50,81 @@ html(lang="ru")
             .nav__link
               a(href="#") Выбор квартир
             .nav__link
-              a(href="#") Покупателям
+              a(href="#") Как купить?
             .nav__link
-              a(href="#") Проекты
+              a(href="#") Готовые интерьеры
             .nav__link
-              a(href="#") Новости и акции
+              a(href="#") Пресс-центр
             .nav__link
-              a(href="#") Риэлторам
-            .nav__link
-              a(href="#") Ход сроительства
+              a(href="#") Агенствам
+            .main-header__menu-toggle
+              .menu-toggle
+                span
+                span
+                span
+
+    section.menu
+      .grid.grid--container
+        .row
+          .col.col--lg-8
+            .menu__form
+              form.menu__search
+                .form-control
+                  input(type="text" placeholder="Поиск по сайту")
+                  img.search-img(src="./img/search.png", alt="")
+                button.btn
+                  span Искать
+                  img(src="./img/search.png", alt="")
+        .menu__list.row
+          .col.col--sm-3
+            .item
+              .item__title О компании
+              a(href="").item__link О компании
+              a(href="").item__link Вакансии
+              a(href="").item__link Контакты
+          .col.col--sm-3
+            .item
+              .item__title Жилые комплексы
+              a(href="").item__link Объекты в продаже
+              a(href="").item__link Коммерческая недвижимость
+              a(href="").item__link Ипотека
+              a(href="").item__link Реализованные проекты
+              a(href="").item__link Ход строительства
+          .col.col--sm-3
+            .item
+              .item__title Выбор квартиры
+              .item__title Как купить?
+              .item__title Готовые интерьеры
+              .item__title Анентствам
+          .col.col--sm-3
+            .item
+              .item__title Пресс-центр
+              a(href="").item__link Спецпредложения
+              a(href="").item__link Новости
+              a(href="").item__link События
+              a(href="").item__link Подписаться
+
+        .menu__bottom.row.row--sm-center
+          .col.col--lg-3.col--sm-4
+            .socials
+              a(href="").social
+                i.fa.fa-vk
+              a(href="").social
+                i.fa.fa-facebook
+              a(href="").social
+                i.fa.fa-odnoklassniki
+              a(href="").social
+                i.fa.fa-instagram
+          .col.col--lg-9.col--sm-8
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Обратный звонок
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Обратная связь
+
 
     block content
 
@@ -72,10 +138,10 @@ html(lang="ru")
     section.pre-footer
       .grid.grid--container
         .pre-footer__container
-          .btn.btn--big.btn--dotted Задать вопрос
-          .btn.btn--big.btn--dotted Подписаться на акции
+          .btn.btn--big Задать вопрос
+          .btn.btn--big.btn--solid Подписаться на акции
           .pre-footer__arm
-            img(src="./img/arm.png", alt="")
+            img(src="./img/arm2.png", alt="")
 
     footer.main-footer
       .grid.grid--container

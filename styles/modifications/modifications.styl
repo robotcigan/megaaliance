@@ -18,6 +18,7 @@
       font-family 'FontAwesome'
   &-dots
     bottom -5rem
+    left 0
     li
       margin 0
   &-dots li button:before
@@ -35,6 +36,36 @@
 .slick-initialized
   opacity 1
 
+.simple-slider,
+.simple-slider-dots,
+.photos,
+.partners
+  .slick
+    &-arrow
+      background-color #fff
+      border-radius 50%
+      circle(5rem)
+      display flex
+      justify-content center
+      transition background-color .2s ease
+      z-index 10
+      &:before
+        color $primary
+        display block
+        font-size 2.4rem
+        font-weight 600
+      &:hover
+        background-color $primary
+        &:before
+          color #fff
+    &-prev
+      left 5rem
+      &:before
+        transform translateX(-2px)
+    &-next
+      right 5rem
+      &:before
+        transform translateX(2px)
 
 .noUi
   &-horizontal

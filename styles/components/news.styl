@@ -1,0 +1,154 @@
+.news-slider
+  margin-left -1.5rem
+  margin-right -1.5rem
+  &__item
+    display block
+    background-color #fff
+    margin-bottom 3rem
+    margin-left 1.5rem
+    margin-right 1.5rem
+    width 100%
+    .megalink
+      display none
+      &--tag
+        display block
+    &:hover
+      .news-slider
+        &__hover
+          opacity 1
+          transform none
+        &__img
+          transform translateY(100%)
+          &:after
+            opacity 1
+        &__date
+          color #fff
+        &__title
+          color #fff
+      .megalink
+        transform none
+        color #fff
+        &--more
+          display block
+        &--tag
+          display none
+  &__hover
+    align-items center
+    background-color $primary
+    display flex
+    height 24rem
+    opacity 0
+    margin-bottom -24rem
+    padding 4rem
+    transform translateY(2rem)
+    transition all .3s ease
+    &-container
+      align-items center
+      display flex
+      flex-shrink 0
+      justify-content space-between
+      width 100%
+    &-title
+      color #fff
+      font-size 3rem
+      font-weight 600
+      line-height 1.2
+      span
+        display block
+        font-size 2.4rem
+  &__img
+    align-items center
+    background-repeat no-repeat
+    background-size cover
+    display flex
+    height 24rem
+    justify-content center
+    position relative
+    transition all .4s ease
+    z-index 1
+    &:after
+      background-color rgba($main, .6)
+      content ''
+      height 100%
+      left 0
+      opacity 0
+      position absolute
+      top 0
+      transition opacity .3s ease
+      width 100%
+  &__container
+    min-height 24rem
+    padding 2rem
+    // padding-top 4rem
+    position relative
+    z-index 5
+  &__red-box
+    background-color $primary
+    color #fff
+    display inline-block
+    font-weight 600
+    letter-spacing .2px
+    padding 1.6rem 3rem
+    text-transform uppercase
+  &__date
+    color #d9e5ea
+    font-weight 500
+    margin-bottom 2.5rem
+    transition all .2s ease
+  &__title
+    font-size 1.8rem
+    line-height 1.4
+    margin-bottom 5rem
+    transition all .2s ease
+  &__video
+    &-icon
+      display inline-block
+      margin-right 1rem
+      vertical-align middle
+      img
+        display block
+    &-text
+      display inline-block
+      vertical-align middle
+  &__item--extra
+    .news-slider
+      &__img
+        align-items center
+        background-color $primary
+        color #fff
+        display flex
+        font-size 3rem
+        font-weight 500
+        padding ((40 / 490) * 100)%
+        &-container
+          align-items flex-end
+          display flex
+          justify-content space-between
+          width 100%
+        &-title
+          font-weight 600
+          line-height 1.2
+          span
+            display block
+            font-size 2.4rem
+      &__container
+        position relative
+        &:before
+          background-color rgba($main, .6)
+          content ''
+          left 0
+          height 100%
+          position absolute
+          top 0
+          width 100%
+          z-index 0
+        &-container
+          position relative
+          z-index 1
+      &__date
+        color #fff
+      &__title
+        color #fff
+  &__down
+    bottom 3.5rem
+    position absolute

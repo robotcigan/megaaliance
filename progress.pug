@@ -1,0 +1,130 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/progress.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        .breadcrumbs__link.breadcrumbs__link--active Согласие на обработку персональных данных
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Ход строительства
+      p.subheader Выберите интересующий вас жилой комплекс
+
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Фото
+            .tabs__link Видео
+      
+        .row
+          .col.col--sm-7
+            form
+              .row
+                .col.col--sm-4
+                  .form-control
+                    select.custom-select(data-placeholder="Объект")
+                      option
+                      option Квартира
+                      option Квартира
+                      option Квартира
+                .col.col--sm-4
+                  .form-control
+                    select.custom-select(data-placeholder="Месяц")
+                      option
+                      option Квартира
+                      option Квартира
+                      option Квартира
+                .col.col--sm-4
+                  .form-control
+                    select.custom-select(data-placeholder="Год")
+                      option
+                      option Квартира
+                      option Квартира
+                      option Квартира
+
+        .tabs__content.tabs__content--active
+          .simple-slider.slider
+            img(src="./img/progress.jpg", alt="")
+            img(src="./img/progress.jpg", alt="")
+
+        .tabs__content
+          .video(style="background-image: url(img/video.jpg)")
+            .mega-btns.video__buttons
+              .mega-btn
+                img(src="./img/video-big.png", alt="")
+                span Смотреть ролик
+              .mega-btn
+                img(src="./img/download.png", alt="")
+                span Скачать ролик
+
+
+
+
+
+
+
+
+
+

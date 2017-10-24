@@ -84,6 +84,12 @@ $(document).ready(function () {
   });
 
   // Слайдеры
+  $('.simple-slider').slick();
+  $('.simple-slider-dots').slick({
+    arrows: true,
+    dots: true
+  });
+
   $('.hero-slider').slick({
     fade: true,
     dots: true,
@@ -142,6 +148,48 @@ $(document).ready(function () {
     slidesToScroll: 1,
     responsive: [{
       breakpoint: 1200,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+
+  $('.photos').slick({
+    arrows: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  });
+
+  $('.partners').slick({
+    adaptiveHeight: true,
+    arrows: true,
+    dots: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 960,
       settings: {
         slidesToShow: 2
       }
@@ -298,10 +346,22 @@ $(document).ready(function () {
   $('.calculator-open').on('click', function () {
     $('.section--mortage').slideDown();
   });
+
+  // Вакансии
+  $('.vacancy').on('click', function () {
+    $(this).find('.vacancy__bottom').stop().slideToggle();
+    $(this).find('.vacancy__arrow').toggleClass('vacancy__arrow--active');
+  });
+
+  // Меню
+  $('.menu-toggle').on('click', function () {
+    $(this).toggleClass('menu-toggle--active');
+    $('.menu').stop().slideToggle();
+  });
 });
 
 // Карта яндекс
-if ($('.map')) {
+if ($('.map').length) {
 
   ymaps.ready(function () {
     var data = {

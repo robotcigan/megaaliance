@@ -32,6 +32,7 @@
     margin-right 1rem
     vertical-align middle
   &__text
+    color #838383
     display inline-block
     vertical-align middle
 
@@ -64,7 +65,8 @@
 
 .nav
   display flex
-  margin-right -2.5rem
+  // margin-right -2.5rem
+  margin-right .8rem
   &__link
     // background-color teal
     // border-left 1px solid #eee
@@ -74,7 +76,18 @@
     // padding .6rem 2.5rem
     & > a
       display block
-      padding 4.5rem 2.5rem
+      padding 4.5rem 2.8rem
+      position relative
+      &:before,
+      &:after
+        background-color #f1efef
+        content ''
+        height 36px
+        left 0
+        position absolute
+        top 35px
+        width 1px
+
     &:after
       content ''
       display block
@@ -91,6 +104,48 @@
       &:after
         width 100%
 
+.main-header__menu-toggle
+  align-items center
+  display flex
+  padding 0 2rem
+  position relative
+  &:before,
+  &:after
+    background-color #f1efef
+    content ''
+    height 36px
+    left 0
+    position absolute
+    top 35px
+    width 1px
+  &:after
+    left initial
+    right -10px
+.menu-toggle
+  cursor pointer
+  margin-left 1rem
+  margin-top -3px
+
+  span
+    background-color $primary
+    border-radius 30%
+    display block
+    height 3px
+    transition transform .2s ease
+    width 24px
+    &:nth-child(2)
+      margin-top 4px
+    &:nth-child(3)
+      margin-top 4px
+  &--active
+    span
+      &:nth-child(1)
+        transform rotate(45deg) translate(5px, .5rem)
+      &:nth-child(2)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(-45deg) translate(5px, -.5rem)
+
 .subnav
   background-color #f8f9fa
   border-top 1px solid #f1efef
@@ -102,11 +157,63 @@
   transition all .3s ease
   left 0
   width 100%
+  z-index 100
   &__link
     margin-right 5rem
     &:hover
       color $primary
-      
+
+
+.menu
+  background-color #9ba6b0
+  color #fff
+  display none
+  // max-height 80rem
+  padding-bottom (60 / 970 * 100)vh
+  padding-top (140 / 970 * 100)vh
+  position absolute
+  top 15.5rem
+  width 100%
+  z-index 600
+  &__form
+    margin-bottom (90 / 970 * 100)vh
+    .form-control
+      margin-right 1.5rem
+      width 100%
+      input
+        background-color transparent
+        border-color #fff
+        color #fff
+        padding-left 5rem
+        &::placeholder
+          color #fff
+      .search-img
+        left 2rem
+        position absolute
+        top 1.8rem
+  .btn
+    img
+      display none
+  &__search
+    display flex
+  &__list
+    margin-bottom (200 / 970 * 100)vh
+    .item
+      &__title
+        font-size 2rem
+        font-weight 500
+        margin-bottom 4rem
+      &__link
+        display block
+        margin-bottom 1.5rem
+  .socials
+    margin-bottom 0
+    .fa
+      color #9ba6b0
+  &__bottom
+    .megalink
+      &:not(:last-child)
+        margin-right 10rem
 
 
 @media(max-width 1200px)
@@ -118,7 +225,16 @@
     &__callback
       padding 0 2rem
   .nav
-    display none
+    &__link
+      display none
+  .menu
+    padding-top 8vh
+    &__form
+      margin-bottom 2vh
+    &__list
+      margin-bottom 8vh
+    top 10.5rem
+
 
 @media(max-width 767px)
   .top-header
@@ -140,4 +256,21 @@
           margin-right 0
         &__text
           display none
+  .menu
+    padding-top 4rem
+    &__list
+      margin-bottom 4rem
+    .socials
+      margin-bottom 2rem
+    &__bottom
+      .megalink
+        &:not(:last-child)
+          margin-right 2rem
 
+@media(max-width 500px)
+  .menu
+    .btn
+      span
+        display none
+      img
+        display block

@@ -1,0 +1,164 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/mortgage.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link Жилые комплексы
+        .breadcrumbs__link.breadcrumbs__link--active Ипотека
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 О компании «МегаАльянс»
+      p.subheader Почему стоит выбрать из многообразия предложений нашу компанию?
+
+      .parallax(style="background-image: url(img/parallax/about-bg.jpg)")
+        .parallax__hero
+          img.animateme(src="./img/parallax/mortgage.png", alt=""
+            data-when="enter"
+            data-from="0"
+            data-to="1.5"
+            data-translatex="60")
+        .parallax__container
+          .parallax__title Репутация честной <br>и открытой компании
+          .parallax__text Компания "МегаАльянс" открыта для сотрудничества и приглашает к работе риэлторские компании Краснодара и России. <br> Мы всегда рады развитию взаимовыгодных долгосрочных партнерских отношений и стремимся к достижению высоких профессиональных результатов. <br>Вместе мы сможем добиться большего!
+          a(href="").btn Сотрудничать
+
+
+
+      
+      - var banks = ["sberbank", "raiffeisen", "vtb"];
+      .banks
+        - for(var i = 0; i < 3; i++)
+          .bank
+            .bank__top
+              .bank__info
+                .bank__logo
+                  img(src="./img/" + banks[i] + ".png", alt="")
+                .bank__percent от 7,4%
+              .bank__table
+                .item
+                  .item__label Ставка по кредиту
+                  .item__text от 7,4%
+                .item
+                  .item__label Минимальный взнос
+                  .item__text от 15%
+                .item
+                  .item__label Срок кредита
+                  .item__text до 7 лет
+                .item
+                  .item__label Макс. сумма кредита
+                  .item__text до 25 млн. руб.
+              .bank__arrow
+                img(src="./img/arrow.png", alt="")
+            .bank__bottom
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
+      
+  section#calculator.section.section--mortage
+    .grid.grid--container
+      .section__container
+        h2.h2 Расчитать ипотеку
+        p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
+        form.form
+          .row
+            .col.col--lg-4
+              .form-control
+                label Стоимость квартиры
+                input(type="number" value="1900000")
+                .form-control__text руб.
+            .col.col--lg-4
+              .form-control
+                label Возраст
+                input(type="number" value="25")
+            .col.col--lg-4
+              .form-control
+                label Гражданство
+                select.custom-select
+                  option Российская Федерация
+                  option Российская Федерация
+                  option Российская Федерация
+                .form-control__icon
+                  i.fa.fa-angle-down
+            .col.col--lg-4
+              .form-control.form-control--inline
+                label Первоначальный взнос
+                input(id="initial-pay-input" type="number" value="5000")
+                .form-control__text руб.
+              #initial-pay
+            .col.col--lg-4
+              .form-control.form-control--inline
+                label Срок кредита
+                input(id="credit-term-input" type="number" value="10")
+                .form-control__text лет
+              #credit-term
+            .col.col--lg-4
+              .calc
+                span Сумма кредита: 
+                .calc__result
+                  span 1 400 000
+                  |  руб.
+
+  section.section--mortage-star
+    .grid.grid--container
+      .mortage-star Приведенные расчеты носят предварительный характер. Окончательный расчет суммы кредита и размер ежемесячного платежа производятся банком после предоставления полного комплекта документов и проведения оценки платежеспособности клиента.
