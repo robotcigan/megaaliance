@@ -39,7 +39,8 @@
 .simple-slider,
 .simple-slider-dots,
 .photos,
-.partners
+.partners,
+.layout__slider
   .slick
     &-arrow
       background-color #fff
@@ -66,6 +67,21 @@
       right 5rem
       &:before
         transform translateX(2px)
+
+.layout__slider
+  .slick
+    &-arrow
+      circle(2.4rem)
+      &:before
+        font-size 1.6rem
+    &-prev
+      left 2rem
+      &:before
+        transform translate(-1.5px, -.5px)
+    &-next
+      right 2rem
+      &:before
+        transform translateX(1.5px)
 
 .noUi
   &-horizontal

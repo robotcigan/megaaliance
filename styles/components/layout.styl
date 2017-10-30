@@ -1,0 +1,86 @@
+.layout
+  background-color #fff
+  position relative
+  &__top-header
+    margin-bottom 2.5rem
+    padding-left 3rem
+    padding-top 3rem
+  &__top-foot
+    align-items center
+    display flex
+    justify-content space-between
+    padding 3rem 2.5rem
+  &__title
+    color #8795a3
+    margin-bottom 1rem
+  &__number
+    color #8795a3
+  &__size
+    align-items center
+    display flex
+    &-number
+      align-items center
+      border $border
+      circle(5.7rem)
+      border-radius 50%
+      display flex
+      font-size 2.4rem
+      font-weight 500
+      justify-content center
+      margin-right 1.5rem
+    &-label
+      display inline-block
+      font-weight 600
+  &__price
+    &-label
+      font-weight 600
+      font-size 1.8rem
+      margin-bottom .4rem
+    &-number
+      color $primary
+      font-size 2rem
+      font-weight 600
+
+  &__bottom
+    border-top $border
+    display flex
+    &-label
+      color #8795a3
+      margin-bottom .5rem
+    &-text
+      font-weight 600
+      span
+        color $primary
+
+  &__complecs-name
+    border-left 3px solid $primary
+    border-right $border
+    padding 2rem
+    padding-left 2rem
+    padding-right 6rem
+  &__letter
+    border-right $border
+    padding 2rem
+    padding-left 2rem
+  &__floor
+    padding 2rem
+    padding-left 2rem
+
+  &__lock
+    background-image url('../../img/lock.png')
+    height 24px
+    position absolute
+    right 6rem
+    top 3rem
+    width 17px
+  .like
+    background-image url('../../img/like-gray.png')
+    right 2.5rem
+    width 2.4rem
+    &--active
+      background-image url('../../img/like-active-border.png')
+      
+
+
+
+

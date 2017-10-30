@@ -45,7 +45,8 @@ $(document).ready(function() {
   if ( $('.phone-mask').length ) {
     $('.phone-mask').inputmask({
       mask: "+7 (999) 999 99 99",
-      showMaskOnHover: false
+      showMask: true
+      // showMaskOnHover: false
     });
   }
 
@@ -231,6 +232,10 @@ $(document).ready(function() {
         }
       }
     ]
+  });
+
+  $('.layout__slider').slick({
+    arrows: true
   });
 
   // Селект

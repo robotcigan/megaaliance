@@ -370,9 +370,7 @@
     </section>
     <section class="pre-footer">
       <div class="grid grid--container">
-        <div class="pre-footer__container">
-          <div class="btn btn--big">Задать вопрос</div>
-          <div class="btn btn--big btn--solid">Подписаться на акции</div>
+        <div class="pre-footer__container"><a class="btn btn--big modal-open" href="#question">Задать вопрос</a><a class="btn btn--big btn--solid modal-open" href="#subscribe">Подписаться на акции</a>
           <div class="pre-footer__arm"><img src="./img/arm2.png" alt=""></div>
         </div>
       </div>
@@ -408,10 +406,9 @@
     </footer>
     <div class="modal" id="callback">
       <div class="modal__align">
-        <div class="modal__left" style="background-image: url(/img/modal.jpg);">
+        <div class="modal__left" style="background-image: url(./img/modal.jpg);">
           <div class="modal__circle">
-            <div class="modal__offer">Скидки до 20%!</div>
-            <div class="modal__sub-offer">Однокомнатные квартиры от 954 тыс руб.</div>
+            <div class="modal__offer">Скидка 2000 ₽ с м<sup>2</sup></div>
           </div>
         </div>
         <div class="modal__right">
@@ -426,6 +423,86 @@
                 </div>
                 <div class="col col--lg-6">
                   <button class="btn">Хорошо, жду звонка</button>
+                </div>
+              </div>
+              <div class="modal__subtitle">Сейчас неудобно? Выберите удобное время для звонка.</div>
+              <div class="checkbox mini-offset">
+                <input type="checkbox" id="checkbox">
+                <label class="checkbox__label" for="checkbox"></label>
+                <label class="checkbox__text" for="checkbox">Я согласен на обработку <a href="">персональных данных</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="question">
+      <div class="modal__align">
+        <div class="modal__left" style="background-image: url(./img/modal.jpg);">
+          <div class="modal__circle"><img src="./img/logo-white.png" alt=""></div>
+        </div>
+        <div class="modal__right">
+          <div class="modal__container">
+            <div class="modal__title">Остались вопросы? <span>Задайте их менеджеру.</span></div>
+            <form class="form">
+              <div class="row">
+                <div class="col col--lg-10">
+                  <div class="form-control">
+                    <input type="text" placeholder="Представьтесь">
+                  </div>
+                </div>
+                <div class="col col--lg-6">
+                  <div class="form-control">
+                    <input class="phone-mask" type="text">
+                  </div>
+                </div>
+                <div class="col col--lg-6">
+                  <div class="form-control">
+                    <input type="email" placeholder="Эл. почта">
+                  </div>
+                </div>
+                <div class="col col--lg-12">
+                  <div class="form-control">
+                    <textarea placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row row--sm-center">
+                <div class="col col--lg-8">
+                  <div class="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <label class="checkbox__label" for="checkbox"></label>
+                    <label class="checkbox__text" for="checkbox">Я согласен на обработку <a href="">персональных данных</a></label>
+                  </div>
+                </div>
+                <div class="col col--lg-4 text--sm-right">
+                  <button class="btn">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="subscribe">
+      <div class="modal__align">
+        <div class="modal__left" style="background-image: url(./img/modal.jpg);">
+          <div class="modal__circle">
+            <div class="modal__offer">Скидка 2000 ₽ с м<sup>2</sup></div>
+          </div>
+        </div>
+        <div class="modal__right">
+          <div class="modal__container">
+            <div class="modal__title">Хотите получать наши акции?<br><span>Просто оставьте вашу электронную почту!</span></div>
+            <form class="form">
+              <div class="row">
+                <div class="col col--lg-6">
+                  <div class="form-control">
+                    <input type="email" placeholder="Эл. почта">
+                  </div>
+                </div>
+                <div class="col col--lg-6">
+                  <button class="btn">Хорошо, жду письма</button>
                 </div>
               </div>
               <div class="modal__subtitle">Сейчас неудобно? Выберите удобное время для звонка.</div>

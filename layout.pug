@@ -138,8 +138,8 @@ html(lang="ru")
     section.pre-footer
       .grid.grid--container
         .pre-footer__container
-          .btn.btn--big Задать вопрос
-          .btn.btn--big.btn--solid Подписаться на акции
+          a(href="#question").btn.btn--big.modal-open Задать вопрос
+          a(href="#subscribe").btn.btn--big.btn--solid.modal-open Подписаться на акции
           .pre-footer__arm
             img(src="./img/arm2.png", alt="")
 
@@ -184,10 +184,10 @@ html(lang="ru")
 
     #callback.modal
       .modal__align
-        .modal__left(style="background-image: url(/img/modal.jpg)")
+        .modal__left(style="background-image: url(./img/modal.jpg)")
           .modal__circle
-            .modal__offer Скидки до 20%!
-            .modal__sub-offer Однокомнатные квартиры от 954 тыс руб.
+            .modal__offer Скидка 2000 ₽ с м
+              sup 2
         .modal__right
           .modal__container
             .modal__title Хотите, мы бесплатно перезвоним Вам и все обсудим 
@@ -206,6 +206,64 @@ html(lang="ru")
                 label.checkbox__text(for="checkbox") Я согласен на обработку 
                   a(href="") персональных данных
 
+    #question.modal
+      .modal__align
+        .modal__left(style="background-image: url(./img/modal.jpg)")
+          .modal__circle
+            img(src="./img/logo-white.png", alt="")
+        .modal__right
+          .modal__container
+            .modal__title Остались вопросы? 
+              span Задайте их менеджеру.
+            form.form
+              .row
+                .col.col--lg-10
+                  .form-control
+                    input(type="text" placeholder="Представьтесь")
+                .col.col--lg-6
+                  .form-control
+                    input(type="text").phone-mask
+                .col.col--lg-6
+                  .form-control
+                    input(type="email" placeholder="Эл. почта")
+                .col.col--lg-12
+                  .form-control
+                    textarea(placeholder="Ваше сообщение")
+              .row.row--sm-center
+                .col.col--lg-8
+                  .checkbox
+                    input(type="checkbox" id="checkbox")
+                    label(for="checkbox").checkbox__label
+                    label.checkbox__text(for="checkbox") Я согласен на обработку 
+                      a(href="") персональных данных
+                .col.col--lg-4.text--sm-right
+                  button.btn Отправить
+
+
+    #subscribe.modal
+      .modal__align
+        .modal__left(style="background-image: url(./img/modal.jpg)")
+          .modal__circle
+            .modal__offer Скидка 2000 ₽ с м
+              sup 2
+        .modal__right
+          .modal__container
+            .modal__title Хотите получать наши акции?
+              br
+              span Просто оставьте вашу электронную почту!
+            form.form
+              .row
+                .col.col--lg-6
+                  .form-control
+                    input(type="email" placeholder="Эл. почта")
+                .col.col--lg-6
+                  button.btn Хорошо, жду письма
+              .modal__subtitle Сейчас неудобно? Выберите удобное время для звонка.
+              .checkbox.mini-offset
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Я согласен на обработку 
+                  a(href="") персональных данных
 
 
     script(src="./js/jquery-2.2.1.min.js")
