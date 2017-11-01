@@ -10,6 +10,7 @@
 
 <body>
     <div class="grid grid--container">
+        <h1>Maptest 3</h1>
         <div class="my-map">
             <div id="my-map"></div>
         </div>
@@ -32,7 +33,7 @@
       function init () {
           var myMap = new ymaps.Map('my-map', {
                   center: [55.76, 37.64],
-                  zoom: 17
+                  zoom: 8
               }, {
                   searchControlProvider: 'yandex#search'
               }),
@@ -51,18 +52,22 @@
           myMap.geoObjects.add(objectManager);
 
           $.ajax({
-              url: "pharmynew.json"
+              url: "pharmy3.json"
           }).done(function(data) {
               for (var i = 0; i < data.features.length; i++) {
                 var item = data.features[i];
-                // console.log(item)
-                data.features[i].properties.balloonContentHeader = '<p>balloonContentHeader</p>';
-                data.features[i].properties.balloonContentBody = '<p>balloonContentBody</p>';
-                data.features[i].properties.balloonContentFooter = '<p>balloonContentFooter</p>';
-                data.features[i].properties.clusterCaption = '<strong><s>Еще</s> одна</strong> метка';
-                data.features[i].properties.hintContent = '<p>hintContent</p>';
+                item.id = i;
+                ymaps.geocode(item.properties.Field4).then(function(res) {
+                  item.geometry.coordinates = res.geoObjects.get(0).geometry.getCoordinates();
+                });
+                // data.properties.balloonContentHeader = '<p>balloonContentHeader</p>';
+                // data.properties.balloonContentBody = '<p>balloonContentBody</p>';
+                // data.properties.balloonContentFooter = '<p>balloonContentFooter</p>';
+                // data.properties.clusterCaption = '<strong><s>Еще</s> одна</strong> метка';
+                // data.properties.hintContent = '<p>hintContent</p>';
+                // console.log(i === data.features.length - 1)
               }
-              // console.log(data.features[2])
+              console.log('data', data)
               objectManager.add(data);
           });
 
