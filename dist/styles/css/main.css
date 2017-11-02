@@ -2465,6 +2465,31 @@ p {
     margin-right: 1r;
   }
 }
+.manager {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 3rem 5rem;
+}
+.manager__photo {
+  height: 13rem;
+  width: 13rem;
+  margin-right: 9.333333333333334%;
+}
+.manager__info {
+  padding: 2rem 0;
+}
+.manager__name {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+.manager__specialization {
+  color: #eb251c;
+}
 .section {
   padding: 8rem 0;
 }

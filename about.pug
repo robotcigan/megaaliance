@@ -103,8 +103,38 @@ block content
             .block
               .block__text 11 437 счастливых покупателя
 
+  section.section.section--gray
+    .grid.grid--container
+      h2.h2 Менеджмент
+      .tabs
+        .tabs__header-container
+          .tabs__header
+            .tabs__link.tabs__link--active Руководство компании
+            .tabs__link Менеджеры
+          .tabs__buttons
+            a(href="").megalink
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text На карте
 
-
+        .tabs__content.tabs__content--active
+          .row
+            - for (var i = 0; i < 6; i++)
+              .col.col--lg-6
+                .manager
+                  .manager__photo(style="background-image: url(./img/manager.jpg)")
+                  .manager__info
+                    .manager__name Маркушин Дмитрий Андреевич
+                    .manager__specialization Менеджер по продажам
+        .tabs__content
+          .row
+            - for (var i = 0; i < 6; i++)
+              .col.col--lg-6
+                .manager
+                  .manager__photo(style="background-image: url(./img/manager-2.jpg)")
+                  .manager__info
+                    .manager__name Маркушин Дмитрий Андреевич
+                    .manager__specialization Менеджер по продажам
 
   section.section.section--padding-fix
     .grid.grid--container
@@ -161,7 +191,7 @@ block content
 
   section.section.section--gray
     .grid.grid--container
-      h2.h2 О компании «МегаАльянс»
+      h2.h2 Партнеры компании
       .partners.slider
         .partner
           img(src="./img/sberbank.png", alt="")

@@ -62,6 +62,7 @@ gulp.task 'imagemin', ->
 gulp.task 'pug', ->
   gulp.src '*.pug'
     .pipe pug {pretty: true}
+    # .pipe pug {}
     .on 'error', swallowError
     .pipe gulp.dest 'dist/'
 
