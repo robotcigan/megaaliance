@@ -1,5 +1,43 @@
+.layouts
+  &__left
+    display flex
+  &__right
+    display flex
+  &-link
+    align-items center
+    display flex
+    &__icon
+      margin-right 1rem
+    &:not(:last-child)
+      margin-right 5rem
+  &__controls
+    align-items center
+    display flex
+    justify-content space-between
+    margin-bottom 4rem
+    .layouts-sort
+      align-items center
+      cursor pointer
+      display flex
+      margin-right 5rem
+      &__icon
+        background-image url('../../img/layout-arrow.png')
+        background-repeat no-repeat
+        background-size contain
+        circle(1rem)
+        display inline-block
+        margin-right 1rem
+      &__text
+        display inline-block
+      &--active
+        .layouts-sort
+          &__icon
+            background-image url('../../img/layout-arrow-acitve.png')
+            circle(2rem)
+
 .layout
   background-color #fff
+  margin-bottom 3rem
   position relative
   &__top-header
     margin-bottom 2.5rem
@@ -70,7 +108,7 @@
     background-image url('../../img/lock.png')
     height 24px
     position absolute
-    right 6rem
+    right 7rem
     top 3rem
     width 17px
   .like
@@ -80,6 +118,44 @@
     &--active
       background-image url('../../img/like-active-border.png')
       
+
+@media(max-width 600px)
+  .layouts
+    &__controls
+      display block
+    &__left
+      margin-bottom 2rem
+
+@media(max-width 450px)
+  .layout
+    &__top-header
+      padding-top 7rem
+    &__top-foot
+      display block
+    &__size
+      margin-bottom 2rem
+    &__bottom
+      display block
+    &__complecs-name
+      border-bottom $border
+      border-right 0
+      padding 1rem
+      padding-left 2rem
+    &__letter
+      border-bottom $border
+      border-right 0
+      padding 1rem
+      padding-left 2rem
+    &__floor
+      padding 1rem
+      padding-left 2rem
+
+
+
+
+
+
+
 
 
 

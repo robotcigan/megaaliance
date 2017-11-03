@@ -363,6 +363,18 @@ $(document).ready(function () {
     $(this).toggleClass('menu-toggle--active');
     $('.menu').stop().slideToggle();
   });
+
+  // Сортировка планировок
+  var options = {
+    valueNames: ['square', 'price']
+  };
+
+  var hackerList = new List('layouts', options);
+
+  // Сортировка классы
+  $('.layouts-sort').on('click', function () {
+    $(this).toggleClass('layouts-sort--active');
+  });
 });
 
 // Карта яндекс

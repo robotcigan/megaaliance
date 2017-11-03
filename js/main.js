@@ -377,6 +377,20 @@ $(document).ready(function() {
     $('.menu').stop().slideToggle();
   });
 
+  // Сортировка планировок
+  let options = {
+      valueNames: [ 'square', 'price' ]
+  };
+
+  let hackerList = new List('layouts', options);
+
+
+  // Сортировка классы
+  $('.layouts-sort').on('click', function () {
+    $(this).toggleClass('layouts-sort--active');
+  })
+
+
 });
 
 

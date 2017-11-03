@@ -1,0 +1,119 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/about.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          .hero__link
+            a(href="").megalink.megalink--white
+              .megalink__icon
+                img(src="./img/megalink.png", alt="")
+              .megalink__text Поиск по карте
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+            a(href="#calculator").icon.calculator-open
+              .icon__symbol
+                img(src="./img/icons/calc.png", alt="")
+              .icon__text Ипотечный<br>калькулятор
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+          .hero__icons-absolute
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/camera.png", alt="")
+              .icon__text Следить за ходом<br>строительства
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        .breadcrumbs__link.breadcrumbs__link--active Выбор квартиры
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Выбор квартиры
+
+      .layouts.row
+        .col.col--sm-4
+          .layout
+            .layout__top
+              .layout__top-header
+                .layout__title 2-х комн. квартира 37,01 м2 1/19 эт.
+                .layout__number № 231-7
+                .layout__lock
+                .like.layout__like
+              .layout__slider
+                img(src="./img/layout.jpg", alt="")
+                img(src="./img/layout-img.jpg", alt="")
+              .layout__top-foot
+                .layout__size
+                  .layout__size-number 2
+                  .layout__size-label 37,01 м
+                    sup 2
+                .layout__price
+                  .layout__price-label Стоимость квартиры
+                  .layout__price-number от 34 000 руб. за м
+                    sup 2
+            .layout__bottom
+              .layout__complecs-name
+                .layout__bottom-label Комплекс
+                .layout__bottom-text Семейный парк
+              .layout__letter
+                .layout__bottom-label Литер
+                .layout__bottom-text
+                  span 1
+              .layout__floor
+                .layout__bottom-label Этаж
+                .layout__bottom-text
+                  span 1
+                  | /19
+
+
+
+
+
+
+
+
+
+
+
+
