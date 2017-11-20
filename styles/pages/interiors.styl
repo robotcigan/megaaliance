@@ -1,0 +1,81 @@
+.interiors
+  .item
+    background-position center
+    background-repeat no-repeat
+    background-size cover
+    cursor pointer
+    height 36rem
+    margin-bottom 3rem
+    position relative
+    width 100%
+    &:before
+      background-color rgba($main, .3)
+      circle(100%)
+      content ''
+      left 0
+      position absolute
+      top 0
+      transition opacity .3s ease
+    &:after
+      background $primary url('../../img/search.png') no-repeat center
+      border-radius 50%
+      bottom 0
+      circle(6rem)
+      content ''
+      left 0
+      margin auto
+      opacity 0
+      position absolute
+      transform translateY(2rem)
+      right 0
+      top 0
+      transition all .3s ease
+    &:hover
+      &:before
+        opacity 0
+      &:after
+        opacity 1
+        transform none
+        
+
+.interiors-info
+  display flex
+  .item
+    border-left $border
+    padding-bottom 4rem
+    padding-left 3rem
+    padding-top 4rem
+    width 25%
+    &__label
+      color $secondary
+      margin-bottom 1rem
+    &__value
+      font-size 2.4rem
+      font-weight 600
+      &--special
+        color $primary
+
+
+@media(max-width 1024px)
+  .interiors-info
+    flex-wrap wrap
+    .item
+      flex-shrink 0
+      width 50%
+      &:nth-child(1),
+      &:nth-child(2)
+        border-bottom $border
+      &:nth-child(1),
+      &:nth-child(3)
+        border-left none
+
+@media(max-width 1024px)
+  .interiors-info
+    flex-wrap wrap
+    .item
+      border none
+      width 100%
+      &:not(:last-child)
+        border-bottom $border
+
+

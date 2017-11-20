@@ -2,7 +2,7 @@ extends layout.pug
 
 
 block content
-  .hero.hero--inner(style="background-image: url(img/heroes/about.jpg)")
+  .hero.hero--inner(style="background-image: url(img/heroes/apartment-choice.jpg)")
     .hero__container
       .grid.grid--container
         form.hero-form
@@ -71,44 +71,108 @@ block content
     .grid.grid--container.scrollme
       h2.h2 Выбор квартиры
 
-      .layouts.row
-        .col.col--sm-4
-          .layout
-            .layout__top
-              .layout__top-header
-                .layout__title 2-х комн. квартира 37,01 м2 1/19 эт.
-                .layout__number № 231-7
-                .layout__lock
-                .like.layout__like
-              .layout__slider
-                img(src="./img/layout.jpg", alt="")
-                img(src="./img/layout-img.jpg", alt="")
-              .layout__top-foot
-                .layout__size
-                  .layout__size-number 2
-                  .layout__size-label 37,01 м
-                    sup 2
-                .layout__price
-                  .layout__price-label Стоимость квартиры
-                  .layout__price-number от 34 000 руб. за м
-                    sup 2
-            .layout__bottom
-              .layout__complecs-name
-                .layout__bottom-label Комплекс
-                .layout__bottom-text Семейный парк
-              .layout__letter
-                .layout__bottom-label Литер
-                .layout__bottom-text
-                  span 1
-              .layout__floor
-                .layout__bottom-label Этаж
-                .layout__bottom-text
-                  span 1
-                  | /19
+
+      #layouts.layouts
+        .layouts__controls
+          .layouts__left
+            .layouts-sort.sort(data-sort="price")
+              .layouts-sort__icon
+              .layouts-sort__text Стоимость
+            .layouts-sort.sort(data-sort="square")
+              .layouts-sort__icon
+              .layouts-sort__text Площадь
+          .layouts__right
+            a(href="").layouts-link
+              .layouts-link__icon
+                img(src="./img/layouts-icon-grid-active.png", alt="")
+              .layouts-link__text Плиткой
+            a(href="").layouts-link
+              .layouts-link__icon
+                img(src="./img/layouts-icon-list.png", alt="")
+              .layouts-link__text Списком
+        .row.list
+          - for (var i = 0; i < 3; i++)
+            .col.col--xl-4.col--md-6
+              .layout
+                .layout__top
+                  .layout__top-header
+                    .layout__title 2-х комн. квартира 37,01 м2 1/19 эт.
+                    .layout__number № 231-7
+                    .layout__lock
+                    .like.layout__like
+                  .layout__slider
+                    img(src="./img/layout.jpg", alt="")
+                    img(src="./img/layout-img.jpg", alt="")
+                  .layout__top-foot
+                    .layout__size
+                      .layout__size-number 2
+                      .layout__size-label 
+                        span.square 18,01 
+                        | м
+                        sup 2
+                    .layout__price
+                      .layout__price-label Стоимость квартиры
+                      .layout__price-number.price от 34 000 руб. за м
+                        sup 2
+                .layout__bottom
+                  .layout__complecs-name
+                    .layout__bottom-label Комплекс
+                    .layout__bottom-text Семейный парк
+                  .layout__letter
+                    .layout__bottom-label Литер
+                    .layout__bottom-text
+                      span 1
+                  .layout__floor
+                    .layout__bottom-label Этаж
+                    .layout__bottom-text
+                      span 1
+                      | /19
+
+          - for (var i = 0; i < 3; i++)
+            .col.col--xl-4.col--md-6
+              .layout
+                .layout__top
+                  .layout__top-header
+                    .layout__title 2-х комн. квартира 37,01 м2 1/19 эт.
+                    .layout__number № 231-7
+                    .layout__lock
+                    .like.layout__like
+                  .layout__slider
+                    img(src="./img/layout.jpg", alt="")
+                    img(src="./img/layout-img.jpg", alt="")
+                  .layout__top-foot
+                    .layout__size
+                      .layout__size-number 2
+                      .layout__size-label 
+                        span.square 37,01 
+                        | м
+                        sup 2
+                    .layout__price
+                      .layout__price-label Стоимость квартиры
+                      .layout__price-number.price от 30 000 руб. за м
+                        sup 2
+                .layout__bottom
+                  .layout__complecs-name
+                    .layout__bottom-label Комплекс
+                    .layout__bottom-text Семейный парк
+                  .layout__letter
+                    .layout__bottom-label Литер
+                    .layout__bottom-text
+                      span 1
+                  .layout__floor
+                    .layout__bottom-label Этаж
+                    .layout__bottom-text
+                      span 1
+                      | /19
+
+      .text-center
+        .btn
+          .btn__icon
+            img(src="./img/load.png", alt="")
+          span Загрузить еще
 
 
-
-
+  
 
 
 

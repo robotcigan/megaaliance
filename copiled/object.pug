@@ -36,20 +36,20 @@ block content
               .icon__symbol.icon__symbol--fix
                 img(src="./img/icons/house.png", alt="")
               .icon__text Ипотека
-            a(href="").icon
-              .icon__symbol
-                img(src="./img/icons/calc.png", alt="")
-              .icon__text Ипотечный<br>калькулятор
+            //- a(href="").icon
+            //-   .icon__symbol
+            //-     img(src="./img/icons/calc.png", alt="")
+            //-   .icon__text Ипотечный<br>калькулятор
           .hero__icons-right
             a(href="").icon
               .icon__symbol
                 img(src="./img/icons/address.png", alt="")
               .icon__text Отделы продаж
-          .hero__icons-absolute
-            a(href="").icon
-              .icon__symbol
-                img(src="./img/icons/camera.png", alt="")
-              .icon__text Следить за ходом<br>строительства
+          //- .hero__icons-absolute
+          //-   a(href="").icon
+          //-     .icon__symbol
+          //-       img(src="./img/icons/camera.png", alt="")
+          //-     .icon__text Следить за ходом<br>строительства
 
   .breadcrumbs
     .grid.grid--container
@@ -62,39 +62,50 @@ block content
     .grid.grid--container
       h2.h2 Все, что нужно для комфортной жизни в городе
       p.subheader Новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.
-      .subheader-btn
-        a(href="").megalink
-          .megalink__icon
-            img(src="./img/megalink.png", alt="")
-          .megalink__text Документы на строительство
-      .comfort
-        .comfort__left
-          .comfort__title Развитый район
-          .comfort__text
-            p ЖК «Семейный Парк» расположен в новом микрорайоне Молодежный в Северо-западной части г. Краснодара. Здесь создается новый облик города и новые условия для жизни: зеленые зоны, чистый воздух.
-            p В жилом комплексе мы предусмотрели возможность для семейного отдыха и активного досуга - благоустроенные площадки, спортивный клуб, кафе. Мини-маркет, аптека, медицинский центр, салон красоты - все необходимое для комфортной жизни рядом с домом.
-              br
-              | Безусловные преимущества комплекса: высокое качество строительства, яркая архитектура, комфортная плотность застройки, теплосберегающая технология отделки фасадов домов и при этом - доступная стоимость жилья.
-
-          .comfort__info
-            .comfort__address
+      .white-gray
+        .white-gray__white
+          h4.h4 Развитый район
+          p 3я очередь ЖК «Янтарный» - это динамичный архитектурный ансамбль, расположенный на проспекте Константина Образцова. Комплекс состоит из двух 16-этажных одноподъездных домов и насчитывает 189 квартир.
+          p Территория комплекса огорожена по всему периметру, во дворе установлены камеры видеонаблюдения. Ворота и шлагбаумы на въездах ограничивают доступ для посторонних. На придомовой территории расположились современные детские и спортивные площадки, футбольное и баскетбольное поля, тренажеры для кардио и силовых тренировок. Порадует жителей и гостей комплекса собственная мангальная зона, где так приятно будет проводить вечера в компании родных и близких. жилья.
+          p Особая гордость ЖК «Янтарный-3» это собственный сад с множеством растений, который с каждым годом будет становиться все пышней и краше.
+          .white-gray__info
+            .white-gray__address
               img(src="./img/address-red.png", alt="")
-              strong Прикубанский, 9-я Тихая.
-            .comfort__date
+              strong МКР Молодёжный, ул.Душистая,60
+            .white-gray__date
               img(src="./img/clock-red.png", alt="")
               strong Срок сдачи — 3й квартал 2018
-        .comfort__right
-          .comfort__img(style="background-image: url(img/comfort.jpg)")
+        .white-gray__gray
+          .white-gray__title Документы на строительство
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Проектная декларация
+              .file__size размер: 213 Кб
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Разрешение на строительство
+              .file__size размер: 213 Кб
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Выписка из ЕГРН
+              .file__size размер: 213 Кб
+
 
   
   section
     .why
       .why__images
-        .image.image--active(style="background-image: url(img/park-img.jpg)")
+        .image.image--active(style="background-image: url(img/object-park.jpg)")
         .image(style="background-image: url(img/fitness.jpg)")
-        .image.image--active(style="background-image: url(img/park-img.jpg)")
+        .image.image--active(style="background-image: url(img/object-park.jpg)")
         .image(style="background-image: url(img/fitness.jpg)")
-        .image.image--active(style="background-image: url(img/park-img.jpg)")
+        .image.image--active(style="background-image: url(img/object-park.jpg)")
       .why__container
         .grid.grid--container
           .why__title Почему мы?
@@ -296,11 +307,7 @@ block content
             .tabs__link.tabs__link--active Фото
             .tabs__link Видео
             .tabs__link Ход строительства
-          .tabs__buttons.tabs__buttons--special
-            a(href="").mega-btn
-              img(src="./img/camera-red.png", alt="")
-              span Веб камера
-
+            
         .tabs__content
           p slide
         .tabs__content.tabs__content--active

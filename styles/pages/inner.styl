@@ -3,15 +3,22 @@
   background-repeat no-repeat
   background-size cover
   display flex
-  justify-content space-between
+  // justify-content space-between
+  justify-content flex-end
   height 54rem
   overflow hidden
   position relative
   width 100%
   &__hero
-    transform translate(4rem, (100 / $container-width * 100)%)
-    align-self flex-start
+    // align-self flex-start
+    bottom 0
+    left 0
+    transform translate(8rem, (100 / $container-width * 100)%)
+    position absolute
+    top 1rem
+    height 100%
     img
+      bottom 0
       display block
     &--special
       transform translate(-6rem, 4rem)
@@ -27,14 +34,27 @@
     color #fff
     font-size 4.8rem
     font-weight 300
-    margin-bottom 5rem
+    line-height 1.2
+    margin-bottom 3rem
   &__text
     color #fff
     line-height 1.6
-    margin-bottom 5rem
+    margin-bottom 4rem
+  .file
+    color #fff
+    margin-bottom 0
+    &__size
+      color #fff
+      opacity .7
+  ul
+    margin 0
+    padding 0
+    li
+      margin-bottom 1rem
   
   & + .banks
     margin-top 4rem
+  
 
 .contact
   background-color #fff
@@ -181,6 +201,11 @@
   &__address
     margin-right 4rem
 
+// .card-slider
+//   margin 0 -1.5rem
+//   .card
+//     padding 0 1.5rem
+
 .photos
   margin 0 -1.5rem
   .slick
@@ -268,6 +293,44 @@
       color #fff
 
 
+.weird-block
+  align-items center
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  display flex
+  height 49rem
+  justify-content center
+  .square
+    background-color $primary
+    color #fff
+    padding 7rem
+    text-align center
+    width 40rem
+    &__title
+      font-size 3rem
+      font-weight 600
+      line-height 1.1
+      margin-bottom 5rem
+      position relative
+      &:after
+        background-color #fff
+        bottom -3rem
+        content ''
+        height 4px
+        left 0
+        margin auto
+        position absolute
+        right 0
+        width 44px
+    &__subtitle
+      font-size 2.4rem
+      font-weight 300
+      margin-bottom 2rem
+
+
+
+
 @media(max-width 1800px)
   .reviews
     .slick
@@ -283,6 +346,14 @@
 
 
 @media(max-width 1200px)
+  .parallax
+    height initial
+    &__hero
+      display none
+    &__container
+      margin-right 0
+      padding 5%
+      width 100%
   .text-block
     padding 2rem
   .white-gray
@@ -293,6 +364,19 @@
       &-arrow
         display none !important
 
+@media(max-width 768px)
+  .parallax
+    &__container
+      padding 7%
+  .weird-block
+    background $primary
+    background-image none !important
+    height initial
+    padding-bottom 5rem
+    padding-top 5rem
+    .square
+      padding 5%
+      width 100%
 
 @media(max-width 500px)
   .preim
@@ -303,6 +387,17 @@
     &__right
       padding 2rem
       width 100%
-
+  .parallax
+    &__container
+      padding 10%
+    &__title
+      font-size 3.2rem
+      margin-bottom 2rem
+    &__text
+      margin-bottom 2.5rem
+  .weird-block
+    .square
+      &__title
+        font-size 2.4rem
 
 

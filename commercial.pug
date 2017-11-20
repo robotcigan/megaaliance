@@ -1,0 +1,82 @@
+extends layout.pug
+
+
+block content
+  .hero.hero--inner(style="background-image: url(img/heroes/commercial.jpg)")
+    .hero__container
+      .grid.grid--container
+        form.hero-form
+          .hero-form__control
+            select.custom-select
+              option Квартира
+              option Квартира
+              option Квартира
+          .hero-form__control
+            select.custom-select
+              option Студия
+              option Студия
+              option Студия
+          .hero-form__control
+            input(type="text" placeholder="Срок сдачи" data-input).datepicker
+          .hero-form__control
+            input(type="number" placeholder="от")
+          .hero-form__control
+            input(type="number" placeholder="до")
+          .hero-form__control
+            input(type="number" placeholder="Площадь")
+          input(type="submit" value="Найти").btn
+        .hero__icons
+          .hero__icons-left
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/params.png", alt="")
+              .icon__text Квартира<br>по параметрам
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/type.png", alt="")
+              .icon__text Квартира<br>по типу
+            a(href="").icon
+              .icon__symbol.icon__symbol--fix
+                img(src="./img/icons/house.png", alt="")
+              .icon__text Ипотека
+          .hero__icons-right
+            a(href="").icon
+              .icon__symbol
+                img(src="./img/icons/address.png", alt="")
+              .icon__text Отделы продаж
+
+
+  .breadcrumbs
+    .grid.grid--container
+      .breadcrumbs__container
+        a(href="").breadcrumbs__link Главная
+        a(href="").breadcrumbs__link Жилые комплексы
+        .breadcrumbs__link.breadcrumbs__link--active Коммерческие помещения
+
+
+  section.section.section--gray.scrollme
+    .grid.grid--container.scrollme
+      h2.h2 Коммерческая недвижимость
+      p.subheader Коммерческие помещения в ЖК «Янтарный 3,4» и ЖК «Семейный парк» - это выгодное направление для развития вашего бизнеса.
+      
+      .parallax(style="background-image: url(img/parallax/about-bg.jpg)")
+        .parallax__hero
+          img.animateme(src="./img/parallax/commercial.png", alt=""
+            data-when="enter"
+            data-from="0"
+            data-to="1.5"
+            data-translatex="60")
+        .parallax__container
+          .parallax__title Жилое окружение
+          .parallax__text Фестивальный район Краснодара уже довольно давно застраивается элитным жильем, здесь элитная недвижимость окружена соответствующей инфраструктурой: торговые центры с премиальными магазинами, частные школы и детские сады, ухоженные парковки и зоны досуга. <br>Все выше перечисленное окружение образует следующую целевую аудиторию общей численностью порядка 300 000 человек.   
+          .file
+            .file__icon
+              img(src="./img/pdf.png", alt="")
+            .file__content
+              a(href="" download).file__name Презентация-Коммерческая недвижимость краснодара
+              .file__size размер: 213 Кб
+
+
+
+
+

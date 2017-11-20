@@ -40,7 +40,9 @@
 .simple-slider-dots,
 .photos,
 .partners,
-.layout__slider
+.layout__slider,
+.card-slider,
+// .common-slider
   .slick
     &-arrow
       background-color #fff
@@ -67,6 +69,43 @@
       right 5rem
       &:before
         transform translateX(2px)
+
+.common-slider
+  .slick
+    &-arrow
+      background-color #fff
+      border-radius 50%
+      circle(5rem)
+      display flex
+      justify-content center
+      transition background-color .2s ease
+      z-index 10
+      &:before
+        color $primary
+        display block
+        font-size 2.4rem
+        font-weight 600
+      &:hover
+        background-color $primary
+        &:before
+          color #fff
+    &-prev
+      left -6rem
+      &:before
+        transform translateX(-2px)
+    &-next
+      right -6rem
+      &:before
+        transform translateX(2px)
+
+.card-slider
+  .slick
+    &-prev
+      left -7rem
+      top 32%
+    &-next
+      right -7rem
+      top 32%
 
 .layout__slider
   .slick
@@ -105,7 +144,30 @@
     font-family $font
     font-weight 300
 
+.swal2
+  &-modal
+    padding 5rem !important
+  &-title
+    color $main !important
+    font-family $font !important
+    font-weight 400 !important
+    margin-bottom 3rem !important
+  &-confirm&-styled,
+  &-cancel&-styled
+    background transparent !important
+    border 0 !important
+    margin 0 !important
+    padding 0 !important
+  &-confirm&-styled
+    margin-right 2rem !important
 
+@media(max-width 1600px)
+  .card-slider
+    .slick
+      &-prev
+        left 4.5rem
+      &-next
+        right 4.5rem
 
 @media(max-width 767px)
   .slick

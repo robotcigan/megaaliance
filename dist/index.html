@@ -149,9 +149,6 @@
             <div class="hero-form__control">
               <input type="number" placeholder="Площадь">
             </div>
-            <div class="hero__link"><a class="megalink megalink--white" href="">
-                <div class="megalink__icon"><img src="./img/megalink.png" alt=""></div>
-                <div class="megalink__text">Поиск по карте</div></a></div>
             <input class="btn" type="submit" value="Найти">
           </form>
           <div class="hero__icons">
@@ -161,15 +158,10 @@
                 <div class="icon__symbol"><img src="./img/icons/type.png" alt=""></div>
                 <div class="icon__text">Квартира<br>по типу</div></a><a class="icon" href="">
                 <div class="icon__symbol icon__symbol--fix"><img src="./img/icons/house.png" alt=""></div>
-                <div class="icon__text">Ипотека</div></a><a class="icon calculator-open" href="#calculator">
-                <div class="icon__symbol"><img src="./img/icons/calc.png" alt=""></div>
-                <div class="icon__text">Ипотечный<br>калькулятор</div></a></div>
+                <div class="icon__text">Ипотека</div></a></div>
             <div class="hero__icons-right"><a class="icon" href="">
                 <div class="icon__symbol"><img src="./img/icons/address.png" alt=""></div>
                 <div class="icon__text">Отделы продаж</div></a></div>
-            <div class="hero__icons-absolute"><a class="icon" href="">
-                <div class="icon__symbol"><img src="./img/icons/camera.png" alt=""></div>
-                <div class="icon__text">Следить за ходом<br>строительства</div></a></div>
           </div>
         </div>
       </div>
@@ -498,9 +490,7 @@
               <div class="item item--type-1">
                 <div class="item__icon"><img src="./img/plus.png" alt=""></div>
                 <div class="item__text">Все банки партнеры</div>
-              </div><a class="item item--type-2 calculator-open" href="#calculator">
-                <div class="item__icon"><img src="./img/calc.png" alt=""></div>
-                <div class="item__text">Ипотечный калькулятор</div></a>
+              </div>
             </div>
           </div>
           <div class="tabs__content tabs__content--active">
@@ -692,64 +682,6 @@
         </div>
       </div>
     </section>
-    <section class="section section--mortage" id="calculator">
-      <div class="grid grid--container">
-        <div class="section__container">
-          <h2 class="h2">Расчитать ипотеку</h2>
-          <p class="subheader">Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям</p>
-          <div class="section__close">×</div>
-          <form class="form">
-            <div class="row">
-              <div class="col col--lg-4">
-                <div class="form-control">
-                  <label>Стоимость квартиры</label>
-                  <input type="number" value="1900000">
-                  <div class="form-control__text">руб.</div>
-                </div>
-              </div>
-              <div class="col col--lg-4">
-                <div class="form-control">
-                  <label>Возраст</label>
-                  <input type="number" value="25">
-                </div>
-              </div>
-              <div class="col col--lg-4">
-                <div class="form-control">
-                  <label>Гражданство</label>
-                  <select class="custom-select">
-                    <option>Российская Федерация</option>
-                    <option>Российская Федерация</option>
-                    <option>Российская Федерация</option>
-                  </select>
-                  <div class="form-control__icon"><i class="fa fa-angle-down"></i></div>
-                </div>
-              </div>
-              <div class="col col--lg-4">
-                <div class="form-control form-control--inline">
-                  <label>Первоначальный взнос</label>
-                  <input id="initial-pay-input" type="number" value="5000">
-                  <div class="form-control__text">руб.</div>
-                </div>
-                <div id="initial-pay"></div>
-              </div>
-              <div class="col col--lg-4">
-                <div class="form-control form-control--inline">
-                  <label>Срок кредита</label>
-                  <input id="credit-term-input" type="number" value="10">
-                  <div class="form-control__text">лет</div>
-                </div>
-                <div id="credit-term"></div>
-              </div>
-              <div class="col col--lg-4">
-                <div class="calc"><span>Сумма кредита: </span>
-                  <div class="calc__result"><span>1 400 000</span> руб.</div>
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
     <section class="section--mortage-star">
       <div class="grid grid--container">
         <div class="mortage-star">Приведенные расчеты носят предварительный характер. Окончательный расчет суммы кредита и размер ежемесячного платежа производятся банком после предоставления полного комплекта документов и проведения оценки платежеспособности клиента.</div>
@@ -924,6 +856,7 @@
     <script src="./js/flatpickr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="./js/jquery.inputmask.bundle.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="./js/main.js"></script>
   </body>

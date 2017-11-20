@@ -172,7 +172,7 @@
           <div class="parallax__hero"><img class="animateme" src="./img/parallax/vacancies.png" alt="" data-when="enter" data-from="0" data-to="1.5" data-translatex="60"></div>
           <div class="parallax__container">
             <div class="parallax__title">Репутация честной <br>и открытой компании</div>
-            <div class="parallax__text">«МегаАльянс» успешно работает на рынке недвижимости Краснодара более 8 лет.<br> Сотрудники компании всегда были и остаются важнейшим активом компании. Постоянное обучение и повышение квалификации – именно то, что позволяет достигать результата как каждому сотруднику в отдельности, так и всей компании.</div><a class="btn" href="">Сотрудничать</a>
+            <div class="parallax__text">«МегаАльянс» успешно работает на рынке недвижимости Краснодара более 8 лет.<br> Сотрудники компании всегда были и остаются важнейшим активом компании. Постоянное обучение и повышение квалификации – именно то, что позволяет достигать результата как каждому сотруднику в отдельности, так и всей компании.</div><a class="btn modal-open" href="#vacancy">Сотрудничать</a>
           </div>
         </div>
       </div>
@@ -210,8 +210,7 @@
                     <div class="vacancy__col">Заработная плата:</div>
                     <div class="vacancy__col vacancy__col--bold">оговаривается на собеседовании.</div>
                   </div>
-                </div>
-                <div class="btn">Присоединиться</div>
+                </div><a class="btn modal-open" href="#vacancy">Присоединиться</a>
               </div>
             </div>
           </div>
@@ -248,8 +247,7 @@
                     <div class="vacancy__col">Заработная плата:</div>
                     <div class="vacancy__col vacancy__col--bold">оговаривается на собеседовании.</div>
                   </div>
-                </div>
-                <div class="btn">Присоединиться</div>
+                </div><a class="btn modal-open" href="#vacancy">Присоединиться</a>
               </div>
             </div>
           </div>
@@ -257,6 +255,42 @@
         </div>
       </div>
     </section>
+    <div class="modal" id="vacancy">
+      <div class="modal__align">
+        <div class="modal__container">
+          <div class="modal__title">Откликнуться на вакансию</div>
+          <form class="form">
+            <div class="form-control">
+              <input type="text" placeholder="Имя">
+            </div>
+            <div class="form-control">
+              <input type="email" placeholder="Эл. почта">
+            </div>
+            <div class="form-control">
+              <input class="phone-mask" type="text" placeholder="Телефон">
+            </div>
+            <p>Прикрепите резюме</p>
+            <div class="box">
+              <input class="inputfile" id="file-1" type="file" name="file-1[]" data-multiple-caption="{count} файлов загружено" multiple>
+              <label class="btn" for="file-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                  <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                </svg><span>Выберите файл&hellip;</span>
+              </label>
+            </div>
+            <div class="mini-offset"></div>
+            <div class="checkbox">
+              <input type="checkbox" id="checkbox">
+              <label class="checkbox__label" for="checkbox"></label>
+              <label class="checkbox__text" for="checkbox">Я согласен на обработку <a href="">персональных данных</a></label>
+            </div>
+            <div class="medium-offset"></div>
+            <button class="btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./js/custom-file-input.js"></script>
     <section class="section--short-news">
       <div class="grid grid--container">
         <div class="short-news">
@@ -424,6 +458,7 @@
     <script src="./js/wNumb.js"></script>
     <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/flatpickr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="./js/jquery.inputmask.bundle.min.js"></script>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="./js/main.js"></script>

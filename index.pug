@@ -37,11 +37,11 @@ block content
             input(type="number" placeholder="до")
           .hero-form__control
             input(type="number" placeholder="Площадь")
-          .hero__link
-            a(href="").megalink.megalink--white
-              .megalink__icon
-                img(src="./img/megalink.png", alt="")
-              .megalink__text Поиск по карте
+          //- .hero__link
+          //-   a(href="").megalink.megalink--white
+          //-     .megalink__icon
+          //-       img(src="./img/megalink.png", alt="")
+          //-     .megalink__text Поиск по карте
           input(type="submit" value="Найти").btn
         .hero__icons
           .hero__icons-left
@@ -57,20 +57,20 @@ block content
               .icon__symbol.icon__symbol--fix
                 img(src="./img/icons/house.png", alt="")
               .icon__text Ипотека
-            a(href="#calculator").icon.calculator-open
-              .icon__symbol
-                img(src="./img/icons/calc.png", alt="")
-              .icon__text Ипотечный<br>калькулятор
+            //- a(href="#calculator").icon.calculator-open
+            //-   .icon__symbol
+            //-     img(src="./img/icons/calc.png", alt="")
+            //-   .icon__text Ипотечный<br>калькулятор
           .hero__icons-right
             a(href="").icon
               .icon__symbol
                 img(src="./img/icons/address.png", alt="")
               .icon__text Отделы продаж
-          .hero__icons-absolute
-            a(href="").icon
-              .icon__symbol
-                img(src="./img/icons/camera.png", alt="")
-              .icon__text Следить за ходом<br>строительства
+          //- .hero__icons-absolute
+          //-   a(href="").icon
+          //-     .icon__symbol
+          //-       img(src="./img/icons/camera.png", alt="")
+          //-     .icon__text Следить за ходом<br>строительства
 
 
   
@@ -328,10 +328,10 @@ block content
               .item__icon
                 img(src="./img/plus.png", alt="")
               .item__text Все банки партнеры
-            a(href="#calculator").item.item--type-2.calculator-open
-              .item__icon
-                img(src="./img/calc.png", alt="")
-              .item__text Ипотечный калькулятор
+            //- a(href="#calculator").item.item--type-2.calculator-open
+            //-   .item__icon
+            //-     img(src="./img/calc.png", alt="")
+            //-   .item__text Ипотечный калькулятор
 
         .tabs__content.tabs__content--active
           - var banks = ["sberbank", "raiffeisen", "vtb"];
@@ -412,50 +412,50 @@ block content
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum expedita deserunt ratione magni, suscipit nulla provident incidunt voluptates vel molestias beatae debitis, dolores tenetur, similique perferendis! Consectetur repellendus, fugit. Debitis.
 
       
-  section#calculator.section.section--mortage
-    .grid.grid--container
-      .section__container
-        h2.h2 Расчитать ипотеку
-        p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
-        .section__close ×
-        form.form
-          .row
-            .col.col--lg-4
-              .form-control
-                label Стоимость квартиры
-                input(type="number" value="1900000")
-                .form-control__text руб.
-            .col.col--lg-4
-              .form-control
-                label Возраст
-                input(type="number" value="25")
-            .col.col--lg-4
-              .form-control
-                label Гражданство
-                select.custom-select
-                  option Российская Федерация
-                  option Российская Федерация
-                  option Российская Федерация
-                .form-control__icon
-                  i.fa.fa-angle-down
-            .col.col--lg-4
-              .form-control.form-control--inline
-                label Первоначальный взнос
-                input(id="initial-pay-input" type="number" value="5000")
-                .form-control__text руб.
-              #initial-pay
-            .col.col--lg-4
-              .form-control.form-control--inline
-                label Срок кредита
-                input(id="credit-term-input" type="number" value="10")
-                .form-control__text лет
-              #credit-term
-            .col.col--lg-4
-              .calc
-                span Сумма кредита: 
-                .calc__result
-                  span 1 400 000
-                  |  руб.
+  //- section#calculator.section.section--mortage
+  //-   .grid.grid--container
+  //-     .section__container
+  //-       h2.h2 Расчитать ипотеку
+  //-       p.subheader Ниже располагается вся необходимая информация для совершения покупки квартир по самым выгодным условиям
+  //-       .section__close ×
+  //-       form.form
+  //-         .row
+  //-           .col.col--lg-4
+  //-             .form-control
+  //-               label Стоимость квартиры
+  //-               input(type="number" value="1900000")
+  //-               .form-control__text руб.
+  //-           .col.col--lg-4
+  //-             .form-control
+  //-               label Возраст
+  //-               input(type="number" value="25")
+  //-           .col.col--lg-4
+  //-             .form-control
+  //-               label Гражданство
+  //-               select.custom-select
+  //-                 option Российская Федерация
+  //-                 option Российская Федерация
+  //-                 option Российская Федерация
+  //-               .form-control__icon
+  //-                 i.fa.fa-angle-down
+  //-           .col.col--lg-4
+  //-             .form-control.form-control--inline
+  //-               label Первоначальный взнос
+  //-               input(id="initial-pay-input" type="number" value="5000")
+  //-               .form-control__text руб.
+  //-             #initial-pay
+  //-           .col.col--lg-4
+  //-             .form-control.form-control--inline
+  //-               label Срок кредита
+  //-               input(id="credit-term-input" type="number" value="10")
+  //-               .form-control__text лет
+  //-             #credit-term
+  //-           .col.col--lg-4
+  //-             .calc
+  //-               span Сумма кредита: 
+  //-               .calc__result
+  //-                 span 1 400 000
+  //-                 |  руб.
 
   section.section--mortage-star
     .grid.grid--container

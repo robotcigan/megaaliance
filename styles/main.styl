@@ -24,6 +24,7 @@
 @import 'components/manager.styl'
 
 @import 'pages/index.styl'
+@import 'pages/interiors.styl'
 @import 'pages/object.styl'
 @import 'pages/inner.styl'
 
@@ -114,6 +115,15 @@
   &:hover,
   &--active
     background url('../../img/like-active.png')
+.dislike
+  color #fff
+  position absolute
+  top 2rem
+  right 4rem
+  &:after
+    content '×'
+    font-size 4rem
+    position absolute
 
 
 .card
@@ -203,6 +213,7 @@
   &__info
     background-color rgba($primary, .9)
     color #fff
+    max-width 33rem
     padding 5rem 3rem
     text-align center
     z-index 20

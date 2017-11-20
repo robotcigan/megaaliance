@@ -14,7 +14,8 @@
     "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
     "scrollme": "^0.1.1",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "sweetalert2": "^6.11.5"
   },
   "devDependencies": {
     "babel": "^6.23.0",
